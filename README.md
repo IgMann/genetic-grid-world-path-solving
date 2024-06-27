@@ -25,8 +25,8 @@ This project uses a conda environment named `genetic_grid_world`. To set up the 
 
 1. Clone the repository:
     ```bash
-    git clone <repository_url>
-    cd <repository_directory>
+    git clone https://github.com/IgMann/genetic-grid-world-path-solving.git
+    cd genetic-grid-world-path-solving
     ```
 
 2. Create the conda environment:
@@ -54,6 +54,7 @@ This project uses a conda environment named `genetic_grid_world`. To set up the 
 To run the Jupyter notebook, use the following command:
 ```bash
 jupyter notebook main.ipynb
+```
 
 ## Genetic Algorithm Theory
 
