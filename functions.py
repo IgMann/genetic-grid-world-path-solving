@@ -11,7 +11,9 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-def create_or_empty_directory(directory_path):
+from typing import Optional, Tuple, List, Dict
+
+def create_or_empty_directory(directory_path: str) -> None:
     """
     Creates a directory if it does not exist, and if it exists, empties the directory.
 
@@ -31,7 +33,13 @@ def create_or_empty_directory(directory_path):
     else:
         os.makedirs(directory_path)
 
-def grid_world_creation(grid_size, start_point, end_point, obstacles, traps):
+def grid_world_creation(
+    grid_size: Tuple[int, int],
+    start_point: Tuple[int, int],
+    end_point: Tuple[int, int],
+    obstacles: List[Tuple[int, int]],
+    traps: List[Tuple[int, int]]
+) -> np.ndarray:
     """
     Creates a grid world matrix with specified start point, end point, obstacles, and traps.
 
@@ -55,7 +63,7 @@ def grid_world_creation(grid_size, start_point, end_point, obstacles, traps):
 
     return grid
 
-def generate_agent(path_length, random_seed=None):
+def generate_agent(path_length: int, random_seed: Optional[int] = None) -> str:
     """
     Generates a random bitstring of the specified length.
 
@@ -71,7 +79,7 @@ def generate_agent(path_length, random_seed=None):
         
     return ''.join(random.choice(['0', '1']) for _ in range(path_length))
 
-def grid_world_to_rgb(grid, agent_flag=1):
+def grid_world_to_rgb(grid: np.ndarray, agent_flag: int = 1) -> Tuple[np.ndarray, Dict[int, list]]:
     """
     Converts the grid world values to corresponding RGB values.
 
@@ -105,12 +113,21 @@ def grid_world_to_rgb(grid, agent_flag=1):
 
     return rgb_image, color_dictionary
 
-def grid_world_visualization(grid, title=None, agent_flag=1, saving_path=None, full_legend=0):
+def grid_world_visualization(
+    grid: np.ndarray,
+    agent_path: Optional[List[Tuple[int, int]]] = None,
+    title: Optional[str] = None,
+    agent_flag: int = 1,
+    saving_path: Optional[str] = None,
+    full_legend: int = 0
+) -> None:
     """
-    Visualizes the grid world with different colors for each value and an optional legend.
+    Visualizes the grid world with different colors for each value, step numbers for agent path (only last step for revisited cells),
+    and an optional legend.
 
     Parameters:
     grid (np.ndarray): The grid world matrix to be visualized.
+    agent_path (list of tuples, optional): Sequence of coordinates representing the agent's path.
     title (str, optional): The title of the plot. If None, the default title "Grid World Visualization" is used.
     agent_flag (int, optional): Flag indicating whether to show agent-related elements. Default is 1.
     saving_path (str, optional): Path to save the plot image. If None, the plot is displayed.
@@ -128,6 +145,14 @@ def grid_world_visualization(grid, title=None, agent_flag=1, saving_path=None, f
     else:
         ax.set_title(title, fontsize=15)
     ax.axis("off")
+
+    last_step_for_cell = {}
+    if agent_path is not None:
+        for step, (y, x) in enumerate(agent_path):
+            last_step_for_cell[(y, x)] = step  
+
+    for (y, x), step in last_step_for_cell.items():
+        ax.text(x, y, str(step), ha="center", va="center", color="black", fontsize=20, fontweight="bold")
 
     legend_labels = {
         0: "Empty",
@@ -160,8 +185,15 @@ def grid_world_visualization(grid, title=None, agent_flag=1, saving_path=None, f
 
     plt.close(fig)
 
-
-def fitness_score_calculation(agent_path, grid_world, path_length, start_position, end_position, penalty_coefficients, grid_size):
+def fitness_score_calculation(
+    agent_path: str,
+    grid_world: np.ndarray,
+    path_length: int,
+    start_position: Tuple[int, int],
+    end_position: Tuple[int, int],
+    penalty_coefficients: List[float],
+    grid_size: Tuple[int, int]
+) -> Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
     """
     Calculates the fitness score of an agent's path in a grid world, considering penalties for obstacles and traps.
 
@@ -234,7 +266,11 @@ def fitness_score_calculation(agent_path, grid_world, path_length, start_positio
 
     return primary_fitness_score, secondary_fitness_score, grid_world, previous_positions
 
-def population_sorting(population, primary_fitness_scores, secondary_fitness_scores):
+def population_sorting(
+    population: List[str],
+    primary_fitness_scores: List[float],
+    secondary_fitness_scores: List[float]
+) -> Tuple[List[str], List[int]]:
     """
     Sorts the population based on primary and secondary fitness scores.
 
@@ -255,7 +291,12 @@ def population_sorting(population, primary_fitness_scores, secondary_fitness_sco
     
     return population_sorted, indices_sorted
 
-def selection(population, bias=2, mode="uniform", random_seed=None):
+def selection(
+    population: List[str],
+    bias: int = 2,
+    mode: str = "uniform",
+    random_seed: int = None
+) -> str:
     """
     Selects one agent from the population based on the specified mode.
 
@@ -285,7 +326,12 @@ def selection(population, bias=2, mode="uniform", random_seed=None):
     else:
         raise ValueError("Invalid mode. Choose 'uniform' or 'rank-based'.")
 
-def crossover(parent1, parent2, crossover_point=None, random_seed=None):
+def crossover(
+    parent1: str,
+    parent2: str,
+    crossover_point: int = None,
+    random_seed: int = None
+) -> Tuple[str, str]:
     """
     Performs a crossover between two parents to produce two offspring.
 
@@ -310,7 +356,7 @@ def crossover(parent1, parent2, crossover_point=None, random_seed=None):
     
     return offspring1, offspring2
 
-def mutate(agent, mutation_probability=0.01, random_seed=None):
+def mutate(agent: str, mutation_probability: float = 0.01, random_seed: Optional[int] = None) -> str:
     """
     Performs mutation on an agent by randomly flipping bits with a given probability.
 
@@ -334,7 +380,14 @@ def mutate(agent, mutation_probability=0.01, random_seed=None):
     
     return ''.join(mutated_agent)
 
-def path_reconstruction(best_population_positions, initial_grid_world, results_path, start_position, end_position, step=1):
+def path_reconstruction(
+    best_population_positions: List[List[Tuple[int, int]]],
+    initial_grid_world: np.ndarray,
+    results_path: str,
+    start_position: Tuple[int, int],
+    end_position: Tuple[int, int],
+    step: int = 1
+) -> None:
     """
     Reconstructs and visualizes the path of the best agent in each generation.
 
@@ -378,8 +431,12 @@ def path_reconstruction(best_population_positions, initial_grid_world, results_p
             step_path = f"{generation_path}/step_{j+1}.png"
             grid_world_visualization(grid_world, title=title, agent_flag=1, saving_path=step_path, full_legend=1)
 
-
-def video_creation(images_path, video_path, fps=5, video_format="mp4"):
+def video_creation(
+    images_path: str,
+    video_path: str,
+    fps: int = 5,
+    video_format: str = "mp4"
+) -> None:
     """
     Creates a video from images stored in a specified directory structure and converts it to H.264 format.
 
