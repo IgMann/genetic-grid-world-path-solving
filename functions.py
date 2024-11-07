@@ -8,6 +8,7 @@ import random
 from tqdm import tqdm
 
 import cv2
+import math
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -63,21 +64,21 @@ def grid_world_creation(
 
     return grid
 
-def generate_agent(path_length: int, random_seed: Optional[int] = None) -> str:
+def generate_agent(chromosome_length: int, random_seed: Optional[int] = None) -> str:
     """
-    Generates a random bitstring of the specified length.
+    Generates a random bitstring of the specified chromosome length.
 
     Parameters:
-    path_length (int): The length of the bitstring to be generated.
+    chromosome_length (int): The length of the bitstring to be generated.
     random_seed (int, optional): Seed for the random number generator. Default is None.
 
     Returns:
-    str: A random bitstring of the specified length.
+    str: A random bitstring of the specified chromosome length.
     """
     if random_seed is not None:
         random.seed(random_seed)
         
-    return ''.join(random.choice(['0', '1']) for _ in range(path_length))
+    return ''.join(random.choice(['0', '1']) for _ in range(chromosome_length))
 
 def grid_world_to_rgb(grid: np.ndarray, agent_flag: int = 1) -> Tuple[np.ndarray, Dict[int, list]]:
     """
@@ -114,29 +115,31 @@ def grid_world_to_rgb(grid: np.ndarray, agent_flag: int = 1) -> Tuple[np.ndarray
     return rgb_image, color_dictionary
 
 def grid_world_visualization(
-    grid: np.ndarray,
+    grid_world: np.ndarray,
     agent_path: Optional[List[Tuple[int, int]]] = None,
     title: Optional[str] = None,
     agent_flag: int = 1,
     saving_path: Optional[str] = None,
-    full_legend: int = 0
+    full_legend: int = 0,
+    show_pheromones: Optional[np.ndarray] = None
 ) -> None:
     """
     Visualizes the grid world with different colors for each value, step numbers for agent path (only last step for revisited cells),
-    and an optional legend.
+    optional pheromone levels, and an optional legend.
 
     Parameters:
-    grid (np.ndarray): The grid world matrix to be visualized.
+    grid_world (np.ndarray): The grid world matrix to be visualized.
     agent_path (list of tuples, optional): Sequence of coordinates representing the agent's path.
     title (str, optional): The title of the plot. If None, the default title "Grid World Visualization" is used.
     agent_flag (int, optional): Flag indicating whether to show agent-related elements. Default is 1.
     saving_path (str, optional): Path to save the plot image. If None, the plot is displayed.
     full_legend (int, optional): Flag indicating whether to show the full legend. Default is 0.
+    show_pheromones (np.ndarray, optional): Matrix of pheromone levels to display on the grid world cells.
 
     Returns:
     None
     """
-    rgb_image, color_dictionary = grid_world_to_rgb(grid, agent_flag)
+    rgb_image, color_dictionary = grid_world_to_rgb(grid_world, agent_flag)
     
     fig, ax = plt.subplots(figsize=(10, 15))
     ax.imshow(rgb_image)
@@ -146,6 +149,7 @@ def grid_world_visualization(
         ax.set_title(title, fontsize=15)
     ax.axis("off")
 
+    # Display step numbers for agent path
     last_step_for_cell = {}
     if agent_path is not None:
         for step, (y, x) in enumerate(agent_path):
@@ -154,6 +158,17 @@ def grid_world_visualization(
     for (y, x), step in last_step_for_cell.items():
         ax.text(x, y, str(step), ha="center", va="center", color="black", fontsize=20, fontweight="bold")
 
+    # Overlay pheromone levels if provided
+    if show_pheromones is not None:
+        for y in range(show_pheromones.shape[0]):
+            for x in range(show_pheromones.shape[1]):
+                if grid_world[y, x] not in [1, 2, 3, 4]:
+                    if show_pheromones[y, x] <= 0.01:
+                        ax.text(x, y, f"{show_pheromones[y, x]:.2f}", ha="center", va="center", color="black", fontsize=10, fontweight="bold")
+                    else:
+                        ax.text(x, y, f"{show_pheromones[y, x]:.2f}", ha="center", va="center", color="purple", fontsize=10, fontweight="bold")
+
+    # Add legend
     legend_labels = {
         0: "Empty",
         1: "Start",
@@ -174,10 +189,11 @@ def grid_world_visualization(
             for i in sorted(legend_labels.keys())]
     else:
         handles = [plt.Line2D([0], [0], marker="s", color="w", markerfacecolor=np.array(color_dictionary[i])/255, markersize=10, label=legend_labels[i])
-                for i in sorted(legend_labels.keys()) if np.any(grid == i)]
+                for i in sorted(legend_labels.keys()) if np.any(grid_world == i)]
 
     ax.legend(handles=handles, title="Legend", bbox_to_anchor=(1.05, 1), loc="upper left", borderaxespad=0.)
 
+    # Save or display plot
     if saving_path is not None:
         plt.savefig(saving_path, format="png", bbox_inches="tight")
     else:
@@ -188,7 +204,7 @@ def grid_world_visualization(
 def fitness_score_calculation(
     agent_path: str,
     grid_world: np.ndarray,
-    path_length: int,
+    chromosome_length: int,
     start_position: Tuple[int, int],
     end_position: Tuple[int, int],
     penalty_coefficients: List[float],
@@ -200,7 +216,7 @@ def fitness_score_calculation(
     Parameters:
     agent_path (str): The bitstring representing the agent's path, with each pair of bits representing a movement direction.
     grid_world (np.ndarray): The grid world matrix.
-    path_length (int): The length of the agent's path in bits (should be even).
+    chromosome_length (int): The length of the agent's path in bits (should be even).
     start_position (tuple): The starting coordinates of the agent (row, column).
     end_position (tuple): The ending coordinates of the agent (row, column).
     penalty_coefficients (list): A list of penalty coefficients for normal moves, obstacles, and traps.
@@ -218,7 +234,7 @@ def fitness_score_calculation(
     secondary_fitness_score = 0
     previous_positions = [start_position]
     
-    for i in range(0, path_length, 2):
+    for i in range(0, chromosome_length, 2):
         secondary_fitness_score = len(previous_positions)
         previous_position = previous_positions[-1]
         grid_world[previous_position] = 6
@@ -356,6 +372,24 @@ def crossover(
     
     return offspring1, offspring2
 
+def check_last_n_generations_same(best_scores: List[float], secondary_scores_of_best: List[int], N: int = 3) -> bool:
+    """
+    Checks if the last N generations have the same best primary and secondary scores.
+
+    Args:
+        best_scores (List[float]): List of best primary scores across generations.
+        secondary_scores_of_best (List[int]): List of best secondary scores across generations.
+        N (int): Number of recent generations to compare, default is 3.
+
+    Returns:
+        bool: True if the last N generations have identical best scores, otherwise False.
+    """
+    if len(best_scores) < N:
+        return False
+    
+    return (all(best_scores[-i] == best_scores[-1] for i in range(1, N)) and
+            all(secondary_scores_of_best[-i] == secondary_scores_of_best[-1] for i in range(1, N)))
+
 def mutate(agent: str, mutation_probability: float = 0.01, random_seed: Optional[int] = None) -> str:
     """
     Performs mutation on an agent by randomly flipping bits with a given probability.
@@ -381,41 +415,56 @@ def mutate(agent: str, mutation_probability: float = 0.01, random_seed: Optional
     return ''.join(mutated_agent)
 
 def path_reconstruction(
-    best_population_positions: List[List[Tuple[int, int]]],
+    best_population_paths: List[List[Tuple[int, int]]],
     initial_grid_world: np.ndarray,
     results_path: str,
     start_position: Tuple[int, int],
     end_position: Tuple[int, int],
-    step: int = 1
+    step: int = 1,
+    title_type: str = "generation",
+    path_flag: bool = False
 ) -> None:
     """
-    Reconstructs and visualizes the path of the best agent in each generation.
+    Reconstructs and visualizes the paths taken by the best agents in a grid world
+    for each generation or iteration. Saves visualizations to a specified directory.
 
     Parameters:
-    best_population_positions (list of list of tuples): A list containing the positions of the best agent in each generation.
-    initial_grid_world (np.ndarray): The initial grid world matrix.
-    results_path (str): The path where the results (visualizations) will be saved.
-    start_position (tuple): The starting position of the agent.
-    end_position (tuple): The ending position of the agent.
-    step (int, optional): The step size for selecting generations to visualize. Default is 1.
+    best_population_paths (List[List[Tuple[int, int]]]): A list of paths where each path 
+        is a list of coordinates (tuples) representing the positions visited by the best agent in each generation.
+    initial_grid_world (np.ndarray): The initial state of the grid world as a NumPy array.
+    results_path (str): The directory path where the visualizations will be saved.
+    start_position (Tuple[int, int]): The starting position (x, y) of the agent in the grid world.
+    end_position (Tuple[int, int]): The ending position (x, y) of the agent in the grid world.
+    step (int, optional): Interval for selecting generations to visualize. Defaults to 1.
+    title_type (str, optional): Type of title to be used in the visualizations, either "generation" or "iteration".
+        If another string is provided, it will be used as the title directly. Defaults to "generation".
+    path_flag (bool, optional): If True, the entire path taken by the agent is visualized. If False, 
+        only the current step is shown. Defaults to False.
 
     Returns:
     None
     """
-    selected_indices = list(range(0, len(best_population_positions), step))
-    if selected_indices[-1] != len(best_population_positions) - 1:
-        selected_indices.append(len(best_population_positions) - 1)
+    create_or_empty_directory(results_path) 
+    selected_indices = list(range(0, len(best_population_paths), step))
+    if selected_indices[-1] != len(best_population_paths) - 1:
+        selected_indices.append(len(best_population_paths) - 1)
 
-    for index in tqdm(selected_indices, desc="Processing generations"):
+    for index in tqdm(selected_indices, desc="Processing generations/iterations"):
         generation = index + 1
-        best_agent_positions = best_population_positions[index]
+        best_agent_path = best_population_paths[index]
         
         generation_path = f"{results_path}/{generation}. generation"
-        title = f"{generation}. generation grid world visualization"
+        if title_type == "generation":
+            title = f"{generation}. generation grid world visualization"
+        elif title_type == "iteration":
+            title = f"{generation}. iteration of ACO grid world visualization"
+        else:
+            title = title_type
+
         create_or_empty_directory(generation_path)
 
         grid_world = copy.deepcopy(initial_grid_world)
-        for j, position in enumerate(best_agent_positions):
+        for j, position in enumerate(best_agent_path):
             grid_world[grid_world == 5] = 6
             if position == start_position:
                 grid_world[start_position] = 5
@@ -429,7 +478,10 @@ def path_reconstruction(
                     grid_world[position] = 5
                     
             step_path = f"{generation_path}/step_{j+1}.png"
-            grid_world_visualization(grid_world, title=title, agent_flag=1, saving_path=step_path, full_legend=1)
+            if not path_flag:
+                grid_world_visualization(grid_world, title=title, agent_flag=1, saving_path=step_path, full_legend=1)
+            else:
+                grid_world_visualization(grid_world, agent_path=best_agent_path, title=title, agent_flag=1, saving_path=step_path, full_legend=1)
 
 def video_creation(
     images_path: str,
@@ -473,3 +525,126 @@ def video_creation(
     subprocess.run(command)
     os.remove(temp_video_path)
     print(f"Video saved to {video_path}")
+
+def calculate_heuristic_score(next_position: Tuple[int, int], end_position: Tuple[int, int]) -> float:
+    """
+    Calculate the heuristic score based on the Euclidean distance between the next position and the end position.
+
+    Parameters:
+    next_position (Tuple[int, int]): The position to evaluate.
+    end_position (Tuple[int, int]): The target end position.
+
+    Returns:
+    float: The heuristic score based on Euclidean distance.
+    """
+    dx = next_position[0] - end_position[0]
+    dy = next_position[1] - end_position[1]
+    
+    return round(math.sqrt(dx**2 + dy**2), 4)
+
+def is_valid_move(position: Tuple[int, int], grid_world: np.ndarray) -> bool:
+    """Check if the move is valid (within grid world and not an obstacle or trap)."""
+    return 0 <= position[0] < grid_world.shape[0] and 0 <= position[1] < grid_world.shape[1] and grid_world[position] not in [3, 4]
+
+def calculate_transition_probabilities(
+    position: Tuple[int, int],
+    pheromone: np.ndarray,
+    grid_world: np.ndarray,
+    start_position: Tuple[int, int],
+    end_position: Tuple[int, int],
+    directions: Dict[str, Tuple[int, int]],
+    alpha: float,
+    beta: float
+) -> List[Tuple[float, Tuple[int, int]]]:
+    """Calculate movement probabilities for each direction based on pheromone and Euclidean distance heuristic, with 0 probability for the start position."""
+    probabilities = []
+    for direction_code, move in directions.items():
+        next_position = (position[0] + move[0], position[1] + move[1])
+        if next_position == start_position:
+            probabilities.append((0, next_position))  # Probability is 0 for moving to the start position
+        elif is_valid_move(next_position, grid_world):
+            heuristic_score = calculate_heuristic_score(next_position, end_position)
+            prob = (pheromone[next_position] ** alpha) * ((1.0 / (1 + heuristic_score)) ** beta)
+            probabilities.append((prob, next_position))
+        else:
+            probabilities.append((0, next_position))  # Probability is 0 for obstacles and traps
+    total_prob = sum([prob for prob, _ in probabilities])
+    return [(prob / total_prob if total_prob > 0 else 0, pos) for prob, pos in probabilities]
+
+def ant_walk(
+    start: Tuple[int, int],
+    end: Tuple[int, int],
+    pheromone: np.ndarray,
+    grid_world: np.ndarray,
+    directions: Dict[str, Tuple[int, int]],
+    alpha: float,
+    beta: float,
+    max_path_length: int,
+    random_seed: Optional[int] = None
+) -> List[Tuple[int, int]]:
+    """Simulate ant traversal from start to end position, limiting path length."""
+    if random_seed is not None:
+        random.seed(random_seed)  # Set the random seed for reproducibility
+
+    path = [start]
+    current_position = start
+    while current_position != end and len(path) < max_path_length:
+        probabilities = calculate_transition_probabilities(current_position, pheromone, grid_world, start, end, directions, alpha, beta)
+        next_move = random.choices([p for _, p in probabilities], [prob for prob, _ in probabilities])[0]
+        if next_move in path:
+            break  # Avoid loops
+        path.append(next_move)
+        current_position = next_move
+    return path
+
+
+def update_pheromones(
+    paths: List[List[Tuple[int, int]]],
+    pheromones: np.ndarray,
+    evaporation_rate: float,
+    deposit_factor: float
+) -> None:
+    """Update pheromone levels based on paths traversed by ants."""
+    pheromones *= (1 - evaporation_rate)  # Pheromone evaporation
+    for path in paths:
+        path_length = len(path)
+        for position in path:
+            pheromones[position] += deposit_factor / path_length  # Pheromone deposit
+
+def sort_ant_paths(paths: List[List[Tuple[int, int]]], end_position: Tuple[int, int]) -> Tuple[List[List[Tuple[int, int]]], List[int]]:
+    """
+    Sort paths based on their Euclidean distance to the end position as primary score,
+    and by number of steps as secondary score, using the population_sorting function.
+    
+    Parameters:
+    paths (List[List[Tuple[int, int]]]): List of ant paths, where each path is a list of positions.
+    end_position (Tuple[int, int]): The target end position for calculating Euclidean distance.
+    
+    Returns:
+    Tuple[List[List[Tuple[int, int]]], List[int]]: Sorted list of paths and their original indices.
+    """
+    def calculate_euclidean_distance(pos1: Tuple[int, int], pos2: Tuple[int, int]) -> float:
+        """Calculate the Euclidean distance between two positions."""
+        return math.sqrt((pos1[0] - pos2[0]) ** 2 + (pos1[1] - pos2[1]) ** 2)
+
+    # Calculate primary and secondary scores for each path
+    primary_fitness_scores = [calculate_euclidean_distance(path[-1], end_position) for path in paths]
+    secondary_fitness_scores = [len(path) for path in paths]
+
+    # Call population_sorting to sort based on primary and secondary scores
+    sorted_paths, sorted_indices = population_sorting(paths, primary_fitness_scores, secondary_fitness_scores)
+    
+    return sorted_paths, sorted_indices
+
+def moving_average(data: List[float], window_size: int) -> np.ndarray:
+    """
+    Computes the moving average of a given data series.
+
+    Parameters:
+    data (List[float]): The input data series to smooth.
+    window_size (int): The number of data points to include in each window for averaging.
+
+    Returns:
+    np.ndarray: The smoothed data as an array of moving averages.
+    """
+    return np.convolve(data, np.ones(window_size) / window_size, mode="valid")
