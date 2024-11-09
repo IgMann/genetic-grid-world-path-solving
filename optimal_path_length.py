@@ -12,6 +12,8 @@ OBSTACLES = [
     (9, 0), (9, 1), (9, 2), (9, 3), (9, 4), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (9, 11), (9, 12), (9, 13), (9, 14)
 ]
 TRAPS = [(1, 3), (2, 3), (2, 7), (3, 3), (3, 10), (4, 3), (5, 3), (5, 13), (7, 9)]
+LINE = 100*'-'
+DOUBLE_LINE = 100*'='
 
 # A* Algorithm
 def heuristic(a, b):
@@ -53,5 +55,9 @@ def astar(start, end, obstacles, traps):
 
 # Running the A* algorithm
 optimal_path = astar(START_POSITION, END_POSITION, set(OBSTACLES), set(TRAPS))
+
+print(DOUBLE_LINE)
 print(f"Optimal path: {optimal_path}")
-print(f"Optimal path length: {len(optimal_path)}")
+print(LINE)
+print(f"Optimal path length: {len(optimal_path)-1}")
+print(DOUBLE_LINE)

@@ -550,26 +550,46 @@ def calculate_transition_probabilities(
     position: Tuple[int, int],
     pheromone: np.ndarray,
     grid_world: np.ndarray,
-    start_position: Tuple[int, int],
     end_position: Tuple[int, int],
     directions: Dict[str, Tuple[int, int]],
     alpha: float,
-    beta: float
+    beta: float,
+    path: List[Tuple[int, int]],
+    revisit_possible: bool = False
 ) -> List[Tuple[float, Tuple[int, int]]]:
-    """Calculate movement probabilities for each direction based on pheromone and Euclidean distance heuristic, with 0 probability for the start position."""
+    """
+    Calculate movement probabilities for each direction based on pheromone levels and a distance heuristic,
+    setting probability to 0 if the next position is already in the path or is an invalid move.
+
+    Parameters:
+    - position: Current position of the ant.
+    - pheromone: 2D array of pheromone values on the grid.
+    - grid_world: Grid world matrix.
+    - end_position: Target position in the grid.
+    - directions: Possible move directions with offsets.
+    - alpha: Influence of pheromone.
+    - beta: Influence of heuristic.
+    - path: List of positions visited by the ant so far.
+    - revisit_possible: If True, aborts path on revisit. If False, assigns 0 probability to revisited positions.
+
+    Returns:
+    List of tuples with probability and position for each move.
+    """
     probabilities = []
-    for direction_code, move in directions.items():
+    for _, move in directions.items():
         next_position = (position[0] + move[0], position[1] + move[1])
-        if next_position == start_position:
-            probabilities.append((0, next_position))  # Probability is 0 for moving to the start position
-        elif is_valid_move(next_position, grid_world):
+        if next_position in path:
+            probabilities.append((0 if not revisit_possible else None, next_position))
+        elif not is_valid_move(next_position, grid_world):
+            probabilities.append((0, next_position))
+        else:
             heuristic_score = calculate_heuristic_score(next_position, end_position)
             prob = (pheromone[next_position] ** alpha) * ((1.0 / (1 + heuristic_score)) ** beta)
             probabilities.append((prob, next_position))
-        else:
-            probabilities.append((0, next_position))  # Probability is 0 for obstacles and traps
-    total_prob = sum([prob for prob, _ in probabilities])
-    return [(prob / total_prob if total_prob > 0 else 0, pos) for prob, pos in probabilities]
+
+    total_prob = sum(prob for prob, _ in probabilities if prob is not None)
+    return [(prob / total_prob if total_prob > 0 else 0, pos) for prob, pos in probabilities if prob is not None]
+
 
 def ant_walk(
     start: Tuple[int, int],
@@ -580,36 +600,79 @@ def ant_walk(
     alpha: float,
     beta: float,
     max_path_length: int,
+    revisit_possible: bool = False,
     random_seed: Optional[int] = None
 ) -> List[Tuple[int, int]]:
-    """Simulate ant traversal from start to end position, limiting path length."""
+    """
+    Simulate ant traversal from start to end position, halting if all probabilities for next moves are 0 or if loops are detected.
+
+    Parameters:
+    - start: Starting position of the ant.
+    - end: End position the ant is trying to reach.
+    - pheromone: 2D array of pheromone values on the grid.
+    - grid_world: The grid world matrix.
+    - directions: Possible directions the ant can move.
+    - alpha: Pheromone importance.
+    - beta: Heuristic importance.
+    - max_path_length: Maximum allowed path length for the ant.
+    - revisit_possible: If True, the path terminates upon revisiting a cell. If False, revisits are given a probability of 0.
+    - random_seed: Seed for reproducibility.
+
+    Returns:
+    List of positions representing the ant's path.
+    """
     if random_seed is not None:
-        random.seed(random_seed)  # Set the random seed for reproducibility
+        random.seed(random_seed)
 
     path = [start]
     current_position = start
     while current_position != end and len(path) < max_path_length:
-        probabilities = calculate_transition_probabilities(current_position, pheromone, grid_world, start, end, directions, alpha, beta)
+        probabilities = calculate_transition_probabilities(
+            current_position, pheromone, grid_world, end, directions, alpha, beta, path, revisit_possible
+        )
+        
+        if all(prob == 0 for prob, _ in probabilities):
+            break
+
         next_move = random.choices([p for _, p in probabilities], [prob for prob, _ in probabilities])[0]
-        if next_move in path:
-            break  # Avoid loops
+        if revisit_possible and next_move in path:
+            break
         path.append(next_move)
         current_position = next_move
-    return path
 
+    return path
 
 def update_pheromones(
     paths: List[List[Tuple[int, int]]],
     pheromones: np.ndarray,
     evaporation_rate: float,
-    deposit_factor: float
+    deposit_factor: float,
+    pheromone_normalization: bool = False
 ) -> None:
-    """Update pheromone levels based on paths traversed by ants."""
-    pheromones *= (1 - evaporation_rate)  # Pheromone evaporation
+    """
+    Update pheromone levels based on paths traversed by ants, with optional normalization.
+
+    Parameters:
+    paths (List[List[Tuple[int, int]]]): List of paths traversed by ants, where each path is a list of grid positions.
+    pheromones (np.ndarray): The grid storing pheromone levels for each position.
+    evaporation_rate (float): The rate at which pheromones evaporate (0 to 1).
+    deposit_factor (float): The amount of pheromone deposited by each ant, scaled by path length.
+    pheromone_normalization (bool): If True, normalize pheromone levels after updating. Default is False.
+    """
+    # Pheromone evaporation
+    pheromones *= (1 - evaporation_rate)
+    
+    # Deposit pheromones for each path
     for path in paths:
         path_length = len(path)
         for position in path:
             pheromones[position] += deposit_factor / path_length  # Pheromone deposit
+    
+    # Optional pheromone normalization
+    if pheromone_normalization:
+        max_pheromone = pheromones.max()
+        if max_pheromone > 0:
+            pheromones /= max_pheromone  # Normalize to the range [0, 1]
 
 def sort_ant_paths(paths: List[List[Tuple[int, int]]], end_position: Tuple[int, int]) -> Tuple[List[List[Tuple[int, int]]], List[int]]:
     """
@@ -648,3 +711,65 @@ def moving_average(data: List[float], window_size: int) -> np.ndarray:
     np.ndarray: The smoothed data as an array of moving averages.
     """
     return np.convolve(data, np.ones(window_size) / window_size, mode="valid")
+
+def find_different_paths(
+    primary_fitness_scores: List[float],
+    secondary_fitness_scores: List[int],
+    N: int
+) -> List[int]:
+    """
+    Finds the indices of the top N unique paths with different secondary fitness scores,
+    sorted primarily by primary fitness score and secondarily by secondary fitness score.
+
+    Parameters:
+    primary_fitness_scores (List[float]): List of primary fitness scores for each path.
+    secondary_fitness_scores (List[int]): List of secondary fitness scores for each path.
+    N (int): Number of unique paths to return.
+
+    Returns:
+    List[int]: List of indices of the selected paths.
+    """
+    indexed_scores = [(i, (primary_fitness_scores[i], secondary_fitness_scores[i])) for i in range(len(primary_fitness_scores))]
+    sorted_scores = sorted(indexed_scores, key=lambda x: (x[1][0], x[1][1]))
+
+    selected_indices = []
+    seen_secondary_scores = set()
+
+    for idx, (primary_score, secondary_score) in sorted_scores:
+        if secondary_score not in seen_secondary_scores:
+            selected_indices.append(idx)
+            seen_secondary_scores.add(secondary_score)
+            if len(selected_indices) == N:
+                break
+
+    return selected_indices
+
+def create_pheromones_matrix(
+    best_positions: List[Tuple[int, int]], 
+    grid_size: Tuple[int, int]
+) -> np.ndarray:
+    """
+    Creates a pheromone matrix where pheromone levels depend on the frequency of 
+    positions in best_positions. Positions with the highest frequency get level 1, 
+    positions with no appearance get 0, and all others are scaled between.
+
+    Parameters:
+    best_positions (List[Tuple[int, int]]): List of coordinates representing positions visited in the best paths.
+    grid_size (Tuple[int, int]): Size of the grid (rows, columns).
+
+    Returns:
+    np.ndarray: A matrix with pheromone levels for each position in the grid.
+    """
+    pheromones = np.zeros(grid_size, dtype=float)
+    position_counts = {}
+
+    for position in best_positions:
+        if isinstance(position, tuple):  # Only add valid coordinates, not strings
+            position_counts[position] = position_counts.get(position, 0) + 1
+
+    max_count = max(position_counts.values(), default=1)
+
+    for position, count in position_counts.items():
+        pheromones[position] = count / max_count
+
+    return pheromones

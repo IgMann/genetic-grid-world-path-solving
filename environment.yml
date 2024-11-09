@@ -1,4 +1,4 @@
-name: genetic_grid_world
+name: grid_world
 channels:
   - conda-forge
   - defaults
