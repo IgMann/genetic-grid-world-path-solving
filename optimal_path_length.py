@@ -1,4 +1,4 @@
-# Importing libraries
+# Importing modules
 import heapq
 
 # Parameters
@@ -19,7 +19,7 @@ DOUBLE_LINE = 100*'='
 def heuristic(a, b):
     return abs(a[0] - b[0]) + abs(a[1] - b[1])
 
-def astar(start, end, obstacles, traps):
+def a_star(start, end, obstacles, traps):
     open_set = []
     heapq.heappush(open_set, (0, start))
     came_from = {}
@@ -54,7 +54,7 @@ def astar(start, end, obstacles, traps):
     return None  # Return None if no path is found
 
 # Running the A* algorithm
-optimal_path = astar(START_POSITION, END_POSITION, set(OBSTACLES), set(TRAPS))
+optimal_path = a_star(START_POSITION, END_POSITION, set(OBSTACLES), set(TRAPS))
 
 print(DOUBLE_LINE)
 print(f"Optimal path: {optimal_path}")
