@@ -38,29 +38,25 @@ def grid_world_creation(
     grid_size: Tuple[int, int],
     start_point: Tuple[int, int],
     end_point: Tuple[int, int],
-    obstacles: List[Tuple[int, int]],
-    traps: List[Tuple[int, int]]
+    obstacles: List[Tuple[int, int]]
 ) -> np.ndarray:
     """
-    Creates a grid world matrix with specified start point, end point, obstacles, and traps.
+    Creates a grid world matrix with specified start point, end point, and obstacles.
 
     Parameters:
     grid_size (tuple): The size of the grid (rows, columns).
     start_point (tuple): The coordinates of the start point (row, column).
     end_point (tuple): The coordinates of the end point (row, column).
     obstacles (list of tuples): A list of coordinates for obstacles.
-    traps (list of tuples): A list of coordinates for traps.
 
     Returns:
     np.ndarray: A grid world matrix with the specified elements.
     """
     grid = np.zeros(grid_size, dtype=int)
-    grid[start_point] = 1
-    grid[end_point] = 2
+    grid[start_point] = 1  
+    grid[end_point] = 2    
     for obstacle in obstacles:
-        grid[obstacle] = 3
-    for trap in traps:
-        grid[trap] = 4
+        grid[obstacle] = 3  
 
     return grid
 
@@ -89,23 +85,22 @@ def grid_world_to_rgb(grid: np.ndarray, agent_flag: int = 1) -> Tuple[np.ndarray
     agent_flag (int, optional): Flag indicating whether to include agent-related elements. Default is 1.
 
     Returns:
-    np.ndarray: The RGB image array.
-    dict: The color dictionary used for mapping grid values to RGB.
+    Tuple[np.ndarray, Dict[int, list]]:
+        - The RGB image array representing the grid.
+        - A dictionary mapping grid values to their corresponding RGB colors.
     """
     color_dictionary = {
         0: [255, 250, 205],  # Empty
         1: [0, 128, 0],      # Start (green)
         2: [0, 0, 255],      # End (blue)
         3: [128, 128, 128],  # Obstacle (gray)
-        4: [255, 0, 0],      # Trap (red)
         5: [128, 0, 128],    # Agent Position (purple)
         6: [221, 160, 221],  # Agent Path (light purple)
-        7: [77, 77, 77],     # Agent Stuck (dark gray)
-        8: [0, 0, 0]         # Agent Failed (black)
+        7: [77, 77, 77]      # Agent Stuck (dark gray)
     }
 
     if not agent_flag:
-        color_dictionary = {k: color_dictionary[k] for k in range(5)}
+        color_dictionary = {k: color_dictionary[k] for k in range(4)}  # Only include empty, start, end, and obstacle
 
     rgb_image = np.zeros((grid.shape[0], grid.shape[1], 3), dtype=np.uint8)
 
@@ -124,13 +119,13 @@ def grid_world_visualization(
     show_pheromones: Optional[np.ndarray] = None
 ) -> None:
     """
-    Visualizes the grid world with different colors for each value, step numbers for agent path (only last step for revisited cells),
+    Visualizes the grid world with colors for each value, step numbers for the agent's path,
     optional pheromone levels, and an optional legend.
 
     Parameters:
     grid_world (np.ndarray): The grid world matrix to be visualized.
     agent_path (list of tuples, optional): Sequence of coordinates representing the agent's path.
-    title (str, optional): The title of the plot. If None, the default title "Grid World Visualization" is used.
+    title (str, optional): The title of the plot. If None, a default title is used.
     agent_flag (int, optional): Flag indicating whether to show agent-related elements. Default is 1.
     saving_path (str, optional): Path to save the plot image. If None, the plot is displayed.
     full_legend (int, optional): Flag indicating whether to show the full legend. Default is 0.
@@ -162,7 +157,7 @@ def grid_world_visualization(
     if show_pheromones is not None:
         for y in range(show_pheromones.shape[0]):
             for x in range(show_pheromones.shape[1]):
-                if grid_world[y, x] not in [1, 2, 3, 4]:
+                if grid_world[y, x] not in [1, 2, 3]:
                     if show_pheromones[y, x] <= 0.01:
                         ax.text(x, y, f"{show_pheromones[y, x]:.2f}", ha="center", va="center", color="black", fontsize=10, fontweight="bold")
                     else:
@@ -174,15 +169,13 @@ def grid_world_visualization(
         1: "Start",
         2: "End",
         3: "Obstacle",
-        4: "Trap",
         5: "Agent Position",
         6: "Agent Path",
-        7: "Agent Stuck",
-        8: "Agent Failed"
+        7: "Agent Stuck"
     }
 
     if not agent_flag:
-        legend_labels = {k: legend_labels[k] for k in range(5)}
+        legend_labels = {k: legend_labels[k] for k in range(4)}  
 
     if agent_flag and full_legend:
         handles = [plt.Line2D([0], [0], marker="s", color="w", markerfacecolor=np.array(color_dictionary[i])/255, markersize=10, label=legend_labels[i])
@@ -240,30 +233,34 @@ def fitness_score_calculation(
     chromosome_length: int,
     start_position: Tuple[int, int],
     end_position: Tuple[int, int],
-    penalty_coefficients: List[float],
     grid_size: Tuple[int, int]
 ) -> Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
     """
-    Calculates the fitness score of an agent's path in a grid world, considering penalties for obstacles and traps.
+    Calculates the fitness score of an agent's path in a grid world.
+
+    The function evaluates the agent's path based on its distance to the end position,
+    while marking its journey in the grid. Obstacles block progress, and the path
+    terminates upon encountering an obstacle or reaching the end.
 
     Parameters:
-    agent_path (str): The bitstring representing the agent's path, with each pair of bits representing a movement direction.
-    grid_world (np.ndarray): The grid world matrix.
-    chromosome_length (int): The length of the agent's path in bits (should be even).
-    start_position (tuple): The starting coordinates of the agent (row, column).
-    end_position (tuple): The ending coordinates of the agent (row, column).
-    penalty_coefficients (list): A list of penalty coefficients for normal moves, obstacles, and traps.
-    grid_size (tuple): The size of the grid (rows, columns).
+    agent_path (str): A bitstring representing the agent's movement directions.
+                      Each pair of bits encodes a movement: 
+                      "00" = down, "01" = right, "10" = left, "11" = up.
+    grid_world (np.ndarray): The grid world matrix where the agent navigates.
+    chromosome_length (int): The total number of bits in the agent's path encoding.
+    start_position (Tuple[int, int]): The starting coordinates of the agent (row, column).
+    end_position (Tuple[int, int]): The target coordinates of the agent (row, column).
+    grid_size (Tuple[int, int]): Dimensions of the grid (rows, columns).
 
     Returns:
-    tuple: A tuple containing:
-        - primary_fitness_score (float): The primary fitness score of the agent's path, adjusted by penalty coefficients.
-        - secondary_fitness_score (int): The secondary fitness score representing the number of moves made by the agent.
-        - grid_world (np.ndarray): The updated grid world matrix after the agent's path.
-        - previous_positions (list): A list of positions (tuples) visited by the agent during its path.
+    Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
+        - primary_fitness_score (float): The Euclidean distance from the agent's final position
+          to the end position.
+        - secondary_fitness_score (int): The total number of steps taken by the agent.
+        - grid_world (np.ndarray): The updated grid world with the agent's path marked.
+        - previous_positions (List[Tuple[int, int]]): List of coordinates visited by the agent.
     """
     grid_world = copy.deepcopy(grid_world)
-    penalty_coefficient = penalty_coefficients[0]
     secondary_fitness_score = 0
     previous_positions = [start_position]
     
@@ -292,13 +289,6 @@ def fitness_score_calculation(
         if grid_world[new_position] == 3:  
             final_position = new_position
             grid_world[new_position] = 7
-            penalty_coefficient = penalty_coefficients[1]
-            previous_positions.append(new_position)
-            break
-        elif grid_world[new_position] == 4:  
-            final_position = new_position
-            grid_world[new_position] = 8
-            penalty_coefficient = penalty_coefficients[2]
             previous_positions.append(new_position)
             break
         elif new_position == end_position:
@@ -311,7 +301,7 @@ def fitness_score_calculation(
             previous_positions.append(new_position)
 
     grid_world[start_position] = 1
-    primary_fitness_score = round(penalty_coefficient * np.sqrt((final_position[0] - end_position[0]) ** 2 + (final_position[1] - end_position[1]) ** 2), 4)
+    primary_fitness_score = round(np.sqrt((final_position[0] - end_position[0]) ** 2 + (final_position[1] - end_position[1]) ** 2), 4)
 
     return primary_fitness_score, secondary_fitness_score, grid_world, previous_positions
 
@@ -505,8 +495,6 @@ def path_reconstruction(
                 grid_world[start_position] = 1
                 if grid_world[position] == 3:
                     grid_world[position] = 7
-                elif grid_world[position] == 4:
-                    grid_world[position] = 8
                 else:
                     grid_world[position] = 5
                     
@@ -576,8 +564,8 @@ def calculate_heuristic_score(next_position: Tuple[int, int], end_position: Tupl
     return round(math.sqrt(dx**2 + dy**2), 4)
 
 def is_valid_move(position: Tuple[int, int], grid_world: np.ndarray) -> bool:
-    """Check if the move is valid (within grid world and not an obstacle or trap)."""
-    return 0 <= position[0] < grid_world.shape[0] and 0 <= position[1] < grid_world.shape[1] and grid_world[position] not in [3, 4]
+    """Check if the move is valid (within grid world and not an obstacle)."""
+    return 0 <= position[0] < grid_world.shape[0] and 0 <= position[1] < grid_world.shape[1] and grid_world[position] != 3
 
 def calculate_transition_probabilities(
     position: Tuple[int, int],
