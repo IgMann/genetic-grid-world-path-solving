@@ -77,5 +77,7 @@ optimal_path: Optional[List[Tuple[int, int]]] = a_star(START_POSITION, END_POSIT
 print(DOUBLE_LINE)
 print(f"Optimal path: {optimal_path}")
 print(LINE)
-print(f"Optimal path length: {len(optimal_path)-1 if optimal_path else 'No path found'}")
+print(f"Optimal path length: {len(optimal_path) if optimal_path else 'No path found'}")
+print(LINE)
+print(f"Optimal number of steps: {len(optimal_path) - 1 if optimal_path else 'No path found'}")
 print(DOUBLE_LINE)
