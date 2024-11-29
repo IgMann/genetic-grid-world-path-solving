@@ -194,38 +194,48 @@ def grid_world_visualization(
 
     plt.close(fig)
 
-def create_time_report(start_time: float, end_time: float, num_iterations: int) -> Tuple[str, float, float]:
+def create_time_report(
+    start_time: float, end_time: float, num_iterations: int, verbose: bool = True
+) -> Tuple[float, float, float]:
     """
-    Generates a report summarizing the time spent on a process and computes related metrics.
+    Generates a time report for a simulation or iterative process and returns key timing metrics.
 
     Parameters:
-    - start_time (float): The start time of the process (in seconds since the epoch).
-    - end_time (float): The end time of the process (in seconds since the epoch).
-    - num_iterations (int): The total number of iterations completed during the process.
+    ----------
+    start_time : float
+        The start time of the simulation, typically obtained using `time.time()`.
+    end_time : float
+        The end time of the simulation, typically obtained using `time.time()`.
+    num_iterations : int
+        The total number of iterations completed during the simulation.
+    verbose : bool, default=True
+        If True, prints a detailed time report including total time, time per iteration, 
+        and iterations per second.
 
     Returns:
-    - tuple[str, float, float]: A tuple containing:
-        - formatted_total_time (str): The total time formatted as seconds or minutes and seconds.
-        - time_per_iteration (float): The average time per iteration in seconds.
-        - iterations_per_second (float): The number of iterations completed per second.
+    -------
+    Tuple:
+        - total_time (float): Total elapsed time in seconds.
+        - time_per_iteration (float): Average time taken per iteration in seconds.
+        - iterations_per_second (float): Number of iterations completed per second.
     """
     total_time = end_time - start_time
     iterations_per_second = num_iterations / total_time if total_time > 0 else float('inf')
     time_per_iteration = total_time / num_iterations if num_iterations > 0 else float('inf')
     
-    if total_time < 60:
-        formatted_total_time = f"{total_time:.2f} seconds"
-    else:
-        minutes = int(total_time // 60)
-        seconds = total_time % 60
-        formatted_total_time = f"{minutes} minutes and {seconds:.2f} seconds"
-    
-    print(f"Total Time: {formatted_total_time}")
-    print(f"Time per Iteration: {time_per_iteration:.4f} seconds")
-    print(f"Iterations per Second: {iterations_per_second:.2f}")
+    if verbose:
+        if total_time < 60:
+            formatted_total_time = f"{total_time:.2f} seconds"
+        else:
+            minutes = int(total_time // 60)
+            seconds = total_time % 60
+            formatted_total_time = f"{minutes} minutes and {seconds:.2f} seconds"
 
-    return formatted_total_time, time_per_iteration, iterations_per_second
+        print(f"Total Time: {formatted_total_time}")
+        print(f"Time per Iteration: {time_per_iteration:.4f} seconds")
+        print(f"Iterations per Second: {iterations_per_second:.2f}")
 
+    return total_time, time_per_iteration, iterations_per_second
 
 def fitness_score_calculation(
     agent_path: str,
@@ -726,8 +736,8 @@ def update_pheromones(
     deposit_factor (float): The amount of pheromone deposited by each ant, scaled by path length.
     pheromone_normalization (bool): If True, normalize pheromone levels after updating. Default is False.
     """
-    # Set values lower than 0.1 to 0
-    pheromones[pheromones < 0.1] = 0
+    # Set values lower or equal than 0.1 to 0
+    pheromones[pheromones <= 0.1] = 0
 
     # Pheromone evaporation
     pheromones *= (1 - evaporation_rate)
