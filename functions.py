@@ -10,6 +10,7 @@ from tqdm import tqdm
 import cv2
 import math
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 
 from typing import Optional, Tuple, List, Dict
@@ -219,9 +220,9 @@ def create_time_report(
         - time_per_iteration (float): Average time taken per iteration in seconds.
         - iterations_per_second (float): Number of iterations completed per second.
     """
-    total_time = end_time - start_time
-    iterations_per_second = num_iterations / total_time if total_time > 0 else float('inf')
-    time_per_iteration = total_time / num_iterations if num_iterations > 0 else float('inf')
+    total_time = round(end_time - start_time, 2)
+    iterations_per_second = round(num_iterations / total_time, 2) if total_time > 0 else float('inf')
+    time_per_iteration = round(total_time / num_iterations, 2) if num_iterations > 0 else float('inf')
     
     if verbose:
         if total_time < 60:
@@ -237,83 +238,83 @@ def create_time_report(
 
     return total_time, time_per_iteration, iterations_per_second
 
-def fitness_score_calculation(
-    agent_path: str,
-    grid_world: np.ndarray,
-    chromosome_length: int,
-    start_position: Tuple[int, int],
-    end_position: Tuple[int, int],
-    grid_size: Tuple[int, int]
-) -> Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
-    """
-    Calculates the fitness score of an agent's path in a grid world.
+# def fitness_score_calculation(
+#     agent_path: str,
+#     grid_world: np.ndarray,
+#     chromosome_length: int,
+#     start_position: Tuple[int, int],
+#     end_position: Tuple[int, int],
+#     grid_size: Tuple[int, int]
+# ) -> Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
+#     """
+#     Calculates the fitness score of an agent's path in a grid world.
 
-    The function evaluates the agent's path based on its distance to the end position,
-    while marking its journey in the grid. Obstacles block progress, and the path
-    terminates upon encountering an obstacle or reaching the end.
+#     The function evaluates the agent's path based on its distance to the end position,
+#     while marking its journey in the grid. Obstacles block progress, and the path
+#     terminates upon encountering an obstacle or reaching the end.
 
-    Parameters:
-    agent_path (str): A bitstring representing the agent's movement directions.
-                      Each pair of bits encodes a movement: 
-                      "00" = down, "01" = right, "10" = left, "11" = up.
-    grid_world (np.ndarray): The grid world matrix where the agent navigates.
-    chromosome_length (int): The total number of bits in the agent's path encoding.
-    start_position (Tuple[int, int]): The starting coordinates of the agent (row, column).
-    end_position (Tuple[int, int]): The target coordinates of the agent (row, column).
-    grid_size (Tuple[int, int]): Dimensions of the grid (rows, columns).
+#     Parameters:
+#     agent_path (str): A bitstring representing the agent's movement directions.
+#                       Each pair of bits encodes a movement: 
+#                       "00" = down, "01" = right, "10" = left, "11" = up.
+#     grid_world (np.ndarray): The grid world matrix where the agent navigates.
+#     chromosome_length (int): The total number of bits in the agent's path encoding.
+#     start_position (Tuple[int, int]): The starting coordinates of the agent (row, column).
+#     end_position (Tuple[int, int]): The target coordinates of the agent (row, column).
+#     grid_size (Tuple[int, int]): Dimensions of the grid (rows, columns).
 
-    Returns:
-    Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
-        - primary_fitness_score (float): The Euclidean distance from the agent's final position
-          to the end position.
-        - secondary_fitness_score (int): The total number of steps taken by the agent.
-        - grid_world (np.ndarray): The updated grid world with the agent's path marked.
-        - previous_positions (List[Tuple[int, int]]): List of coordinates visited by the agent.
-    """
-    grid_world = copy.deepcopy(grid_world)
-    secondary_fitness_score = 0
-    previous_positions = [start_position]
+#     Returns:
+#     Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
+#         - primary_fitness_score (float): The Euclidean distance from the agent's final position
+#           to the end position.
+#         - secondary_fitness_score (int): The total number of steps taken by the agent.
+#         - grid_world (np.ndarray): The updated grid world with the agent's path marked.
+#         - previous_positions (List[Tuple[int, int]]): List of coordinates visited by the agent.
+#     """
+#     grid_world = copy.deepcopy(grid_world)
+#     secondary_fitness_score = 0
+#     previous_positions = [start_position]
     
-    for i in range(0, chromosome_length, 2):
-        secondary_fitness_score = len(previous_positions)
-        previous_position = previous_positions[-1]
-        grid_world[previous_position] = 6
+#     for i in range(0, chromosome_length, 2):
+#         secondary_fitness_score = len(previous_positions)
+#         previous_position = previous_positions[-1]
+#         grid_world[previous_position] = 6
 
-        choice_bytes = agent_path[i] + agent_path[i + 1]
-        if choice_bytes == "00":  # down
-            new_position = (previous_position[0] + 1, previous_position[1])
-        elif choice_bytes == "01":  # right
-            new_position = (previous_position[0], previous_position[1] + 1)
-        elif choice_bytes == "10":  # left
-            new_position = (previous_position[0], previous_position[1] - 1)
-        elif choice_bytes == "11":  # up
-            new_position = (previous_position[0] - 1, previous_position[1])
-        else:
-            raise ValueError("Values only could be: '00', '01', '10', '11'.")
+#         choice_bytes = agent_path[i] + agent_path[i + 1]
+#         if choice_bytes == "00":  # down
+#             new_position = (previous_position[0] + 1, previous_position[1])
+#         elif choice_bytes == "01":  # right
+#             new_position = (previous_position[0], previous_position[1] + 1)
+#         elif choice_bytes == "10":  # left
+#             new_position = (previous_position[0], previous_position[1] - 1)
+#         elif choice_bytes == "11":  # up
+#             new_position = (previous_position[0] - 1, previous_position[1])
+#         else:
+#             raise ValueError("Values only could be: '00', '01', '10', '11'.")
 
-        if new_position[0] < 0 or new_position[0] >= grid_size[0] or new_position[1] < 0 or new_position[1] >= grid_size[1]:
-            primary_fitness_score = np.inf
-            previous_positions.append(new_position)
-            break
+#         if new_position[0] < 0 or new_position[0] >= grid_size[0] or new_position[1] < 0 or new_position[1] >= grid_size[1]:
+#             primary_fitness_score = np.inf
+#             previous_positions.append(new_position)
+#             break
 
-        if grid_world[new_position] == 3:  
-            final_position = new_position
-            grid_world[new_position] = 7
-            previous_positions.append(new_position)
-            break
-        elif new_position == end_position:
-            final_position = new_position
-            previous_positions.append(new_position)
-            break
-        else:
-            final_position = new_position
-            grid_world[new_position] = 5
-            previous_positions.append(new_position)
+#         if grid_world[new_position] == 3:  
+#             final_position = new_position
+#             grid_world[new_position] = 7
+#             previous_positions.append(new_position)
+#             break
+#         elif new_position == end_position:
+#             final_position = new_position
+#             previous_positions.append(new_position)
+#             break
+#         else:
+#             final_position = new_position
+#             grid_world[new_position] = 5
+#             previous_positions.append(new_position)
 
-    grid_world[start_position] = 1
-    primary_fitness_score = round(np.sqrt((final_position[0] - end_position[0]) ** 2 + (final_position[1] - end_position[1]) ** 2), 4)
+#     grid_world[start_position] = 1
+#     primary_fitness_score = round(np.sqrt((final_position[0] - end_position[0]) ** 2 + (final_position[1] - end_position[1]) ** 2), 4)
 
-    return primary_fitness_score, secondary_fitness_score, grid_world, previous_positions
+#     return primary_fitness_score, secondary_fitness_score, grid_world, previous_positions
 
 def population_sorting(
     population: List[str],
@@ -716,9 +717,6 @@ def ant_walk(
 
     return path
 
-import numpy as np
-from typing import List, Tuple
-
 def update_pheromones(
     paths: List[List[Tuple[int, int]]],
     pheromones: np.ndarray,
@@ -895,3 +893,98 @@ def check_pheromone_path(pheromone_matrix: np.ndarray, num_optimal_steps: int, t
                 return True
 
     return False
+
+def check_missing_values(
+    dataframe: pd.DataFrame, 
+    double_line: str = "=" * 100, 
+    line: str = "-" * 100, 
+    return_missing: bool = False
+) -> Tuple[Optional[pd.DataFrame], Optional[List[str]]]:
+    """
+    Checks and reports missing values in a DataFrame, providing a detailed summary for each column with missing data.
+    
+    Parameters:
+    ----------
+    dataframe : pd.DataFrame
+        The DataFrame to check for missing values.
+    double_line : str, default='=' * 100
+        String used as a double-line separator in the output.
+    line : str, default='-' * 100
+        String used as a single-line separator in the output.
+    return_missing : bool, default=False
+        If True, returns a DataFrame containing rows with missing values and a list of column names with missing data.
+    
+    Returns:
+    -------
+    Tuple[Optional[pd.DataFrame], Optional[List[str]]]
+        - missing_data_df: DataFrame containing rows with missing values (if return_missing is True, otherwise None).
+        - missing_data_columns: List of column names with missing values (if return_missing is True, otherwise None).
+    """
+    print(double_line)
+    print("Missing values check:")
+    print(double_line)
+
+    missing_data = dataframe.isnull().sum()
+    total_rows = len(dataframe)
+    missing_columns = missing_data[missing_data > 0]
+    missing_data_df = None
+    missing_data_columns = None
+
+    line_flag = False
+    if missing_columns.empty:
+        print("There is no missing values!")
+    else:
+        for column, missing_count in missing_columns.items():
+            if not line_flag:
+                line_flag = True
+            else:
+                print(line)
+            
+            missing_percentage = (missing_count / total_rows) * 100
+            print(f"{column} missing {missing_count} values out of {total_rows} values ({missing_percentage:.2f}%)")
+        
+        if return_missing:
+            missing_data_df = dataframe[dataframe.isnull().any(axis=1)]
+            missing_data_columns = list(missing_columns.index)
+
+    print(double_line)
+
+    if return_missing:
+        return missing_data_df, missing_data_columns
+
+    return None, None
+
+def aggregate_categorical_results(
+    dataframe: pd.DataFrame,
+    categorical_columns: List[str]
+) -> pd.DataFrame:
+    """
+    Aggregates numerical results by computing the mean for each unique combination of categorical values.
+
+    Parameters:
+    ----------
+    dataframe : pd.DataFrame
+        The DataFrame containing the data to aggregate.
+    categorical_columns : List[str]
+        The list of column names used as categorical criteria for grouping.
+
+    Returns:
+    -------
+    pd.DataFrame
+        A DataFrame with aggregated numerical values, preserving the order of columns in the input.
+    """
+    numerical_columns = dataframe.select_dtypes(include="number").columns.difference(categorical_columns)
+
+    grouped_df = (
+        dataframe.groupby(categorical_columns)[numerical_columns]
+        .mean()
+        .reset_index()
+    )
+
+    grouped_df = grouped_df.reindex(columns=dataframe.columns)
+    grouped_df[numerical_columns] = grouped_df[numerical_columns].round(2)
+
+    return grouped_df
+
+
+

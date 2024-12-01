@@ -249,15 +249,17 @@ def ga_simulation(
         grid_worlds = []
         population_paths = []
 
-        for agent in population:
-            primary_fitness_score, secondary_fitness_score, grid_world, path = fn.fitness_score_calculation(
-                agent_path=agent,
+        for i, agent_path in enumerate(population):
+            primary_fitness_score, secondary_fitness_score, grid_world, path, agent_path = fn.fitness_score_calculation(
+                agent_path=agent_path,
                 grid_world=initial_grid_world,
                 chromosome_length=chromosome_length,
                 start_position=start_position,
                 end_position=end_position,
-                grid_size=grid_size,
+                grid_size=grid_size
             )
+
+            population[i] = agent_path
 
             primary_fitness_scores.append(primary_fitness_score)
             secondary_fitness_scores.append(secondary_fitness_score)
@@ -444,7 +446,7 @@ def aco_simulation(
     Tuple:
         - first_full_path (Optional[int]): Iteration number of the first complete path found, or None if not found.
         - first_optimal_path (Optional[int]): Iteration number of the first optimal path found, or None if not found.
-        - convergence_flag (bool): Whether the simulation achieved convergence.
+        - convergence_iteration (Optional[int]): Iteration number when convergence was achieved, or None if not achieved.
         - total_time (float): Total elapsed time for the simulation in seconds.
         - time_per_iteration (float): Average time taken per iteration in seconds.
         - iterations_per_second (float): Number of iterations completed per second.
@@ -462,6 +464,7 @@ def aco_simulation(
 
     first_full_path = None
     first_optimal_path = None
+    convergence_iteration = None
     best_secondary_score = float('inf')
 
     best_paths = []
@@ -547,6 +550,7 @@ def aco_simulation(
                 print(f"First optimal path iteration: {first_optimal_path}")
                 if convergence_flag:
                     print(f"Convergence achieved in iteration: {iteration}")
+                    convergence_iteration = iteration
             else:
                 print("Optimal path is not found!")
                 print(f"Shortest full path: {best_secondary_score}")
@@ -576,7 +580,7 @@ def aco_simulation(
     return (
         first_full_path,
         first_optimal_path,
-        convergence_flag,
+        convergence_iteration,
         total_time,
         time_per_iteration,
         iterations_per_second,

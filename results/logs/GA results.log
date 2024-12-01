@@ -1,0 +1,2443 @@
+====================================================================================================
+====================================================================================================
+************************************ !!! EXPERIMENT STARTED !!! ************************************
+====================================================================================================
+====================================================================================================
+
+====================================================================================================
+RANDOM STATE: 10
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+1. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 6.39 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 156.49
+----------------------------------------------------------------------------------------------------
+2. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 5.21 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 191.94
+----------------------------------------------------------------------------------------------------
+3. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 4.55 seconds
+Time per Iteration: 0.0000 seconds
+Iterations per Second: 219.78
+----------------------------------------------------------------------------------------------------
+4. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 6.78 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 147.49
+----------------------------------------------------------------------------------------------------
+5. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 6.21 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 161.03
+----------------------------------------------------------------------------------------------------
+6. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 8.92 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 112.11
+----------------------------------------------------------------------------------------------------
+7. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 8.26 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 121.07
+----------------------------------------------------------------------------------------------------
+8. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 6.69 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 149.48
+----------------------------------------------------------------------------------------------------
+9. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 5.67 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 176.37
+----------------------------------------------------------------------------------------------------
+10. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 9.88 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 101.21
+----------------------------------------------------------------------------------------------------
+11. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 8.29 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 120.63
+----------------------------------------------------------------------------------------------------
+12. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 10
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 8.27 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 120.92
+====================================================================================================
+RANDOM STATE: 20
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+13. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 8.94 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 111.86
+----------------------------------------------------------------------------------------------------
+14. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 7.03 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 142.25
+----------------------------------------------------------------------------------------------------
+15. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 7.11 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 140.65
+----------------------------------------------------------------------------------------------------
+16. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 9.65 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 103.63
+----------------------------------------------------------------------------------------------------
+17. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 8.71 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 114.81
+----------------------------------------------------------------------------------------------------
+18. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 7.37 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 135.69
+----------------------------------------------------------------------------------------------------
+19. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 10.28 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 97.28
+----------------------------------------------------------------------------------------------------
+20. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 7.82 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 127.88
+----------------------------------------------------------------------------------------------------
+21. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 5.84 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 171.23
+----------------------------------------------------------------------------------------------------
+22. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 10.97 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 91.16
+----------------------------------------------------------------------------------------------------
+23. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 8.95 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 111.73
+----------------------------------------------------------------------------------------------------
+24. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 20
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 6.07 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 164.74
+====================================================================================================
+RANDOM STATE: 30
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+25. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 10.41 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 96.06
+----------------------------------------------------------------------------------------------------
+26. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 8.34 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 119.90
+----------------------------------------------------------------------------------------------------
+27. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 6.77 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 147.71
+----------------------------------------------------------------------------------------------------
+28. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 8.46 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 118.20
+----------------------------------------------------------------------------------------------------
+29. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 9.29 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 107.64
+----------------------------------------------------------------------------------------------------
+30. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 7.91 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 126.42
+----------------------------------------------------------------------------------------------------
+31. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 9.05 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 110.50
+----------------------------------------------------------------------------------------------------
+32. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 6.72 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 148.81
+----------------------------------------------------------------------------------------------------
+33. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 6.69 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 149.48
+----------------------------------------------------------------------------------------------------
+34. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 9.89 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 101.11
+----------------------------------------------------------------------------------------------------
+35. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 8.26 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 121.07
+----------------------------------------------------------------------------------------------------
+36. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 30
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 8.55 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 116.96
+====================================================================================================
+RANDOM STATE: 40
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+37. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 8.90 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 112.36
+----------------------------------------------------------------------------------------------------
+38. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 7.71 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 129.70
+----------------------------------------------------------------------------------------------------
+39. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 7.47 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 133.87
+----------------------------------------------------------------------------------------------------
+40. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 9.74 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 102.67
+----------------------------------------------------------------------------------------------------
+41. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 8.88 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 112.61
+----------------------------------------------------------------------------------------------------
+42. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 8.95 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 111.73
+----------------------------------------------------------------------------------------------------
+43. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 9.65 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 103.63
+----------------------------------------------------------------------------------------------------
+44. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 7.14 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 140.06
+----------------------------------------------------------------------------------------------------
+45. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 7.27 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 137.55
+----------------------------------------------------------------------------------------------------
+46. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 10.61 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 94.25
+----------------------------------------------------------------------------------------------------
+47. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 7.58 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 131.93
+----------------------------------------------------------------------------------------------------
+48. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 40
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 7.38 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 135.50
+====================================================================================================
+RANDOM STATE: 50
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+49. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 10.27 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 97.37
+----------------------------------------------------------------------------------------------------
+50. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 6.48 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 154.32
+----------------------------------------------------------------------------------------------------
+51. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 6.66 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 150.15
+----------------------------------------------------------------------------------------------------
+52. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 10.62 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 94.16
+----------------------------------------------------------------------------------------------------
+53. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 8.83 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 113.25
+----------------------------------------------------------------------------------------------------
+54. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 7.38 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 135.50
+----------------------------------------------------------------------------------------------------
+55. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 9.60 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 104.17
+----------------------------------------------------------------------------------------------------
+56. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 7.71 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 129.70
+----------------------------------------------------------------------------------------------------
+57. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 5.66 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 176.68
+----------------------------------------------------------------------------------------------------
+58. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 11.14 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 89.77
+----------------------------------------------------------------------------------------------------
+59. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 8.73 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 114.55
+----------------------------------------------------------------------------------------------------
+60. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 50
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 7.57 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 132.10
+====================================================================================================
+RANDOM STATE: 60
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+61. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 9.67 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 103.41
+----------------------------------------------------------------------------------------------------
+62. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 8.58 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 116.55
+----------------------------------------------------------------------------------------------------
+63. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 7.21 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 138.70
+----------------------------------------------------------------------------------------------------
+64. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 10.35 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 96.62
+----------------------------------------------------------------------------------------------------
+65. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 8.81 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 113.51
+----------------------------------------------------------------------------------------------------
+66. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 8.85 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 112.99
+----------------------------------------------------------------------------------------------------
+67. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 10.82 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 92.42
+----------------------------------------------------------------------------------------------------
+68. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 6.99 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 143.06
+----------------------------------------------------------------------------------------------------
+69. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 7.65 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 130.72
+----------------------------------------------------------------------------------------------------
+70. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 10.18 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 98.23
+----------------------------------------------------------------------------------------------------
+71. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 7.58 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 131.93
+----------------------------------------------------------------------------------------------------
+72. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 60
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 8.15 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 122.70
+====================================================================================================
+RANDOM STATE: 70
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+73. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 9.73 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 102.77
+----------------------------------------------------------------------------------------------------
+74. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 7.41 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 134.95
+----------------------------------------------------------------------------------------------------
+75. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 6.55 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 152.67
+----------------------------------------------------------------------------------------------------
+76. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 10.95 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 91.32
+----------------------------------------------------------------------------------------------------
+77. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 9.38 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 106.61
+----------------------------------------------------------------------------------------------------
+78. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 8.04 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 124.38
+----------------------------------------------------------------------------------------------------
+79. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 8.99 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 111.23
+----------------------------------------------------------------------------------------------------
+80. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 8.37 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 119.47
+----------------------------------------------------------------------------------------------------
+81. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 7.78 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 128.53
+----------------------------------------------------------------------------------------------------
+82. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 9.96 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 100.40
+----------------------------------------------------------------------------------------------------
+83. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 7.56 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 132.28
+----------------------------------------------------------------------------------------------------
+84. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 70
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 7.96 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 125.63
+====================================================================================================
+RANDOM STATE: 80
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+85. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 10.11 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 98.91
+----------------------------------------------------------------------------------------------------
+86. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 7.03 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 142.25
+----------------------------------------------------------------------------------------------------
+87. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 7.28 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 137.36
+----------------------------------------------------------------------------------------------------
+88. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 10.75 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 93.02
+----------------------------------------------------------------------------------------------------
+89. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 9.24 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 108.23
+----------------------------------------------------------------------------------------------------
+90. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 7.22 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 138.50
+----------------------------------------------------------------------------------------------------
+91. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 9.87 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 101.32
+----------------------------------------------------------------------------------------------------
+92. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 8.48 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 117.92
+----------------------------------------------------------------------------------------------------
+93. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 6.49 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 154.08
+----------------------------------------------------------------------------------------------------
+94. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 9.95 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 100.50
+----------------------------------------------------------------------------------------------------
+95. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 9.61 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 104.06
+----------------------------------------------------------------------------------------------------
+96. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 80
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 8.58 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 116.55
+====================================================================================================
+RANDOM STATE: 90
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+97. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 9.91 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 100.91
+----------------------------------------------------------------------------------------------------
+98. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 7.41 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 134.95
+----------------------------------------------------------------------------------------------------
+99. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 6.19 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 161.55
+----------------------------------------------------------------------------------------------------
+100. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 10.61 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 94.25
+----------------------------------------------------------------------------------------------------
+101. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 9.86 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 101.42
+----------------------------------------------------------------------------------------------------
+102. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 8.61 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 116.14
+----------------------------------------------------------------------------------------------------
+103. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 10.50 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 95.24
+----------------------------------------------------------------------------------------------------
+104. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 7.02 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 142.45
+----------------------------------------------------------------------------------------------------
+105. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 6.79 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 147.28
+----------------------------------------------------------------------------------------------------
+106. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 10.98 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 91.07
+----------------------------------------------------------------------------------------------------
+107. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 8.42 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 118.76
+----------------------------------------------------------------------------------------------------
+108. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 90
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 6.88 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 145.35
+====================================================================================================
+RANDOM STATE: 100
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+109. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: all to all
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 295
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 10.49 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 95.33
+----------------------------------------------------------------------------------------------------
+110. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 659
+The best primary score: 3.1623
+The best secondary score: 14
+Total Time: 8.61 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 116.14
+----------------------------------------------------------------------------------------------------
+111. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 537
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 5.71 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 175.13
+----------------------------------------------------------------------------------------------------
+112. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: all to all
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 267
+The best primary score: 2.2361
+The best secondary score: 17
+Total Time: 10.53 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 94.97
+----------------------------------------------------------------------------------------------------
+113. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 40
+The best primary score: 2.2361
+The best secondary score: 27
+Total Time: 9.83 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 101.73
+----------------------------------------------------------------------------------------------------
+114. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 1.5
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 3.1623
+The best secondary score: 30
+Total Time: 5.44 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 183.82
+----------------------------------------------------------------------------------------------------
+115. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: all to all
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 271
+The best primary score: 2.8284
+The best secondary score: 18
+Total Time: 9.45 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 105.82
+----------------------------------------------------------------------------------------------------
+116. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: best to rest
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 884
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 8.31 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 120.34
+----------------------------------------------------------------------------------------------------
+117. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: hybrid
+Progressive mutation: True
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 677
+The best primary score: 2.2361
+The best secondary score: 13
+Total Time: 6.97 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 143.47
+----------------------------------------------------------------------------------------------------
+118. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: all to all
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 30
+The best primary score: 2.2361
+The best secondary score: 15
+Total Time: 9.87 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 101.32
+----------------------------------------------------------------------------------------------------
+119. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: best to rest
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 25
+The best primary score: 2.8284
+The best secondary score: 14
+Total Time: 7.88 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 126.90
+----------------------------------------------------------------------------------------------------
+120. simulation
+----------------------------------------------------------------------------------------------------
+
+Parameters:
+
+Random state: 100
+Crossover type: hybrid
+Progressive mutation: False
+Bias: 3.0
+
+Results:
+
+Full path is not found!
+The best generation: 12
+The best primary score: 2.2361
+The best secondary score: 21
+Total Time: 8.59 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 116.41
+====================================================================================================
+Results saved in ./results/logs/GA.csv path.
+====================================================================================================
+====================================================================================================
+************************************ !!! EXPERIMENT FINISHED !!! ***********************************
+====================================================================================================
+====================================================================================================
