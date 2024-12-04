@@ -1,4 +1,4 @@
-name: grid_world
+name: metaheuristic_grid_world
 channels:
   - conda-forge
   - defaults
@@ -85,8 +85,10 @@ dependencies:
       - matplotlib==3.7.5
       - numpy==1.24.4
       - opencv-python==4.10.0.84
+      - pandas==2.0.3
       - pillow==10.3.0
       - pyparsing==3.1.2
       - pytz==2024.1
+      - seaborn==0.13.2
       - tqdm==4.66.4
       - tzdata==2024.1

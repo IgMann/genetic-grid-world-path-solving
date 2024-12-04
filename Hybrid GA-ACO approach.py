@@ -17,10 +17,10 @@ START_POSITION: Tuple[int, int] = (6, 1)
 END_POSITION: Tuple[int, int] = (4, 13)
 OBSTACLES: List[Tuple[int, int]] = [
     (0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (0, 12), (0, 13), (0, 14),
-    (1, 0), (1, 3), (1, 14), (2, 0), (2, 3), (2, 5), (2, 6), (2, 7), (2, 11), (2, 14), (3, 0), (3, 3), (3, 10), (3, 11), (3, 14), 
-    (4, 0), (4, 3), (4, 9), (4, 10), (4, 11), (4, 14), (5, 0), (5, 3), (5, 6), (5, 11), (5, 13), (5, 14), (6, 0), (6, 6), (6, 9), 
-    (6, 11), (6, 14), (7, 0), (7, 6), (7, 9), (7, 14), (8, 0), (8, 3), (8, 6), (8, 14), (9, 0), (9, 1), (9, 2), (9, 3), (9, 4), 
-    (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (9, 11), (9, 12), (9, 13), (9, 14)
+    (1, 0), (1, 3), (1, 14), (2, 0), (2, 3), (2, 5), (2, 6), (2, 7), (2, 11), (2, 14), (3, 0), (3, 3), (3, 10), (3, 11), (3, 13), 
+    (3, 14), (4, 0), (4, 3), (4, 9), (4, 10), (4, 11), (4, 14), (5, 0), (5, 3), (5, 6), (5, 11), (5, 13), (5, 14), (6, 0), (6, 6), 
+    (6, 9), (6, 11), (6, 14), (7, 0), (7, 6), (7, 9), (7, 14), (8, 0), (8, 3), (8, 6), (8, 14), (9, 0), (9, 1), (9, 2), (9, 3), 
+    (9, 4), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (9, 11), (9, 12), (9, 13), (9, 14)
 ]
 NUM_OPTIMAL_STEPS: int = 20
 
@@ -28,13 +28,14 @@ NUM_OPTIMAL_STEPS: int = 20
 CHROMOSOME_LENGTH: int = 64
 POPULATION_SIZE: int = 100
 NUM_GENERATIONS: int = 50
-BIAS: List[float] = [1.5, 3.0]
-PROGRESSIVE_MUTATION: List[bool] = [True, False]
+BIAS: float = 2.25
+PROGRESSIVE_MUTATION: bool = True
 MUTATION_RATE: float = 0.01
 EARLY_STOP: bool = False
-BEST_ONES_PERCENTAGE: float = 0.2
+BEST_ONES_PERCENTAGE: float = 0.1
 WORST_ONES_PERCENTAGE: float = 0.2
 NUM_BEST_PATHS: int = 5
+SELECTION_TYPES: List[str] = ["all to all", "best to rest", "hybrid"]
 
 # Simulation parameters - Ant Colony Optimization
 ALPHA: List[float] = [1.5, 3.0]
@@ -43,8 +44,7 @@ EVAPORATION_RATE: float = 0.5
 DEPOSIT_FACTOR: int = 10
 NUM_ANTS: int = 100
 NUM_ITERATIONS: int = 1000
-MAX_PATH_LENGTH: int = 32
-REVISIT_POSSIBILITY: List[bool] = [True, False]  
+MAX_PATH_LENGTH: int = 32 
 PHEROMONE_NORMALIZATION: bool = True
 PHEROMONE_THRESHOLD: float = 0.25
 PATH_SCALING_FACTOR: int = 10
@@ -57,6 +57,7 @@ GA_ACO_RESULTS_CSV_PATH: str = f"{LOGS_PATH}/GA-ACO results.csv"
 
 # Other
 RANDOM_STATES: List[int] = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+REVISIT_POSSIBILITY: List[bool] = [True, False] 
 LINE: str = '-' * 100
 DOUBLE_LINE: str = '=' * 100
 EXPERIMENT_STARTED: str = '*' * 36 + " !!! EXPERIMENT STARTED !!! " + '*' * 36
@@ -92,9 +93,9 @@ try:
         print(f"RANDOM STATE: {random_state}")
         print(DOUBLE_LINE)
 
-        for bias in BIAS:
-            for progressive_mutation in PROGRESSIVE_MUTATION:
-                for revisit_possible in REVISIT_POSSIBILITY:
+        for selection_type in SELECTION_TYPES:
+            for ga_revisit_possible in REVISIT_POSSIBILITY:
+                for aco_revisit_possible in REVISIT_POSSIBILITY:
                     for alpha in ALPHA:
                         for beta in BETA:  
                             print(LINE)
@@ -103,9 +104,9 @@ try:
                             
                             print("\nParameters:\n")
                             print(f"Random state: {random_state}")
-                            print(f"Progressive mutation: {progressive_mutation}")
-                            print(f"Bias: {bias}")
-                            print(f"Revisit possible: {revisit_possible}")
+                            print(f"Revisit possible - GA: {ga_revisit_possible}")
+                            print(f"Selection type: {selection_type}")
+                            print(f"Revisit possible - ACO: {aco_revisit_possible}")
                             print(f"Alpha: {alpha}")
                             print(f"Beta: {beta}\n")
 
@@ -117,10 +118,10 @@ try:
                                 num_generations=NUM_GENERATIONS,
                                 population_size=POPULATION_SIZE,
                                 chromosome_length=CHROMOSOME_LENGTH,
-                                mutation_rate=MUTATION_RATE,
-                                crossover_type="hybrid",
-                                progressive_mutation=progressive_mutation,
-                                bias=bias,
+                                initial_mutation_rate=MUTATION_RATE,
+                                selection_type=selection_type,
+                                progressive_mutation=PROGRESSIVE_MUTATION,
+                                bias=BIAS,
                                 early_stop=EARLY_STOP,
                                 best_ones_percentage=BEST_ONES_PERCENTAGE,
                                 worst_ones_percentage=WORST_ONES_PERCENTAGE,
@@ -132,6 +133,7 @@ try:
                                 random_seed=random_state,
                                 simulation_started_message=SIMULATION_STARTED,
                                 simulation_finished_message=SIMULATION_FINISHED,
+                                revisit_possible = ga_revisit_possible,
                                 verbose="Restricted",
                                 line = LINE,
                                 double_line = DOUBLE_LINE  
@@ -146,10 +148,15 @@ try:
                             population_paths = results[17]
 
                             # Pheromones initialization
-                            best_paths_indices = fn.find_different_paths(primary_fitness_scores, secondary_fitness_scores, NUM_BEST_PATHS)
+                            selected_paths, _ = fn.find_different_paths(
+                                primary_fitness_scores = primary_fitness_scores, 
+                                secondary_fitness_scores = secondary_fitness_scores, 
+                                population_paths = population_paths,
+                                N = NUM_BEST_PATHS
+                            )
                             best_positions = []
-                            for index in best_paths_indices:        
-                                best_positions.extend(population_paths[index])
+                            for selected_path in selected_paths:        
+                                best_positions.extend(selected_path)
 
                             pheromones = ((PATH_SCALING_FACTOR - 1) * fn.create_pheromones_matrix(best_positions, GRID_SIZE) + 1) / PATH_SCALING_FACTOR
 
@@ -163,7 +170,7 @@ try:
                                 alpha=alpha,
                                 beta=beta,
                                 max_path_length=MAX_PATH_LENGTH,
-                                revisit_possible=revisit_possible,
+                                revisit_possible=aco_revisit_possible,
                                 evaporation_rate=EVAPORATION_RATE,
                                 deposit_factor=DEPOSIT_FACTOR,
                                 pheromone_normalization=PHEROMONE_NORMALIZATION,
@@ -187,9 +194,9 @@ try:
 
                             data.append({
                                 "Random State": random_state,
-                                "Progressive Mutation": progressive_mutation,
-                                "Bias": bias,
-                                "Revisit Possible": revisit_possible,
+                                "GA Revisit Possible": ga_revisit_possible,
+                                "Selection Type": selection_type,
+                                "ACO Revisit Possible": aco_revisit_possible,
                                 "Alpha": alpha,
                                 "Beta": beta,
                                 "GA Best Generation": ga_best_generation,

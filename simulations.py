@@ -10,8 +10,8 @@ def ga_simulation(
     num_generations: int,
     population_size: int,
     chromosome_length: int,
-    mutation_rate: float,
-    crossover_type: str,
+    initial_mutation_rate: float,
+    selection_type: str,
     progressive_mutation: bool,
     bias: int,
     early_stop: bool,
@@ -25,6 +25,8 @@ def ga_simulation(
     random_seed: int,
     simulation_started_message: str,
     simulation_finished_message: str,
+    recode_path: Optional[bool] = True,
+    revisit_possible: Optional[bool] = False,
     verbose: Optional[str] = None, 
     line: Optional[str] = 100*'-',
     double_line: Optional[str] = 100*'=',
@@ -32,91 +34,69 @@ def ga_simulation(
     Optional[int], int, float, int, str, float, float, List[float], List[int], List[float], List[float], List[np.ndarray], List[List[Tuple[int, int]]], int
     ]:
     """
-    Simulates a Genetic Algorithm (GA) process to optimize paths in a grid world, 
-    supporting multiple crossover strategies and dynamic mutation adjustment.
+    Simulates a Genetic Algorithm (GA) for solving the pathfinding problem in a grid world.
 
-    Parameters:
-    ----------
-    num_generations : int
-        Total number of generations for the simulation.
-    population_size : int
-        Number of agents in the population.
-    chromosome_length : int
-        Length of the bitstring representation of agents.
-    mutation_rate : float
-        Initial mutation rate for agents.
-    crossover_type : str
-        Type of crossover strategy to use. Options:
-        - "all to all": Performs crossover between all pairs of agents.
-        - "best to rest": Performs crossover between the best agents and the rest of the population.
-        - "hybrid": Combines the best agents, middle agents, and worst replacements.
-    progressive_mutation : bool
-        If True, increases mutation rate dynamically when generations show no improvement.
-    bias : int
-        Bias factor for rank-based selection.
-    early_stop : bool
-        Whether to stop the simulation early if an optimal solution is found.
-    best_ones_percentage : float
-        Percentage of the population to consider as "best" in the hybrid or best-to-rest crossover strategies.
-    worst_ones_percentage : float
-        Percentage of the population to consider as "worst" in the hybrid crossover strategy.
-    num_optimal_steps : int
-        Number of steps in the optimal path.
-    start_position : Tuple[int, int]
-        Starting position of agents in the grid.
-    end_position : Tuple[int, int]
-        Target position of agents in the grid.
-    grid_size : Tuple[int, int]
-        Dimensions of the grid world.
-    initial_grid_world : np.ndarray
-        Initial state of the grid world.
-    random_seed : int
-        Random seed for reproducibility.
-    simulation_started_message : str
-        Message to display at the start of the simulation.
-    simulation_finished_message : str
-        Message to display at the end of the simulation.
-    verbose : Optional[str], default=None
-        Logging level. Options:
-        - None: No output is logged.
-        - "Restricted": Logs summary metrics at the end of the simulation.
-        - "Full": Logs detailed information for each generation and summary metrics.
-    line : Optional[str], default='-' * 100
-        The line separator used in verbose logs.
-    double_line : Optional[str], default='=' * 100
-        The double-line separator used in verbose logs.
+    Args:
+        num_generations (int): The total number of generations to simulate.
+        population_size (int): The size of the agent population.
+        chromosome_length (int): The length of the chromosome representing each agent's path.
+        initial_mutation_rate (float): The initial mutation rate for the genetic algorithm.
+        selection_type (str): The type of selection strategy to use ("all to all", "best to rest", or "hybrid").
+        progressive_mutation (bool): Enables dynamic mutation rate adjustment when progress stagnates.
+        bias (int): The bias factor for rank-based selection.
+        early_stop (bool): Whether to terminate the simulation when an optimal path is found.
+        best_ones_percentage (float): Fraction of top-performing individuals for breeding.
+        worst_ones_percentage (float): Fraction of worst-performing individuals replaced in "hybrid" selection.
+        num_optimal_steps (int): The optimal number of steps to complete the path.
+        start_position (Tuple[int, int]): The starting position in the grid world.
+        end_position (Tuple[int, int]): The ending position in the grid world.
+        grid_size (Tuple[int, int]): The dimensions of the grid world.
+        initial_grid_world (np.ndarray): The initial grid world configuration.
+        random_seed (int): Seed for ensuring reproducibility of random operations.
+        simulation_started_message (str): Message displayed at the start of the simulation.
+        simulation_finished_message (str): Message displayed at the end of the simulation.
+        recode_path (Optional[bool], default=True): If True, rewrites the path in the grid world matrix.
+        revisit_possible (Optional[bool], default=False): Allows revisiting grid cells if True.
+        verbose (Optional[str], default=None): Sets the verbosity level of the output ("Full", "Restricted", or None).
+        line (Optional[str], default="-" * 100): Line separator for verbose output.
+        double_line (Optional[str], default="=" * 100): Double line separator for verbose sections.
 
     Returns:
-    -------
-    Tuple:
-        - first_full_path_generation (Optional[int]): The generation number of the first full path, or None if not found.
-        - best_generation (int): The generation number with the best solution.
-        - final_best_score (float): The best primary score achieved.
-        - final_best_secondary_score (int): The best secondary score achieved.
-        - total_time (float): Total elapsed time for the simulation in seconds.
-        - time_per_generation (float): Average time taken per generation in seconds.
-        - generations_per_second (float): Number of generations completed per second.
-        - best_scores (List[float]): Best primary scores for each generation.
-        - secondary_scores_of_best (List[int]): Secondary scores of the best solutions for each generation.
-        - median_scores (List[float]): Median primary scores for each generation.
-        - mean_scores (List[float]): Mean primary scores for each generation.
-        - best_grid_worlds (List[np.ndarray]): The grid worlds corresponding to the best solutions for each generation.
-        - best_population_paths (List[List[Tuple[int, int]]]): The best paths found for each generation.
-        - generation (int): Total number of generations completed.
-        - primary_fitness_scores (List[float]): Primary fitness scores of all agents in the final generation.
-        - secondary_fitness_scores (List[int]): Secondary fitness scores of all agents in the final generation.
-        - grid_worlds (List[np.ndarray]): All grid worlds evaluated in the final generation.
-        - population_paths (List[List[Tuple[int, int]]]): All population paths evaluated in the final generation.
+        Tuple:
+            - first_full_path_generation (Optional[int]): The generation where the first optimal path was discovered.
+            - best_generation (int): The generation containing the best overall solution.
+            - final_best_score (float): The best primary fitness score achieved.
+            - final_best_secondary_score (int): The secondary fitness score (e.g., path length) of the best solution.
+            - total_time (float): The total runtime of the simulation in seconds.
+            - time_per_generation (float): The average time per generation in seconds.
+            - generations_per_second (float): The number of generations processed per second.
+            - best_scores (List[float]): The best fitness scores across all generations.
+            - secondary_scores_of_best (List[int]): Secondary scores of the best solutions for each generation.
+            - median_scores (List[float]): Median fitness scores for each generation.
+            - mean_scores (List[float]): Mean fitness scores for each generation.
+            - best_grid_worlds (List[np.ndarray]): Grid configurations of the best solutions in each generation.
+            - best_population_paths (List[List[Tuple[int, int]]]): The paths taken by the best agents in each generation.
+            - generation_count (int): The total number of generations processed.
     """
-    
-    def all_to_all_crossover() -> List[Tuple[str, str]]:
+    def all_to_all_selection() -> List[Tuple[str, str]]:
         """
-        Performs all-to-all crossover for the population.
+        Implements the "all to all" selection strategy for pairing agents in the population.
+
+        This strategy pairs agents by selecting two individuals from the population repeatedly until 
+        the desired number of pairs is created. The selection is rank-based, and agents are not 
+        paired with themselves. The resulting pairs undergo crossover to produce new offspring.
+
+        Args:
+            None
 
         Returns:
-        -------
-        List[Tuple[str, str]]:
-            A list of tuples where each tuple contains two new agents produced by crossover.
+            List[Tuple[str, str]]: A list of tuples, where each tuple represents a pair of offspring 
+            resulting from the crossover operation.
+
+        Details:
+            - For each pair, two agents are selected using rank-based selection with a bias parameter.
+            - Ensures that the two selected agents are not the same.
+            - The selected agents are combined via a crossover operation to generate offspring.
         """
         new_agents = []
         for i in range(int(population_size/2)):
@@ -133,14 +113,27 @@ def ga_simulation(
 
         return new_agents
 
-    def best_to_rest() -> List[Tuple[str, str]]:
+    def best_to_rest_selection() -> List[Tuple[str, str]]:
         """
-        Performs crossover between the best agents and the rest of the population.
+        Implements the "best to rest" selection strategy for pairing agents in the population.
+
+        This strategy selects one agent from the top-performing individuals and another agent 
+        from the remaining population for each pair. The selected pairs undergo crossover to 
+        produce new offspring.
+
+        Args:
+            None
 
         Returns:
-        -------
-        List[Tuple[str, str]]:
-            A list of tuples where each tuple contains two new agents produced by crossover.
+            List[Tuple[str, str]]: A list of tuples, where each tuple represents a pair of offspring 
+            resulting from the crossover operation.
+
+        Details:
+            - The top-performing individuals (the "best") are selected based on rank.
+            - The rest of the population serves as the pool for pairing with the best individuals.
+            - Each pair of agents is generated by selecting one agent from the "best" group 
+            and one from the "rest" group, ensuring they are not identical.
+            - The selected agents are combined via a crossover operation to generate offspring.
         """
         rest_individuals = population_sorted[num_best:]
 
@@ -159,14 +152,27 @@ def ga_simulation(
 
         return new_agents
 
-    def hybrid_crossover() -> List[Tuple[str, str]]:
+    def hybrid_selection() -> List[Tuple[str, str]]:
         """
-        Performs crossover between the best agents and middle agents while keeping worst replacements.
+        Implements the "hybrid" selection strategy for pairing agents in the population.
+
+        This strategy combines individuals from the best, middle, and worst performing groups 
+        to maintain diversity while promoting strong candidates. Pairs are formed by selecting 
+        agents from the best and middle groups, with additional replacements for the worst agents.
+
+        Args:
+            None
 
         Returns:
-        -------
-        List[Tuple[str, str]]:
-            A list of tuples where each tuple contains two new agents produced by crossover.
+            List[Tuple[str, str]]: A list of tuples, where each tuple represents a pair of offspring 
+            resulting from the crossover operation.
+
+        Details:
+            - The population is divided into three groups: best, middle, and worst performers.
+            - Agents from the best and middle groups are paired for crossover.
+            - The middle group ensures diversity by including individuals with intermediate performance.
+            - Additional replacements are generated for worst-performing agents.
+            - The resulting pairs undergo crossover to produce offspring for the next generation.
         """
         middle_individuals = population_sorted[num_best:num_best+num_middle]
 
@@ -192,16 +198,16 @@ def ga_simulation(
 
     start_time = time()
 
-    if crossover_type != "all to all":
+    if selection_type != "all to all":
         num_best = int(population_size * best_ones_percentage)
 
-        if crossover_type == "best to rest":
+        if selection_type == "best to rest":
             pass
-        elif crossover_type == "hybrid":
+        elif selection_type == "hybrid":
             num_worst = int(population_size * worst_ones_percentage)
             num_middle = population_size - num_best - num_worst
         else:
-            raise ValueError("Crossover type could be only \"all to all\", \"best to rest\" or \"hybrid\".")
+            raise ValueError("Selection type could be only \"all to all\", \"best to rest\" or \"hybrid\".")
 
     best_scores = []
     secondary_scores_of_best = []
@@ -209,6 +215,7 @@ def ga_simulation(
     mean_scores = []
     best_grid_worlds = []
     best_population_paths = []
+    mutation_rate = initial_mutation_rate
     first_full_path_generation = None
     convergence_flag = False
 
@@ -218,31 +225,51 @@ def ga_simulation(
         else:
             population = []
 
-            if crossover_type == "all to all":
-                new_agents = all_to_all_crossover()
-            elif crossover_type == "best to rest":
+            if selection_type == "all to all":
+                new_agents = all_to_all_selection()
+            elif selection_type == "best to rest":
                 best_individuals = population_sorted[:num_best]
                 
-                new_agents = best_to_rest()
-            elif crossover_type == "hybrid":
+                new_agents = best_to_rest_selection()
+            elif selection_type == "hybrid":
                 best_individuals = population_sorted[:num_best]
                 population.extend(best_individuals)
 
-                new_agents = hybrid_crossover()
+                new_agents = hybrid_selection()
 
             if progressive_mutation and mutation_rate < 0.1 and fn.check_last_n_generations_same(
                 best_scores, secondary_scores_of_best
             ):
-                mutation_rate += mutation_rate
+                mutation_rate += initial_mutation_rate
+            else:
+                mutation_rate = initial_mutation_rate
 
             for i, agent_pair in enumerate(new_agents):
                 mutated_agent1 = fn.mutate(agent_pair[0], mutation_probability=mutation_rate, random_seed=i)
                 mutated_agent2 = fn.mutate(agent_pair[1], mutation_probability=mutation_rate, random_seed=i**2)
                 population.extend([mutated_agent1, mutated_agent2])
 
-            if crossover_type == "hybrid":
-                worst_replacements = [fn.generate_agent(chromosome_length, random_seed=i + population_size) for i in range(num_worst)]
+            if selection_type == "hybrid":
+                unique_population = population_sorted[:num_best]
+                seen_individuals = set(unique_population)
+                num_removed = 0
+
+                for agent in population_sorted[num_best:num_best + num_middle]:
+                    if agent not in seen_individuals:
+                        unique_population.append(agent)
+                        seen_individuals.add(agent)
+                    else:
+                        num_removed += 1
+
+                population = unique_population
+
+                worst_replacements = [
+                    fn.generate_agent(chromosome_length, random_seed=i + population_size)
+                    for i in range(num_worst + num_removed)
+                ]
                 population.extend(worst_replacements)
+
+                population = population[:population_size]
 
         primary_fitness_scores = []
         secondary_fitness_scores = []
@@ -256,7 +283,10 @@ def ga_simulation(
                 chromosome_length=chromosome_length,
                 start_position=start_position,
                 end_position=end_position,
-                grid_size=grid_size
+                grid_size=grid_size,
+                num_optimal_steps=num_optimal_steps,
+                recode_path=recode_path,
+                revisit_possible=revisit_possible
             )
 
             population[i] = agent_path
@@ -344,8 +374,8 @@ def ga_simulation(
         print(double_line)
 
     return (
-        first_full_path_generation,
-        best_generation,
+        int(first_full_path_generation) if first_full_path_generation is not None else None,
+        int(best_generation) if best_generation is not None else None,
         final_best_score,
         final_best_secondary_score,
         total_time,
@@ -357,7 +387,7 @@ def ga_simulation(
         mean_scores,
         best_grid_worlds,
         best_population_paths,
-        generation,
+        int(generation),
         primary_fitness_scores,
         secondary_fitness_scores,
         grid_worlds,
@@ -578,9 +608,9 @@ def aco_simulation(
         print(double_line)
 
     return (
-        first_full_path,
-        first_optimal_path,
-        convergence_iteration,
+        int(first_full_path) if first_full_path is not None else None,
+        int(first_optimal_path) if first_optimal_path is not None else None,
+        int(convergence_iteration) if convergence_iteration is not None else None,
         total_time,
         time_per_iteration,
         iterations_per_second,
@@ -588,5 +618,6 @@ def aco_simulation(
         best_scores,
         median_scores,
         mean_scores,
+        int(iteration)
     )
 

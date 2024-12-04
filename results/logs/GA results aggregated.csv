@@ -1,13 +1,13 @@
-Simulation,Crossover Type,Progressive Mutation,Bias,Best Generation,Best Score,Best Secondary Score,Total Time,Generations Per Second
-58.0,all to all,False,1.5,267.0,2.24,17.0,9.84,103.63
-64.0,all to all,False,3.0,30.0,2.24,15.0,10.34,96.9
-55.0,all to all,True,1.5,295.0,2.83,18.0,9.48,107.55
-61.0,all to all,True,3.0,271.0,2.83,18.0,9.65,104.27
-59.0,best to rest,False,1.5,40.0,2.24,27.0,8.9,114.08
-65.0,best to rest,False,3.0,25.0,2.83,14.0,8.29,121.38
-56.0,best to rest,True,1.5,659.0,3.16,14.0,7.38,138.3
-62.0,best to rest,True,3.0,884.0,2.24,21.0,7.52,133.92
-60.0,hybrid,False,1.5,12.0,3.16,30.0,7.87,129.73
-66.0,hybrid,False,3.0,12.0,2.24,21.0,7.8,129.69
-57.0,hybrid,True,1.5,537.0,2.24,15.0,6.55,155.76
-63.0,hybrid,True,3.0,677.0,2.24,13.0,6.68,151.54
+Selection Type,Revisit Possible,Bias,Best Generation,Best Score,Best Secondary Score,Total Time
+all to all,False,1.5,73.0,0.0,20.0,1.49
+all to all,False,3.0,109.0,0.0,20.0,2.31
+all to all,True,1.5,33.0,0.0,20.0,0.8
+all to all,True,3.0,45.0,0.0,20.0,1.1
+best to rest,False,1.5,29.0,0.0,20.0,0.55
+best to rest,False,3.0,65.0,0.0,20.0,1.24
+best to rest,True,1.5,41.0,0.0,20.0,0.94
+best to rest,True,3.0,42.0,0.0,20.0,0.95
+hybrid,False,1.5,26.0,1.8,25.0,15.18
+hybrid,False,3.0,26.0,1.8,25.0,15.19
+hybrid,True,1.5,4.0,5.15,32.0,19.91
+hybrid,True,3.0,4.0,5.15,32.0,19.93

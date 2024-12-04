@@ -17,10 +17,10 @@ START_POSITION: Tuple[int, int] = (6, 1)
 END_POSITION: Tuple[int, int] = (4, 13)
 OBSTACLES: List[Tuple[int, int]] = [
     (0, 0), (0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (0, 7), (0, 8), (0, 9), (0, 10), (0, 11), (0, 12), (0, 13), (0, 14),
-    (1, 0), (1, 3), (1, 14), (2, 0), (2, 3), (2, 5), (2, 6), (2, 7), (2, 11), (2, 14), (3, 0), (3, 3), (3, 10), (3, 11), (3, 14), 
-    (4, 0), (4, 3), (4, 9), (4, 10), (4, 11), (4, 14), (5, 0), (5, 3), (5, 6), (5, 11), (5, 13), (5, 14), (6, 0), (6, 6), (6, 9), 
-    (6, 11), (6, 14), (7, 0), (7, 6), (7, 9), (7, 14), (8, 0), (8, 3), (8, 6), (8, 14), (9, 0), (9, 1), (9, 2), (9, 3), (9, 4), 
-    (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (9, 11), (9, 12), (9, 13), (9, 14)
+    (1, 0), (1, 3), (1, 14), (2, 0), (2, 3), (2, 5), (2, 6), (2, 7), (2, 11), (2, 14), (3, 0), (3, 3), (3, 10), (3, 11), (3, 13), 
+    (3, 14), (4, 0), (4, 3), (4, 9), (4, 10), (4, 11), (4, 14), (5, 0), (5, 3), (5, 6), (5, 11), (5, 13), (5, 14), (6, 0), (6, 6), 
+    (6, 9), (6, 11), (6, 14), (7, 0), (7, 6), (7, 9), (7, 14), (8, 0), (8, 3), (8, 6), (8, 14), (9, 0), (9, 1), (9, 2), (9, 3), 
+    (9, 4), (9, 5), (9, 6), (9, 7), (9, 8), (9, 9), (9, 10), (9, 11), (9, 12), (9, 13), (9, 14)
 ]
 NUM_OPTIMAL_STEPS: int = 20
 
@@ -29,12 +29,13 @@ CHROMOSOME_LENGTH: int = 64
 POPULATION_SIZE: int = 100
 NUM_GENERATIONS: int = 1000
 BIAS: List[float] = [1.5, 3.0]
-PROGRESSIVE_MUTATION: List[bool] = [True, False]
+PROGRESSIVE_MUTATION: bool = True
+REVISIT_POSSIBILITY: List[bool] = [True, False]
 MUTATION_RATE: float = 0.01
 EARLY_STOP: bool = False
-BEST_ONES_PERCENTAGE: float = 0.2
+BEST_ONES_PERCENTAGE: float = 0.1
 WORST_ONES_PERCENTAGE: float = 0.2
-CROSSOVER_TYPES: List[str] = ["all to all", "best to rest", "hybrid"]
+SELECTION_TYPES: List[str] = ["all to all", "best to rest", "hybrid"]
 
 # Paths
 RESULTS_PATH: str = "./results"
@@ -80,16 +81,16 @@ try:
         print(DOUBLE_LINE)
 
         for bias in BIAS:
-            for progressive_mutation in PROGRESSIVE_MUTATION:
-                for crossover_type in CROSSOVER_TYPES:   
+            for revisit_possible in REVISIT_POSSIBILITY:
+                for selection_type in SELECTION_TYPES:   
                     print(LINE)
                     print(f"{counter}. simulation")
                     print(LINE)
                     
                     print("\nParameters:\n")
                     print(f"Random state: {random_state}")
-                    print(f"Crossover type: {crossover_type}")
-                    print(f"Progressive mutation: {progressive_mutation}")
+                    print(f"Selection type: {selection_type}")
+                    print(f"Progressive mutation: {revisit_possible}")
                     print(f"Bias: {bias}\n")
 
                     print("Results:\n")
@@ -98,9 +99,9 @@ try:
                         num_generations=NUM_GENERATIONS,
                         population_size=POPULATION_SIZE,
                         chromosome_length=CHROMOSOME_LENGTH,
-                        mutation_rate=MUTATION_RATE,
-                        crossover_type=crossover_type,
-                        progressive_mutation=progressive_mutation,
+                        initial_mutation_rate=MUTATION_RATE,
+                        selection_type=selection_type,
+                        progressive_mutation=PROGRESSIVE_MUTATION,
                         bias=bias,
                         early_stop=EARLY_STOP,
                         best_ones_percentage=BEST_ONES_PERCENTAGE,
@@ -113,6 +114,7 @@ try:
                         random_seed=random_state,
                         simulation_started_message=SIMULATION_STARTED,
                         simulation_finished_message=SIMULATION_FINISHED,
+                        revisit_possible = revisit_possible,
                         verbose="Restricted",
                         line = LINE,
                         double_line = DOUBLE_LINE  
@@ -133,8 +135,8 @@ try:
 
                     data.append({
                         "Random State": random_state,
-                        "Crossover Type": crossover_type,
-                        "Progressive Mutation": progressive_mutation,
+                        "Selection Type": selection_type,
+                        "Revisit Possible": revisit_possible,
                         "Bias": bias,
                         "First Full Path Generation": first_full_path_generation,
                         "Optimal Path Generation": optimal_path_generation,
