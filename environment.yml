@@ -1,4 +1,4 @@
-name: metaheuristic_grid_world
+name: metaheuristic_path_optimization
 channels:
   - conda-forge
   - defaults
