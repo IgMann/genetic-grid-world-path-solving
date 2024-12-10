@@ -20,13 +20,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.83 seconds
+The first full path generation: 39
+Total Time: 1.34 seconds
 Time per Iteration: 0.0300 seconds
-Iterations per Second: 39.76
+Iterations per Second: 29.10
 ----------------------------------------------------------------------------------------------------
 2. simulation
 ----------------------------------------------------------------------------------------------------
@@ -40,13 +40,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.93 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.09
+The first full path generation: 24
+Total Time: 0.74 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.43
 ----------------------------------------------------------------------------------------------------
 3. simulation
 ----------------------------------------------------------------------------------------------------
@@ -61,12 +61,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.88 seconds
+Total Time: 22.89 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.30
+Iterations per Second: 43.69
 ----------------------------------------------------------------------------------------------------
 4. simulation
 ----------------------------------------------------------------------------------------------------
@@ -80,13 +80,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.49 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 48.99
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 5. simulation
 ----------------------------------------------------------------------------------------------------
@@ -100,13 +100,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.55 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.73
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 6. simulation
 ----------------------------------------------------------------------------------------------------
@@ -121,12 +121,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.19 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 17.94 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.83
+Iterations per Second: 55.74
 ----------------------------------------------------------------------------------------------------
 7. simulation
 ----------------------------------------------------------------------------------------------------
@@ -140,13 +140,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.10 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.91
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 8. simulation
 ----------------------------------------------------------------------------------------------------
@@ -160,13 +160,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 9. simulation
 ----------------------------------------------------------------------------------------------------
@@ -181,12 +181,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.83 seconds
+Total Time: 22.89 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.43
+Iterations per Second: 43.69
 ----------------------------------------------------------------------------------------------------
 10. simulation
 ----------------------------------------------------------------------------------------------------
@@ -200,13 +200,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.30 seconds
+The first full path generation: 6
+Total Time: 0.12 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.39
+Iterations per Second: 50.00
 ----------------------------------------------------------------------------------------------------
 11. simulation
 ----------------------------------------------------------------------------------------------------
@@ -220,13 +220,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 12. simulation
 ----------------------------------------------------------------------------------------------------
@@ -241,12 +241,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.12 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 17.97 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 66.14
+Iterations per Second: 55.65
 ====================================================================================================
 RANDOM STATE: 20
 ====================================================================================================
@@ -263,13 +263,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.79 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 41.77
+The first full path generation: 39
+Total Time: 1.30 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 30.00
 ----------------------------------------------------------------------------------------------------
 14. simulation
 ----------------------------------------------------------------------------------------------------
@@ -283,13 +283,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.93 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.09
+The first full path generation: 24
+Total Time: 0.74 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.43
 ----------------------------------------------------------------------------------------------------
 15. simulation
 ----------------------------------------------------------------------------------------------------
@@ -304,12 +304,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.88 seconds
+Total Time: 22.92 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.30
+Iterations per Second: 43.63
 ----------------------------------------------------------------------------------------------------
 16. simulation
 ----------------------------------------------------------------------------------------------------
@@ -323,13 +323,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.48 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 49.32
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 17. simulation
 ----------------------------------------------------------------------------------------------------
@@ -343,13 +343,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.54 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 53.70
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 18. simulation
 ----------------------------------------------------------------------------------------------------
@@ -364,12 +364,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.12 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 17.94 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 66.14
+Iterations per Second: 55.74
 ----------------------------------------------------------------------------------------------------
 19. simulation
 ----------------------------------------------------------------------------------------------------
@@ -383,13 +383,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.10 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.91
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 20. simulation
 ----------------------------------------------------------------------------------------------------
@@ -403,13 +403,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 21. simulation
 ----------------------------------------------------------------------------------------------------
@@ -424,12 +424,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.87 seconds
+Total Time: 22.93 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.33
+Iterations per Second: 43.61
 ----------------------------------------------------------------------------------------------------
 22. simulation
 ----------------------------------------------------------------------------------------------------
@@ -443,13 +443,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.30 seconds
+The first full path generation: 6
+Total Time: 0.12 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.39
+Iterations per Second: 50.00
 ----------------------------------------------------------------------------------------------------
 23. simulation
 ----------------------------------------------------------------------------------------------------
@@ -463,13 +463,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 24. simulation
 ----------------------------------------------------------------------------------------------------
@@ -484,12 +484,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.14 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 17.95 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 66.05
+Iterations per Second: 55.71
 ====================================================================================================
 RANDOM STATE: 30
 ====================================================================================================
@@ -506,13 +506,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.79 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 41.77
+The first full path generation: 39
+Total Time: 1.31 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 29.77
 ----------------------------------------------------------------------------------------------------
 26. simulation
 ----------------------------------------------------------------------------------------------------
@@ -526,13 +526,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.93 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.09
+The first full path generation: 24
+Total Time: 0.74 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.43
 ----------------------------------------------------------------------------------------------------
 27. simulation
 ----------------------------------------------------------------------------------------------------
@@ -547,12 +547,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.84 seconds
+Total Time: 22.92 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.40
+Iterations per Second: 43.63
 ----------------------------------------------------------------------------------------------------
 28. simulation
 ----------------------------------------------------------------------------------------------------
@@ -566,13 +566,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.48 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 49.32
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 29. simulation
 ----------------------------------------------------------------------------------------------------
@@ -586,13 +586,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.54 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 53.70
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 30. simulation
 ----------------------------------------------------------------------------------------------------
@@ -607,12 +607,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.13 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 17.96 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 66.09
+Iterations per Second: 55.68
 ----------------------------------------------------------------------------------------------------
 31. simulation
 ----------------------------------------------------------------------------------------------------
@@ -626,13 +626,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.10 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.91
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 32. simulation
 ----------------------------------------------------------------------------------------------------
@@ -646,13 +646,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 33. simulation
 ----------------------------------------------------------------------------------------------------
@@ -667,12 +667,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.94 seconds
+Total Time: 23.00 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.15
+Iterations per Second: 43.48
 ----------------------------------------------------------------------------------------------------
 34. simulation
 ----------------------------------------------------------------------------------------------------
@@ -686,13 +686,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.31 seconds
+The first full path generation: 6
+Total Time: 0.12 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.19
+Iterations per Second: 50.00
 ----------------------------------------------------------------------------------------------------
 35. simulation
 ----------------------------------------------------------------------------------------------------
@@ -706,13 +706,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 36. simulation
 ----------------------------------------------------------------------------------------------------
@@ -727,12 +727,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.16 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 18.01 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.96
+Iterations per Second: 55.52
 ====================================================================================================
 RANDOM STATE: 40
 ====================================================================================================
@@ -749,13 +749,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.79 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 41.77
+The first full path generation: 39
+Total Time: 1.30 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 30.00
 ----------------------------------------------------------------------------------------------------
 38. simulation
 ----------------------------------------------------------------------------------------------------
@@ -769,13 +769,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.94 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 43.62
+The first full path generation: 24
+Total Time: 0.74 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.43
 ----------------------------------------------------------------------------------------------------
 39. simulation
 ----------------------------------------------------------------------------------------------------
@@ -790,12 +790,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.83 seconds
+Total Time: 22.97 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.43
+Iterations per Second: 43.54
 ----------------------------------------------------------------------------------------------------
 40. simulation
 ----------------------------------------------------------------------------------------------------
@@ -809,13 +809,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.48 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 49.32
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 41. simulation
 ----------------------------------------------------------------------------------------------------
@@ -829,13 +829,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.54 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 53.70
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 42. simulation
 ----------------------------------------------------------------------------------------------------
@@ -850,12 +850,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.16 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 18.00 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.96
+Iterations per Second: 55.56
 ----------------------------------------------------------------------------------------------------
 43. simulation
 ----------------------------------------------------------------------------------------------------
@@ -869,13 +869,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.11 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.54
+The first full path generation: 4
+Total Time: 0.15 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 26.67
 ----------------------------------------------------------------------------------------------------
 44. simulation
 ----------------------------------------------------------------------------------------------------
@@ -889,13 +889,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.23 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 30.43
 ----------------------------------------------------------------------------------------------------
 45. simulation
 ----------------------------------------------------------------------------------------------------
@@ -910,12 +910,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.96 seconds
+Total Time: 23.04 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.10
+Iterations per Second: 43.40
 ----------------------------------------------------------------------------------------------------
 46. simulation
 ----------------------------------------------------------------------------------------------------
@@ -929,13 +929,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.39 seconds
+The first full path generation: 6
+Total Time: 0.12 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 45.61
+Iterations per Second: 50.00
 ----------------------------------------------------------------------------------------------------
 47. simulation
 ----------------------------------------------------------------------------------------------------
@@ -949,13 +949,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.25 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.00
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 48. simulation
 ----------------------------------------------------------------------------------------------------
@@ -970,12 +970,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.23 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 18.03 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.66
+Iterations per Second: 55.46
 ====================================================================================================
 RANDOM STATE: 50
 ====================================================================================================
@@ -992,13 +992,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.79 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 41.77
+The first full path generation: 39
+Total Time: 1.30 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 30.00
 ----------------------------------------------------------------------------------------------------
 50. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1012,13 +1012,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.94 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 43.62
+The first full path generation: 24
+Total Time: 0.75 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.00
 ----------------------------------------------------------------------------------------------------
 51. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1033,12 +1033,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.91 seconds
+Total Time: 21.40 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.23
+Iterations per Second: 46.73
 ----------------------------------------------------------------------------------------------------
 52. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1052,13 +1052,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.49 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 48.99
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 53. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1072,13 +1072,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.55 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.73
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 54. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1093,12 +1093,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.19 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 17.26 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.83
+Iterations per Second: 57.94
 ----------------------------------------------------------------------------------------------------
 55. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1112,13 +1112,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.10 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.91
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 56. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1132,13 +1132,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.98 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 42.86
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 57. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1153,12 +1153,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.95 seconds
+Total Time: 21.39 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.13
+Iterations per Second: 46.75
 ----------------------------------------------------------------------------------------------------
 58. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1172,13 +1172,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.31 seconds
+The first full path generation: 6
+Total Time: 0.12 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.19
+Iterations per Second: 50.00
 ----------------------------------------------------------------------------------------------------
 59. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1192,13 +1192,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 60. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1213,12 +1213,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.21 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 15.67 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.75
+Iterations per Second: 63.82
 ====================================================================================================
 RANDOM STATE: 60
 ====================================================================================================
@@ -1235,13 +1235,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.79 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 41.77
+The first full path generation: 39
+Total Time: 1.31 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 29.77
 ----------------------------------------------------------------------------------------------------
 62. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1255,13 +1255,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.94 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 43.62
+The first full path generation: 24
+Total Time: 0.75 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.00
 ----------------------------------------------------------------------------------------------------
 63. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1276,12 +1276,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.93 seconds
+Total Time: 22.18 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.18
+Iterations per Second: 45.09
 ----------------------------------------------------------------------------------------------------
 64. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1295,13 +1295,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.49 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 48.99
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 65. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1315,13 +1315,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.54 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 53.70
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 66. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1336,12 +1336,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.23 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 17.22 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.66
+Iterations per Second: 58.07
 ----------------------------------------------------------------------------------------------------
 67. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1355,13 +1355,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.10 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.91
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 68. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1375,13 +1375,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 69. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1396,12 +1396,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.97 seconds
+Total Time: 21.43 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.08
+Iterations per Second: 46.66
 ----------------------------------------------------------------------------------------------------
 70. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1415,13 +1415,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.30 seconds
+The first full path generation: 6
+Total Time: 0.12 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.39
+Iterations per Second: 50.00
 ----------------------------------------------------------------------------------------------------
 71. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1435,13 +1435,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 72. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1456,12 +1456,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.21 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 16.43 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.75
+Iterations per Second: 60.86
 ====================================================================================================
 RANDOM STATE: 70
 ====================================================================================================
@@ -1478,13 +1478,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.79 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 41.77
+The first full path generation: 39
+Total Time: 1.30 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 30.00
 ----------------------------------------------------------------------------------------------------
 74. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1498,13 +1498,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.94 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 43.62
+The first full path generation: 24
+Total Time: 0.74 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.43
 ----------------------------------------------------------------------------------------------------
 75. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1519,12 +1519,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 20.00 seconds
+Total Time: 22.13 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.00
+Iterations per Second: 45.19
 ----------------------------------------------------------------------------------------------------
 76. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1538,13 +1538,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.49 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 48.99
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 77. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1558,13 +1558,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.55 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.73
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 78. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1579,12 +1579,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.20 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 15.64 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.79
+Iterations per Second: 63.94
 ----------------------------------------------------------------------------------------------------
 79. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1598,13 +1598,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.10 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.91
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 80. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1618,13 +1618,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 81. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1639,12 +1639,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.91 seconds
+Total Time: 19.56 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.23
+Iterations per Second: 51.12
 ----------------------------------------------------------------------------------------------------
 82. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1658,13 +1658,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.31 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.19
+The first full path generation: 6
+Total Time: 0.07 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 85.71
 ----------------------------------------------------------------------------------------------------
 83. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1678,13 +1678,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+The first full path generation: 13
+Total Time: 0.15 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 86.67
 ----------------------------------------------------------------------------------------------------
 84. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1699,12 +1699,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.20 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 15.33 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.79
+Iterations per Second: 65.23
 ====================================================================================================
 RANDOM STATE: 80
 ====================================================================================================
@@ -1721,13 +1721,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.79 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 41.77
+The first full path generation: 39
+Total Time: 1.30 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 30.00
 ----------------------------------------------------------------------------------------------------
 86. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1741,13 +1741,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.93 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.09
+The first full path generation: 24
+Total Time: 0.74 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.43
 ----------------------------------------------------------------------------------------------------
 87. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1762,12 +1762,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.94 seconds
+Total Time: 21.32 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.15
+Iterations per Second: 46.90
 ----------------------------------------------------------------------------------------------------
 88. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1781,13 +1781,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.49 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 48.99
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 89. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1801,13 +1801,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.55 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.73
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 90. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1822,12 +1822,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.20 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 17.96 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.79
+Iterations per Second: 55.68
 ----------------------------------------------------------------------------------------------------
 91. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1841,13 +1841,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.10 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.91
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 92. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1861,13 +1861,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 93. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1882,12 +1882,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.91 seconds
+Total Time: 21.47 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.23
+Iterations per Second: 46.58
 ----------------------------------------------------------------------------------------------------
 94. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1901,13 +1901,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.31 seconds
+The first full path generation: 6
+Total Time: 0.12 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.19
+Iterations per Second: 50.00
 ----------------------------------------------------------------------------------------------------
 95. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1921,13 +1921,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 96. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1942,12 +1942,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.20 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 16.54 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.79
+Iterations per Second: 60.46
 ====================================================================================================
 RANDOM STATE: 90
 ====================================================================================================
@@ -1964,13 +1964,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.80 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 41.25
+The first full path generation: 39
+Total Time: 1.30 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 30.00
 ----------------------------------------------------------------------------------------------------
 98. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1984,13 +1984,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.94 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 43.62
+The first full path generation: 24
+Total Time: 0.74 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.43
 ----------------------------------------------------------------------------------------------------
 99. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2005,12 +2005,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.98 seconds
+Total Time: 21.26 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.05
+Iterations per Second: 47.04
 ----------------------------------------------------------------------------------------------------
 100. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2024,13 +2024,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.48 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 49.32
+The first full path generation: 13
+Total Time: 0.15 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 86.67
 ----------------------------------------------------------------------------------------------------
 101. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2044,13 +2044,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.55 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.73
+The first full path generation: 13
+Total Time: 0.15 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 86.67
 ----------------------------------------------------------------------------------------------------
 102. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2065,12 +2065,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.18 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 16.81 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.88
+Iterations per Second: 59.49
 ----------------------------------------------------------------------------------------------------
 103. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2084,13 +2084,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.11 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.54
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 104. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2104,13 +2104,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 105. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2125,12 +2125,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.93 seconds
+Total Time: 20.16 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.18
+Iterations per Second: 49.60
 ----------------------------------------------------------------------------------------------------
 106. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2144,13 +2144,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.31 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.19
+The first full path generation: 6
+Total Time: 0.07 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 85.71
 ----------------------------------------------------------------------------------------------------
 107. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2164,13 +2164,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+The first full path generation: 13
+Total Time: 0.15 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 86.67
 ----------------------------------------------------------------------------------------------------
 108. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2185,12 +2185,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.23 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.66
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 14.77 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 67.70
 ====================================================================================================
 RANDOM STATE: 100
 ====================================================================================================
@@ -2207,13 +2207,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 33
+The best generation: 39
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 33
-Total Time: 0.83 seconds
+The first full path generation: 39
+Total Time: 1.31 seconds
 Time per Iteration: 0.0300 seconds
-Iterations per Second: 39.76
+Iterations per Second: 29.77
 ----------------------------------------------------------------------------------------------------
 110. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2227,13 +2227,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 41
+The best generation: 24
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 41
-Total Time: 0.94 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 43.62
+The first full path generation: 24
+Total Time: 0.75 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 32.00
 ----------------------------------------------------------------------------------------------------
 111. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2248,12 +2248,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 19.92 seconds
+Total Time: 19.30 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 50.20
+Iterations per Second: 51.81
 ----------------------------------------------------------------------------------------------------
 112. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2267,13 +2267,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 73
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 73
-Total Time: 1.49 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 48.99
+The first full path generation: 13
+Total Time: 0.15 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 86.67
 ----------------------------------------------------------------------------------------------------
 113. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2287,13 +2287,13 @@ Bias: 1.5
 
 Results:
 
-The best generation: 29
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 29
-Total Time: 0.55 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.73
+The first full path generation: 13
+Total Time: 0.15 seconds
+Time per Iteration: 0.0100 seconds
+Iterations per Second: 86.67
 ----------------------------------------------------------------------------------------------------
 114. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2308,12 +2308,12 @@ Bias: 1.5
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.19 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 15.64 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.83
+Iterations per Second: 63.94
 ----------------------------------------------------------------------------------------------------
 115. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2327,13 +2327,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 45
+The best generation: 4
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 45
-Total Time: 1.10 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 40.91
+The first full path generation: 4
+Total Time: 0.14 seconds
+Time per Iteration: 0.0400 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 116. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2347,13 +2347,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 42
+The best generation: 7
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 42
-Total Time: 0.95 seconds
-Time per Iteration: 0.0200 seconds
-Iterations per Second: 44.21
+The first full path generation: 7
+Total Time: 0.22 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 31.82
 ----------------------------------------------------------------------------------------------------
 117. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2368,12 +2368,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 4
-The best primary score: 5.1516
+The best generation: 68
+The best primary score: 1.4142
 The best secondary score: 32
-Total Time: 20.01 seconds
+Total Time: 22.19 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 49.98
+Iterations per Second: 45.07
 ----------------------------------------------------------------------------------------------------
 118. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2387,13 +2387,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 109
+The best generation: 6
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 109
-Total Time: 2.30 seconds
+The first full path generation: 6
+Total Time: 0.12 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 47.39
+Iterations per Second: 50.00
 ----------------------------------------------------------------------------------------------------
 119. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2407,13 +2407,13 @@ Bias: 3.0
 
 Results:
 
-The best generation: 65
+The best generation: 13
 The best primary score: 0.0
 The best secondary score: 20
-The first full path generation: 65
-Total Time: 1.24 seconds
+The first full path generation: 13
+Total Time: 0.27 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 52.42
+Iterations per Second: 48.15
 ----------------------------------------------------------------------------------------------------
 120. simulation
 ----------------------------------------------------------------------------------------------------
@@ -2428,12 +2428,12 @@ Bias: 3.0
 Results:
 
 Full path is not found!
-The best generation: 26
-The best primary score: 1.8028
-The best secondary score: 25
-Total Time: 15.21 seconds
+The best generation: 1
+The best primary score: 1.5812
+The best secondary score: 26
+Total Time: 16.40 seconds
 Time per Iteration: 0.0200 seconds
-Iterations per Second: 65.75
+Iterations per Second: 60.98
 ====================================================================================================
 Results saved in ./results/logs/GA results.csv path.
 ====================================================================================================

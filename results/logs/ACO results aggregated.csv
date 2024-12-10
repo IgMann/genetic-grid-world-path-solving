@@ -1,9 +1,9 @@
-Alpha,Beta,Revisit Possible,First Full Path,First Optimal Path,Convergence Iteration,Total Time
-1.5,1.5,False,1.38,3.0,13.75,0.92
-1.5,1.5,True,129.3,134.4,176.6,18.87
-1.5,3.0,False,1.0,1.9,8.4,0.54
-1.5,3.0,True,5.0,7.9,77.3,6.26
-3.0,1.5,False,1.38,2.62,5.0,0.31
-3.0,1.5,True,85.25,87.25,113.88,12.37
-3.0,3.0,False,1.0,1.8,4.3,0.27
-3.0,3.0,True,5.0,6.7,22.1,2.07
+Alpha,Beta,Revisit Possible,First Full Path,First Optimal Path,Convergence Iteration,Iterations per Second,Total Time
+1.5,1.5,False,1.12,2.88,5.5,18.42,0.32
+1.5,1.5,True,104.3,105.7,107.5,9.51,11.81
+1.5,3.0,False,1.0,1.8,4.7,16.56,0.29
+1.5,3.0,True,3.6,5.1,7.7,12.54,0.64
+3.0,1.5,False,1.0,2.0,4.67,15.48,0.31
+3.0,1.5,True,104.3,105.4,107.9,9.6,11.73
+3.0,3.0,False,1.0,1.8,4.6,16.2,0.28
+3.0,3.0,True,3.6,5.0,7.4,9.91,0.76

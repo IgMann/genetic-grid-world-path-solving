@@ -495,7 +495,8 @@ def aco_simulation(
     first_full_path = None
     first_optimal_path = None
     convergence_iteration = None
-    best_secondary_score = float('inf')
+    shortest_full_path = float('inf')
+    global_best_path = ['' for _ in range(100)]
 
     best_paths = []
     best_scores = []
@@ -528,16 +529,20 @@ def aco_simulation(
                 if first_full_path is None:
                     first_full_path = iteration
 
-                if best_secondary_score > len(path) - 1:
-                    best_secondary_score = len(path) - 1
+                if shortest_full_path > len(path):
+                    shortest_full_path = len(path)
 
                 full_paths.append(path)
 
         sorted_paths, sorted_indices, sorted_path_lengths, sorted_heuristic_scores = fn.sort_ant_paths(
-            all_paths, end_position
+            all_paths, 
+            end_position
         )
         best_path = sorted_paths[0]
         best_paths.append(best_path)
+
+        if len(best_path) < len(global_best_path):
+            global_best_path = best_path
 
         best_score = sorted_heuristic_scores[0]
         median_score = round(np.median(np.array(sorted_heuristic_scores)), 4)
@@ -552,13 +557,25 @@ def aco_simulation(
             print(line)
 
         if full_paths:
-            fn.update_pheromones(
-                paths=full_paths,
+            if first_optimal_path:
+                fn.update_pheromones(
+                paths=[best_path, global_best_path],
                 pheromones=pheromones,
                 evaporation_rate=evaporation_rate,
                 deposit_factor=deposit_factor,
                 pheromone_normalization=pheromone_normalization,
             )
+
+            else:
+                full_paths.append(global_best_path)
+
+                fn.update_pheromones(
+                    paths=full_paths,
+                    pheromones=pheromones,
+                    evaporation_rate=evaporation_rate,
+                    deposit_factor=deposit_factor,
+                    pheromone_normalization=pheromone_normalization,
+                )
 
         if (
             first_optimal_path is None
@@ -583,7 +600,7 @@ def aco_simulation(
                     convergence_iteration = iteration
             else:
                 print("Optimal path is not found!")
-                print(f"Shortest full path: {best_secondary_score}")
+                print(f"Shortest full path: {shortest_full_path}")
         else:
             print("Full path is not found!")
 

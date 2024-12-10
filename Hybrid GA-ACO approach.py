@@ -28,6 +28,7 @@ NUM_OPTIMAL_STEPS: int = 20
 CHROMOSOME_LENGTH: int = 64
 POPULATION_SIZE: int = 100
 NUM_GENERATIONS: int = 50
+OPTIMAL_PATH_LENGTH: int = 21
 BIAS: float = 2.25
 PROGRESSIVE_MUTATION: bool = True
 MUTATION_RATE: float = 0.01
@@ -41,10 +42,10 @@ SELECTION_TYPES: List[str] = ["all to all", "best to rest", "hybrid"]
 ALPHA: List[float] = [1.5, 3.0]
 BETA: List[float] = [1.5, 3.0]
 EVAPORATION_RATE: float = 0.5
-DEPOSIT_FACTOR: int = 10
+DEPOSIT_FACTOR: int = 100
 NUM_ANTS: int = 100
 NUM_ITERATIONS: int = 1000
-MAX_PATH_LENGTH: int = 32 
+MAX_PATH_LENGTH: int = 33
 PHEROMONE_NORMALIZATION: bool = True
 PHEROMONE_THRESHOLD: float = 0.25
 PATH_SCALING_FACTOR: int = 10
@@ -143,52 +144,81 @@ try:
                             ga_final_best_score = results[2]
                             ga_final_best_secondary_score = results[3]
                             ga_total_time = results[4]
+                            ga_generations_per_second = results[6]
                             primary_fitness_scores = results[14]
                             secondary_fitness_scores = results[15]
                             population_paths = results[17]
 
-                            # Pheromones initialization
-                            selected_paths, _ = fn.find_different_paths(
-                                primary_fitness_scores = primary_fitness_scores, 
-                                secondary_fitness_scores = secondary_fitness_scores, 
-                                population_paths = population_paths,
-                                N = NUM_BEST_PATHS
-                            )
-                            best_positions = []
-                            for selected_path in selected_paths:        
-                                best_positions.extend(selected_path)
+                            if ga_final_best_score == 0 and ga_final_best_secondary_score == 20:
+                                aco_first_full_path = None
+                                aco_first_optimal_path = None
+                                aco_convergence_iteration = None
+                                aco_total_time = None
+                                aco_iterations_per_second = None
+                            else:
+                                # Pheromones initialization
+                                selected_paths, _ = fn.find_different_paths(
+                                    primary_fitness_scores = primary_fitness_scores, 
+                                    secondary_fitness_scores = secondary_fitness_scores, 
+                                    population_paths = population_paths,
+                                    N = NUM_BEST_PATHS
+                                )
 
-                            pheromones = ((PATH_SCALING_FACTOR - 1) * fn.create_pheromones_matrix(best_positions, GRID_SIZE) + 1) / PATH_SCALING_FACTOR
+                                best_positions = []
 
-                            results = sm.aco_simulation(
-                                num_iterations=NUM_ITERATIONS,
-                                num_ants=NUM_ANTS,
-                                start_position=START_POSITION,
-                                end_position=END_POSITION,
-                                initial_pheromones=pheromones,
-                                grid_world=initial_grid_world,
-                                alpha=alpha,
-                                beta=beta,
-                                max_path_length=MAX_PATH_LENGTH,
-                                revisit_possible=aco_revisit_possible,
-                                evaporation_rate=EVAPORATION_RATE,
-                                deposit_factor=DEPOSIT_FACTOR,
-                                pheromone_normalization=PHEROMONE_NORMALIZATION,
-                                random_seed=random_state,
-                                num_optimal_steps=NUM_OPTIMAL_STEPS,
-                                pheromone_threshold=PHEROMONE_THRESHOLD,
-                                simulation_started_message=SIMULATION_STARTED,
-                                simulation_finished_message=SIMULATION_FINISHED,
-                                verbose="Restricted"  
-                            )
+                                if ga_revisit_possible:
+                                    for selected_path in selected_paths:
+                                        unique_path = []
+                                        seen = set()
+                                        for position in selected_path:
+                                            if position not in seen:
+                                                unique_path.append(position)
+                                                seen.add(position)
+                                        
+                                        # Process the unique path
+                                        if len(unique_path) > OPTIMAL_PATH_LENGTH:
+                                            best_positions.extend(unique_path[:OPTIMAL_PATH_LENGTH])
+                                        else:
+                                            best_positions.extend(unique_path)
+
+                                else:
+                                    for selected_path in selected_paths:
+                                        if len(selected_path) > OPTIMAL_PATH_LENGTH:
+                                                best_positions.extend(selected_path[:OPTIMAL_PATH_LENGTH])
+                                        else:
+                                            best_positions.extend(selected_path)
+
+                                pheromones = ((PATH_SCALING_FACTOR - 1) * fn.create_pheromones_matrix(best_positions, GRID_SIZE) + 1) / PATH_SCALING_FACTOR
+
+                                results = sm.aco_simulation(
+                                    num_iterations=NUM_ITERATIONS,
+                                    num_ants=NUM_ANTS,
+                                    start_position=START_POSITION,
+                                    end_position=END_POSITION,
+                                    initial_pheromones=pheromones,
+                                    grid_world=initial_grid_world,
+                                    alpha=alpha,
+                                    beta=beta,
+                                    max_path_length=MAX_PATH_LENGTH,
+                                    revisit_possible=aco_revisit_possible,
+                                    evaporation_rate=EVAPORATION_RATE,
+                                    deposit_factor=DEPOSIT_FACTOR,
+                                    pheromone_normalization=PHEROMONE_NORMALIZATION,
+                                    random_seed=random_state,
+                                    num_optimal_steps=NUM_OPTIMAL_STEPS,
+                                    pheromone_threshold=PHEROMONE_THRESHOLD,
+                                    simulation_started_message=SIMULATION_STARTED,
+                                    simulation_finished_message=SIMULATION_FINISHED,
+                                    verbose="Restricted"  
+                                )
+
+                                aco_first_full_path = results[0]
+                                aco_first_optimal_path = results[1]
+                                aco_convergence_iteration = results[2]
+                                aco_total_time = results[3]
+                                aco_iterations_per_second = results[5]
 
                             end_time = time.time()
-
-                            aco_first_full_path = results[0]
-                            aco_first_optimal_path = results[1]
-                            aco_convergence_iteration = results[2]
-                            aco_total_time = results[3]
-                            aco_iterations_per_second = results[5]
 
                             total_time = round(end_time - start_time, 2)
 
@@ -202,9 +232,11 @@ try:
                                 "GA Best Generation": ga_best_generation,
                                 "GA Best Score": ga_final_best_score,
                                 "GA Best Secondary Score": ga_final_best_secondary_score,
+                                "GA Generations per Second": ga_generations_per_second,
                                 "ACO First Full Path": aco_first_full_path,
                                 "ACO First Optimal Path": aco_first_optimal_path,
                                 "ACO Convergence Iteration": aco_convergence_iteration,
+                                "ACO Iterations per Second": aco_iterations_per_second,
                                 "Total Time": total_time
                             })
 

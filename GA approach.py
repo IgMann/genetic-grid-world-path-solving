@@ -143,6 +143,7 @@ try:
                         "Best Generation": best_generation,
                         "Best Score": final_best_score,
                         "Best Secondary Score": final_best_secondary_score,
+                        "Generations per Second": generations_per_second,
                         "Total Time": total_time
                     })
 

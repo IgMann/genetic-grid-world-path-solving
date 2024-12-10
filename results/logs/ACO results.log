@@ -21,11 +21,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 33
-First optimal path iteration: 36
-Convergence achieved in iteration: 51
-Total Time: 5.24 seconds
-Time per Iteration: 0.1000 seconds
-Iterations per Second: 9.73
+First optimal path iteration: 34
+Convergence achieved in iteration: 35
+Total Time: 2.45 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 14.29
 ----------------------------------------------------------------------------------------------------
 2. simulation
 ----------------------------------------------------------------------------------------------------
@@ -40,11 +40,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 4
-First optimal path iteration: 6
-Convergence achieved in iteration: 173
-Total Time: 12.76 seconds
+First optimal path iteration: 5
+Convergence achieved in iteration: 5
+Total Time: 0.34 seconds
 Time per Iteration: 0.0700 seconds
-Iterations per Second: 13.56
+Iterations per Second: 14.71
 ----------------------------------------------------------------------------------------------------
 3. simulation
 ----------------------------------------------------------------------------------------------------
@@ -59,11 +59,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 33
-First optimal path iteration: 35
-Convergence achieved in iteration: 38
-Total Time: 4.31 seconds
-Time per Iteration: 0.1100 seconds
-Iterations per Second: 8.82
+First optimal path iteration: 34
+Convergence achieved in iteration: 35
+Total Time: 4.08 seconds
+Time per Iteration: 0.1200 seconds
+Iterations per Second: 8.58
 ----------------------------------------------------------------------------------------------------
 4. simulation
 ----------------------------------------------------------------------------------------------------
@@ -79,10 +79,10 @@ Results:
 
 First full path iteration: 4
 First optimal path iteration: 5
-Convergence achieved in iteration: 10
-Total Time: 1.03 seconds
-Time per Iteration: 0.1000 seconds
-Iterations per Second: 9.71
+Convergence achieved in iteration: 5
+Total Time: 0.60 seconds
+Time per Iteration: 0.1200 seconds
+Iterations per Second: 8.33
 ----------------------------------------------------------------------------------------------------
 5. simulation
 ----------------------------------------------------------------------------------------------------
@@ -96,12 +96,12 @@ Beta: 1.5
 
 Results:
 
-First full path iteration: 2
-First optimal path iteration: 3
-Convergence achieved in iteration: 31
-Total Time: 2.18 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 14.22
+First full path iteration: 1
+First optimal path iteration: 6
+Convergence achieved in iteration: 7
+Total Time: 0.41 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 17.07
 ----------------------------------------------------------------------------------------------------
 6. simulation
 ----------------------------------------------------------------------------------------------------
@@ -117,10 +117,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 9
-Total Time: 0.56 seconds
+Convergence achieved in iteration: 6
+Total Time: 0.38 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.07
+Iterations per Second: 15.79
 ----------------------------------------------------------------------------------------------------
 7. simulation
 ----------------------------------------------------------------------------------------------------
@@ -134,12 +134,12 @@ Beta: 1.5
 
 Results:
 
-First full path iteration: 2
-First optimal path iteration: 3
-Convergence achieved in iteration: 4
-Total Time: 0.22 seconds
-Time per Iteration: 0.0600 seconds
-Iterations per Second: 18.18
+First full path iteration: 1
+Optimal path is not found!
+Shortest full path: 23
+Total Time: 1 minutes and 12.21 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 13.85
 ----------------------------------------------------------------------------------------------------
 8. simulation
 ----------------------------------------------------------------------------------------------------
@@ -155,10 +155,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 5
-Total Time: 0.31 seconds
+Convergence achieved in iteration: 4
+Total Time: 0.25 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.13
+Iterations per Second: 16.00
 ====================================================================================================
 RANDOM STATE: 20
 ====================================================================================================
@@ -176,11 +176,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 250
-First optimal path iteration: 254
-Convergence achieved in iteration: 274
-Total Time: 31.57 seconds
-Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.68
+First optimal path iteration: 251
+Convergence achieved in iteration: 257
+Total Time: 28.87 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 8.90
 ----------------------------------------------------------------------------------------------------
 10. simulation
 ----------------------------------------------------------------------------------------------------
@@ -195,11 +195,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 2
-First optimal path iteration: 4
-Convergence achieved in iteration: 45
-Total Time: 3.44 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 13.08
+First optimal path iteration: 3
+Convergence achieved in iteration: 5
+Total Time: 0.53 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.43
 ----------------------------------------------------------------------------------------------------
 11. simulation
 ----------------------------------------------------------------------------------------------------
@@ -214,11 +214,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 250
-First optimal path iteration: 252
-Convergence achieved in iteration: 253
-Total Time: 29.63 seconds
-Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.54
+First optimal path iteration: 251
+Convergence achieved in iteration: 257
+Total Time: 28.04 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.17
 ----------------------------------------------------------------------------------------------------
 12. simulation
 ----------------------------------------------------------------------------------------------------
@@ -233,11 +233,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 2
-First optimal path iteration: 4
-Convergence achieved in iteration: 4
-Total Time: 0.46 seconds
+First optimal path iteration: 3
+Convergence achieved in iteration: 3
+Total Time: 0.36 seconds
 Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.70
+Iterations per Second: 8.33
 ----------------------------------------------------------------------------------------------------
 13. simulation
 ----------------------------------------------------------------------------------------------------
@@ -252,11 +252,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 3
-Convergence achieved in iteration: 15
-Total Time: 1.01 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 14.85
+First optimal path iteration: 2
+Convergence achieved in iteration: 3
+Total Time: 0.17 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 17.65
 ----------------------------------------------------------------------------------------------------
 14. simulation
 ----------------------------------------------------------------------------------------------------
@@ -272,10 +272,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 3
-Total Time: 0.17 seconds
+Convergence achieved in iteration: 5
+Total Time: 0.31 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 17.65
+Iterations per Second: 16.13
 ----------------------------------------------------------------------------------------------------
 15. simulation
 ----------------------------------------------------------------------------------------------------
@@ -292,9 +292,9 @@ Results:
 First full path iteration: 1
 First optimal path iteration: 2
 Convergence achieved in iteration: 3
-Total Time: 0.17 seconds
+Total Time: 0.19 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 17.65
+Iterations per Second: 15.79
 ----------------------------------------------------------------------------------------------------
 16. simulation
 ----------------------------------------------------------------------------------------------------
@@ -310,10 +310,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 3
-Total Time: 0.18 seconds
-Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.67
+Convergence achieved in iteration: 4
+Total Time: 0.26 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 15.38
 ====================================================================================================
 RANDOM STATE: 30
 ====================================================================================================
@@ -331,11 +331,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 11
-First optimal path iteration: 16
-Convergence achieved in iteration: 29
-Total Time: 2.74 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 10.58
+First optimal path iteration: 12
+Convergence achieved in iteration: 13
+Total Time: 1.54 seconds
+Time per Iteration: 0.1200 seconds
+Iterations per Second: 8.44
 ----------------------------------------------------------------------------------------------------
 18. simulation
 ----------------------------------------------------------------------------------------------------
@@ -349,12 +349,12 @@ Beta: 3.0
 
 Results:
 
-First full path iteration: 11
-First optimal path iteration: 14
-Convergence achieved in iteration: 122
-Total Time: 9.91 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 12.31
+First full path iteration: 6
+First optimal path iteration: 8
+Convergence achieved in iteration: 9
+Total Time: 1.01 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 8.91
 ----------------------------------------------------------------------------------------------------
 19. simulation
 ----------------------------------------------------------------------------------------------------
@@ -369,11 +369,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 11
-First optimal path iteration: 13
-Convergence achieved in iteration: 15
-Total Time: 1.68 seconds
-Time per Iteration: 0.1100 seconds
-Iterations per Second: 8.93
+First optimal path iteration: 12
+Convergence achieved in iteration: 13
+Total Time: 1.54 seconds
+Time per Iteration: 0.1200 seconds
+Iterations per Second: 8.44
 ----------------------------------------------------------------------------------------------------
 20. simulation
 ----------------------------------------------------------------------------------------------------
@@ -387,12 +387,12 @@ Beta: 3.0
 
 Results:
 
-First full path iteration: 11
-First optimal path iteration: 13
-Convergence achieved in iteration: 17
-Total Time: 1.86 seconds
-Time per Iteration: 0.1100 seconds
-Iterations per Second: 9.14
+First full path iteration: 6
+First optimal path iteration: 7
+Convergence achieved in iteration: 8
+Total Time: 0.95 seconds
+Time per Iteration: 0.1200 seconds
+Iterations per Second: 8.42
 ----------------------------------------------------------------------------------------------------
 21. simulation
 ----------------------------------------------------------------------------------------------------
@@ -408,10 +408,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 8
-Total Time: 0.49 seconds
+Convergence achieved in iteration: 7
+Total Time: 0.42 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.33
+Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------
 22. simulation
 ----------------------------------------------------------------------------------------------------
@@ -427,10 +427,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 6
-Total Time: 0.37 seconds
+Convergence achieved in iteration: 5
+Total Time: 0.30 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.22
+Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------
 23. simulation
 ----------------------------------------------------------------------------------------------------
@@ -446,10 +446,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 4
-Total Time: 0.24 seconds
+Convergence achieved in iteration: 3
+Total Time: 0.19 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.67
+Iterations per Second: 15.79
 ----------------------------------------------------------------------------------------------------
 24. simulation
 ----------------------------------------------------------------------------------------------------
@@ -465,10 +465,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 4
-Total Time: 0.25 seconds
+Convergence achieved in iteration: 5
+Total Time: 0.32 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.00
+Iterations per Second: 15.62
 ====================================================================================================
 RANDOM STATE: 40
 ====================================================================================================
@@ -486,11 +486,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 125
-First optimal path iteration: 127
-Convergence achieved in iteration: 259
-Total Time: 24.11 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 10.74
+First optimal path iteration: 126
+Convergence achieved in iteration: 127
+Total Time: 14.01 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.06
 ----------------------------------------------------------------------------------------------------
 26. simulation
 ----------------------------------------------------------------------------------------------------
@@ -505,11 +505,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 5
-Convergence achieved in iteration: 11
-Total Time: 1.10 seconds
-Time per Iteration: 0.1000 seconds
-Iterations per Second: 10.00
+First optimal path iteration: 2
+Convergence achieved in iteration: 4
+Total Time: 0.37 seconds
+Time per Iteration: 0.0900 seconds
+Iterations per Second: 10.81
 ----------------------------------------------------------------------------------------------------
 27. simulation
 ----------------------------------------------------------------------------------------------------
@@ -524,11 +524,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 125
-First optimal path iteration: 127
-Convergence achieved in iteration: 130
-Total Time: 15.05 seconds
-Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.64
+First optimal path iteration: 126
+Convergence achieved in iteration: 127
+Total Time: 14.04 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.05
 ----------------------------------------------------------------------------------------------------
 28. simulation
 ----------------------------------------------------------------------------------------------------
@@ -543,11 +543,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 3
-Convergence achieved in iteration: 3
-Total Time: 0.34 seconds
-Time per Iteration: 0.1100 seconds
-Iterations per Second: 8.82
+First optimal path iteration: 2
+Convergence achieved in iteration: 2
+Total Time: 0.23 seconds
+Time per Iteration: 0.1200 seconds
+Iterations per Second: 8.70
 ----------------------------------------------------------------------------------------------------
 29. simulation
 ----------------------------------------------------------------------------------------------------
@@ -562,11 +562,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 4
-Convergence achieved in iteration: 8
-Total Time: 0.52 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 15.38
+First optimal path iteration: 2
+Convergence achieved in iteration: 3
+Total Time: 0.17 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 17.65
 ----------------------------------------------------------------------------------------------------
 30. simulation
 ----------------------------------------------------------------------------------------------------
@@ -582,10 +582,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 8
-Total Time: 0.50 seconds
+Convergence achieved in iteration: 4
+Total Time: 0.24 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.00
+Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------
 31. simulation
 ----------------------------------------------------------------------------------------------------
@@ -601,10 +601,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 6
-Total Time: 0.41 seconds
+Convergence achieved in iteration: 9
+Total Time: 0.61 seconds
 Time per Iteration: 0.0700 seconds
-Iterations per Second: 14.63
+Iterations per Second: 14.75
 ----------------------------------------------------------------------------------------------------
 32. simulation
 ----------------------------------------------------------------------------------------------------
@@ -620,10 +620,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 5
-Total Time: 0.32 seconds
+Convergence achieved in iteration: 3
+Total Time: 0.18 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 15.62
+Iterations per Second: 16.67
 ====================================================================================================
 RANDOM STATE: 50
 ====================================================================================================
@@ -641,11 +641,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 45
-First optimal path iteration: 51
-Convergence achieved in iteration: 98
-Total Time: 9.29 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 10.55
+First optimal path iteration: 46
+Convergence achieved in iteration: 47
+Total Time: 5.72 seconds
+Time per Iteration: 0.1200 seconds
+Iterations per Second: 8.22
 ----------------------------------------------------------------------------------------------------
 34. simulation
 ----------------------------------------------------------------------------------------------------
@@ -660,11 +660,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 4
-First optimal path iteration: 9
-Convergence achieved in iteration: 55
-Total Time: 4.50 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 12.22
+First optimal path iteration: 5
+Convergence achieved in iteration: 10
+Total Time: 0.86 seconds
+Time per Iteration: 0.0900 seconds
+Iterations per Second: 11.63
 ----------------------------------------------------------------------------------------------------
 35. simulation
 ----------------------------------------------------------------------------------------------------
@@ -679,11 +679,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 45
-First optimal path iteration: 47
-Convergence achieved in iteration: 247
-Total Time: 21.74 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 11.36
+First optimal path iteration: 46
+Convergence achieved in iteration: 47
+Total Time: 5.10 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.22
 ----------------------------------------------------------------------------------------------------
 36. simulation
 ----------------------------------------------------------------------------------------------------
@@ -699,10 +699,10 @@ Results:
 
 First full path iteration: 4
 First optimal path iteration: 5
-Convergence achieved in iteration: 27
-Total Time: 2.38 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 11.34
+Convergence achieved in iteration: 10
+Total Time: 1.02 seconds
+Time per Iteration: 0.1000 seconds
+Iterations per Second: 9.80
 ----------------------------------------------------------------------------------------------------
 37. simulation
 ----------------------------------------------------------------------------------------------------
@@ -717,11 +717,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 3
-Convergence achieved in iteration: 13
-Total Time: 0.86 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 15.12
+First optimal path iteration: 2
+Convergence achieved in iteration: 5
+Total Time: 0.30 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------
 38. simulation
 ----------------------------------------------------------------------------------------------------
@@ -737,10 +737,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 11
-Total Time: 0.72 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 15.28
+Convergence achieved in iteration: 3
+Total Time: 0.18 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------
 39. simulation
 ----------------------------------------------------------------------------------------------------
@@ -755,7 +755,7 @@ Beta: 1.5
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 3
+First optimal path iteration: 2
 Convergence achieved in iteration: 5
 Total Time: 0.32 seconds
 Time per Iteration: 0.0600 seconds
@@ -776,9 +776,9 @@ Results:
 First full path iteration: 1
 First optimal path iteration: 2
 Convergence achieved in iteration: 5
-Total Time: 0.36 seconds
+Total Time: 0.33 seconds
 Time per Iteration: 0.0700 seconds
-Iterations per Second: 13.89
+Iterations per Second: 15.15
 ====================================================================================================
 RANDOM STATE: 60
 ====================================================================================================
@@ -796,11 +796,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 96
-First optimal path iteration: 102
-Convergence achieved in iteration: 103
-Total Time: 11.76 seconds
+First optimal path iteration: 98
+Convergence achieved in iteration: 102
+Total Time: 11.07 seconds
 Time per Iteration: 0.1100 seconds
-Iterations per Second: 8.76
+Iterations per Second: 9.21
 ----------------------------------------------------------------------------------------------------
 42. simulation
 ----------------------------------------------------------------------------------------------------
@@ -814,12 +814,12 @@ Beta: 3.0
 
 Results:
 
-First full path iteration: 9
-First optimal path iteration: 11
-Convergence achieved in iteration: 127
-Total Time: 10.53 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 12.06
+First full path iteration: 3
+First optimal path iteration: 5
+Convergence achieved in iteration: 6
+Total Time: 0.36 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------
 43. simulation
 ----------------------------------------------------------------------------------------------------
@@ -834,11 +834,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 96
-First optimal path iteration: 98
-Convergence achieved in iteration: 100
-Total Time: 11.63 seconds
-Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.60
+First optimal path iteration: 97
+Convergence achieved in iteration: 98
+Total Time: 11.15 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 8.79
 ----------------------------------------------------------------------------------------------------
 44. simulation
 ----------------------------------------------------------------------------------------------------
@@ -852,12 +852,12 @@ Beta: 3.0
 
 Results:
 
-First full path iteration: 9
-First optimal path iteration: 11
-Convergence achieved in iteration: 11
-Total Time: 1.29 seconds
-Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.53
+First full path iteration: 3
+First optimal path iteration: 5
+Convergence achieved in iteration: 6
+Total Time: 0.66 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.09
 ----------------------------------------------------------------------------------------------------
 45. simulation
 ----------------------------------------------------------------------------------------------------
@@ -873,10 +873,10 @@ Results:
 
 First full path iteration: 1
 Optimal path is not found!
-Shortest full path: 22
-Total Time: 1 minutes and 15.51 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 13.24
+Shortest full path: 23
+Total Time: 1 minutes and 11.29 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 14.03
 ----------------------------------------------------------------------------------------------------
 46. simulation
 ----------------------------------------------------------------------------------------------------
@@ -891,11 +891,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 3
-Convergence achieved in iteration: 9
-Total Time: 0.58 seconds
+First optimal path iteration: 2
+Convergence achieved in iteration: 4
+Total Time: 0.24 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 15.52
+Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------
 47. simulation
 ----------------------------------------------------------------------------------------------------
@@ -911,10 +911,10 @@ Results:
 
 First full path iteration: 1
 Optimal path is not found!
-Shortest full path: 22
-Total Time: 1 minutes and 15.27 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 13.29
+Shortest full path: 23
+Total Time: 1 minutes and 11.38 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 14.01
 ----------------------------------------------------------------------------------------------------
 48. simulation
 ----------------------------------------------------------------------------------------------------
@@ -930,10 +930,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 5
-Total Time: 0.31 seconds
-Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.13
+Convergence achieved in iteration: 11
+Total Time: 0.59 seconds
+Time per Iteration: 0.0500 seconds
+Iterations per Second: 18.64
 ====================================================================================================
 RANDOM STATE: 70
 ====================================================================================================
@@ -950,12 +950,12 @@ Beta: 1.5
 
 Results:
 
-First full path iteration: 586
-First optimal path iteration: 600
-Convergence achieved in iteration: 602
-Total Time: 1 minutes and 10.71 seconds
-Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.51
+First full path iteration: 336
+First optimal path iteration: 338
+Convergence achieved in iteration: 339
+Total Time: 38.22 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 8.87
 ----------------------------------------------------------------------------------------------------
 50. simulation
 ----------------------------------------------------------------------------------------------------
@@ -970,11 +970,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 8
-First optimal path iteration: 11
-Convergence achieved in iteration: 18
-Total Time: 1.89 seconds
-Time per Iteration: 0.1000 seconds
-Iterations per Second: 9.52
+First optimal path iteration: 10
+Convergence achieved in iteration: 14
+Total Time: 1.02 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 13.73
 ----------------------------------------------------------------------------------------------------
 51. simulation
 ----------------------------------------------------------------------------------------------------
@@ -988,12 +988,12 @@ Beta: 1.5
 
 Results:
 
-First full path iteration: 586
-Optimal path is not found!
-Shortest full path: 22
-Total Time: 1 minutes and 40.84 seconds
-Time per Iteration: 0.1000 seconds
-Iterations per Second: 9.92
+First full path iteration: 336
+First optimal path iteration: 338
+Convergence achieved in iteration: 340
+Total Time: 37.19 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.14
 ----------------------------------------------------------------------------------------------------
 52. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1009,10 +1009,10 @@ Results:
 
 First full path iteration: 8
 First optimal path iteration: 10
-Convergence achieved in iteration: 14
-Total Time: 1.53 seconds
-Time per Iteration: 0.1100 seconds
-Iterations per Second: 9.15
+Convergence achieved in iteration: 15
+Total Time: 1.52 seconds
+Time per Iteration: 0.1000 seconds
+Iterations per Second: 9.87
 ----------------------------------------------------------------------------------------------------
 53. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1027,9 +1027,9 @@ Beta: 1.5
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 2
-Convergence achieved in iteration: 11
-Total Time: 0.77 seconds
+First optimal path iteration: 3
+Convergence achieved in iteration: 10
+Total Time: 0.70 seconds
 Time per Iteration: 0.0700 seconds
 Iterations per Second: 14.29
 ----------------------------------------------------------------------------------------------------
@@ -1047,10 +1047,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 1
-Convergence achieved in iteration: 7
-Total Time: 0.45 seconds
+Convergence achieved in iteration: 2
+Total Time: 0.11 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 15.56
+Iterations per Second: 18.18
 ----------------------------------------------------------------------------------------------------
 55. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1066,10 +1066,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 6
-Total Time: 0.41 seconds
+Convergence achieved in iteration: 5
+Total Time: 0.35 seconds
 Time per Iteration: 0.0700 seconds
-Iterations per Second: 14.63
+Iterations per Second: 14.29
 ----------------------------------------------------------------------------------------------------
 56. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1085,10 +1085,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 1
-Convergence achieved in iteration: 5
-Total Time: 0.33 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 15.15
+Convergence achieved in iteration: 2
+Total Time: 0.12 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 16.67
 ====================================================================================================
 RANDOM STATE: 80
 ====================================================================================================
@@ -1106,11 +1106,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 72
-First optimal path iteration: 75
-Convergence achieved in iteration: 146
-Total Time: 14.32 seconds
+First optimal path iteration: 74
+Convergence achieved in iteration: 76
+Total Time: 7.57 seconds
 Time per Iteration: 0.1000 seconds
-Iterations per Second: 10.20
+Iterations per Second: 10.04
 ----------------------------------------------------------------------------------------------------
 58. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1126,10 +1126,10 @@ Results:
 
 First full path iteration: 4
 First optimal path iteration: 6
-Convergence achieved in iteration: 196
-Total Time: 15.80 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 12.41
+Convergence achieved in iteration: 12
+Total Time: 1.08 seconds
+Time per Iteration: 0.0900 seconds
+Iterations per Second: 11.11
 ----------------------------------------------------------------------------------------------------
 59. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1144,11 +1144,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 72
-First optimal path iteration: 74
-Convergence achieved in iteration: 75
-Total Time: 8.78 seconds
-Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.54
+First optimal path iteration: 73
+Convergence achieved in iteration: 82
+Total Time: 8.69 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.44
 ----------------------------------------------------------------------------------------------------
 60. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1164,10 +1164,10 @@ Results:
 
 First full path iteration: 4
 First optimal path iteration: 6
-Convergence achieved in iteration: 104
-Total Time: 8.80 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 11.82
+Convergence achieved in iteration: 7
+Total Time: 0.81 seconds
+Time per Iteration: 0.1200 seconds
+Iterations per Second: 8.64
 ----------------------------------------------------------------------------------------------------
 61. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1182,10 +1182,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 1
-First optimal path iteration: 5
-Total Time: 1 minutes and 19.13 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 12.64
+Optimal path is not found!
+Shortest full path: 23
+Total Time: 1 minutes and 13.30 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 13.64
 ----------------------------------------------------------------------------------------------------
 62. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1201,10 +1202,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 10
-Total Time: 0.66 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 15.15
+Convergence achieved in iteration: 7
+Total Time: 0.45 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 15.56
 ----------------------------------------------------------------------------------------------------
 63. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1220,10 +1221,10 @@ Results:
 
 First full path iteration: 1
 Optimal path is not found!
-Shortest full path: 22
-Total Time: 1 minutes and 23.30 seconds
-Time per Iteration: 0.0800 seconds
-Iterations per Second: 12.00
+Shortest full path: 25
+Total Time: 1 minutes and 13.67 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 13.57
 ----------------------------------------------------------------------------------------------------
 64. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1240,9 +1241,9 @@ Results:
 First full path iteration: 1
 First optimal path iteration: 2
 Convergence achieved in iteration: 3
-Total Time: 0.18 seconds
+Total Time: 0.19 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 16.67
+Iterations per Second: 15.79
 ====================================================================================================
 RANDOM STATE: 90
 ====================================================================================================
@@ -1260,11 +1261,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 25
-First optimal path iteration: 28
-Convergence achieved in iteration: 86
-Total Time: 7.80 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 11.03
+First optimal path iteration: 26
+Convergence achieved in iteration: 27
+Total Time: 3.10 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 8.71
 ----------------------------------------------------------------------------------------------------
 66. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1278,12 +1279,12 @@ Beta: 3.0
 
 Results:
 
-First full path iteration: 5
-First optimal path iteration: 8
-Convergence achieved in iteration: 19
-Total Time: 1.89 seconds
-Time per Iteration: 0.1000 seconds
-Iterations per Second: 10.05
+First full path iteration: 2
+First optimal path iteration: 4
+Convergence achieved in iteration: 8
+Total Time: 0.41 seconds
+Time per Iteration: 0.0500 seconds
+Iterations per Second: 19.51
 ----------------------------------------------------------------------------------------------------
 67. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1298,11 +1299,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 25
-Optimal path is not found!
-Shortest full path: 22
-Total Time: 1 minutes and 26.75 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 11.53
+First optimal path iteration: 26
+Convergence achieved in iteration: 27
+Total Time: 1.83 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 14.75
 ----------------------------------------------------------------------------------------------------
 68. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1316,12 +1317,12 @@ Beta: 3.0
 
 Results:
 
-First full path iteration: 5
-First optimal path iteration: 7
-Convergence achieved in iteration: 27
-Total Time: 2.52 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 10.71
+First full path iteration: 2
+First optimal path iteration: 4
+Convergence achieved in iteration: 5
+Total Time: 0.30 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------
 69. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1335,12 +1336,12 @@ Beta: 1.5
 
 Results:
 
-First full path iteration: 3
-First optimal path iteration: 5
-Convergence achieved in iteration: 9
-Total Time: 0.50 seconds
-Time per Iteration: 0.0600 seconds
-Iterations per Second: 18.00
+First full path iteration: 2
+First optimal path iteration: 4
+Convergence achieved in iteration: 6
+Total Time: 0.21 seconds
+Time per Iteration: 0.0300 seconds
+Iterations per Second: 28.57
 ----------------------------------------------------------------------------------------------------
 70. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1356,10 +1357,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 1
-Convergence achieved in iteration: 9
-Total Time: 0.57 seconds
+Convergence achieved in iteration: 7
+Total Time: 0.44 seconds
 Time per Iteration: 0.0600 seconds
-Iterations per Second: 15.79
+Iterations per Second: 15.91
 ----------------------------------------------------------------------------------------------------
 71. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1373,12 +1374,12 @@ Beta: 1.5
 
 Results:
 
-First full path iteration: 3
-First optimal path iteration: 5
-Convergence achieved in iteration: 7
-Total Time: 0.39 seconds
-Time per Iteration: 0.0600 seconds
-Iterations per Second: 17.95
+First full path iteration: 2
+Optimal path is not found!
+Shortest full path: 23
+Total Time: 1 minutes and 10.24 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 14.24
 ----------------------------------------------------------------------------------------------------
 72. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1394,10 +1395,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 1
-Convergence achieved in iteration: 5
-Total Time: 0.32 seconds
-Time per Iteration: 0.0600 seconds
-Iterations per Second: 15.62
+Convergence achieved in iteration: 6
+Total Time: 0.39 seconds
+Time per Iteration: 0.0700 seconds
+Iterations per Second: 15.38
 ====================================================================================================
 RANDOM STATE: 100
 ====================================================================================================
@@ -1415,11 +1416,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 50
-First optimal path iteration: 55
-Convergence achieved in iteration: 118
-Total Time: 11.15 seconds
-Time per Iteration: 0.0900 seconds
-Iterations per Second: 10.58
+First optimal path iteration: 52
+Convergence achieved in iteration: 52
+Total Time: 5.53 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.40
 ----------------------------------------------------------------------------------------------------
 74. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1434,11 +1435,11 @@ Beta: 3.0
 Results:
 
 First full path iteration: 2
-First optimal path iteration: 5
-Convergence achieved in iteration: 7
-Total Time: 0.75 seconds
+First optimal path iteration: 3
+Convergence achieved in iteration: 4
+Total Time: 0.45 seconds
 Time per Iteration: 0.1100 seconds
-Iterations per Second: 9.33
+Iterations per Second: 8.89
 ----------------------------------------------------------------------------------------------------
 75. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1453,11 +1454,11 @@ Beta: 1.5
 Results:
 
 First full path iteration: 50
-First optimal path iteration: 52
+First optimal path iteration: 51
 Convergence achieved in iteration: 53
-Total Time: 6.17 seconds
-Time per Iteration: 0.1200 seconds
-Iterations per Second: 8.59
+Total Time: 5.60 seconds
+Time per Iteration: 0.1100 seconds
+Iterations per Second: 9.46
 ----------------------------------------------------------------------------------------------------
 76. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1473,10 +1474,10 @@ Results:
 
 First full path iteration: 2
 First optimal path iteration: 3
-Convergence achieved in iteration: 4
-Total Time: 0.45 seconds
-Time per Iteration: 0.1100 seconds
-Iterations per Second: 8.89
+Convergence achieved in iteration: 13
+Total Time: 1.16 seconds
+Time per Iteration: 0.0900 seconds
+Iterations per Second: 11.21
 ----------------------------------------------------------------------------------------------------
 77. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1492,10 +1493,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 15
-Total Time: 0.99 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 15.15
+Convergence achieved in iteration: 3
+Total Time: 0.16 seconds
+Time per Iteration: 0.0500 seconds
+Iterations per Second: 18.75
 ----------------------------------------------------------------------------------------------------
 78. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1511,10 +1512,10 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 12
-Total Time: 0.79 seconds
-Time per Iteration: 0.0700 seconds
-Iterations per Second: 15.19
+Convergence achieved in iteration: 4
+Total Time: 0.23 seconds
+Time per Iteration: 0.0600 seconds
+Iterations per Second: 17.39
 ----------------------------------------------------------------------------------------------------
 79. simulation
 ----------------------------------------------------------------------------------------------------
@@ -1530,8 +1531,8 @@ Results:
 
 First full path iteration: 1
 First optimal path iteration: 2
-Convergence achieved in iteration: 5
-Total Time: 0.30 seconds
+Convergence achieved in iteration: 3
+Total Time: 0.18 seconds
 Time per Iteration: 0.0600 seconds
 Iterations per Second: 16.67
 ----------------------------------------------------------------------------------------------------

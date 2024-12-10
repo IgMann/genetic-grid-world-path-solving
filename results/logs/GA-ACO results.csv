@@ -1,481 +1,481 @@
-Random State,GA Revisit Possible,Selection Type,ACO Revisit Possible,Alpha,Beta,GA Best Generation,GA Best Score,GA Best Secondary Score,ACO First Full Path,ACO First Optimal Path,ACO Convergence Iteration,Total Time
-10,True,all to all,True,1.5,1.5,18,0.0,20,1,1.0,17.0,1.04
-10,True,all to all,True,1.5,3.0,18,0.0,20,1,1.0,12.0,0.97
-10,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,7.0,1.09
-10,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,15.0,1.8
-10,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,6.0,0.82
-10,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,4.0,0.7
-10,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,4.0,0.7
-10,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,5.0,0.77
-10,False,all to all,True,1.5,1.5,12,0.0,20,1,,,76.0
-10,False,all to all,True,1.5,3.0,12,0.0,20,1,2.0,173.0,10.78
-10,False,all to all,True,3.0,1.5,12,0.0,20,1,1.0,5.0,0.38
-10,False,all to all,True,3.0,3.0,12,0.0,20,1,1.0,18.0,1.65
-10,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,11.0,0.97
-10,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,6.0,0.6
-10,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,7.0,0.7
-10,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,4.0,0.49
-10,True,best to rest,True,1.5,1.5,33,0.0,20,1,2.0,36.0,3.39
-10,True,best to rest,True,1.5,3.0,33,0.0,20,1,2.0,7.0,1.31
-10,True,best to rest,True,3.0,1.5,33,0.0,20,1,2.0,23.0,2.03
-10,True,best to rest,True,3.0,3.0,33,0.0,20,1,1.0,23.0,1.78
-10,True,best to rest,False,1.5,1.5,33,0.0,20,1,2.0,22.0,2.38
-10,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,8.0,1.28
-10,True,best to rest,False,3.0,1.5,33,0.0,20,1,1.0,4.0,1.04
-10,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,5.0,1.1
-10,False,best to rest,True,1.5,1.5,8,0.0,20,1,2.0,25.0,1.78
-10,False,best to rest,True,1.5,3.0,8,0.0,20,1,2.0,5.0,0.55
-10,False,best to rest,True,3.0,1.5,8,0.0,20,1,2.0,23.0,1.42
-10,False,best to rest,True,3.0,3.0,8,0.0,20,1,2.0,2.0,0.33
-10,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,8.0,0.69
-10,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,10.0,0.8
-10,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-10,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,2.0,0.28
-10,True,hybrid,True,1.5,1.5,4,5.1516,32,2,4.0,18.0,2.36
-10,True,hybrid,True,1.5,3.0,4,5.1516,32,1,3.0,26.0,2.93
-10,True,hybrid,True,3.0,1.5,4,5.1516,32,1,3.0,3.0,0.71
-10,True,hybrid,True,3.0,3.0,4,5.1516,32,1,2.0,2.0,0.95
-10,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,22.0,2.52
-10,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,9.0,1.57
-10,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,4.0,1.28
-10,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,5.0,1.32
-10,False,hybrid,True,1.5,1.5,26,1.8028,25,2,6.0,20.0,2.02
-10,False,hybrid,True,1.5,3.0,26,1.8028,25,2,8.0,26.0,1.51
-10,False,hybrid,True,3.0,1.5,26,1.8028,25,1,2.0,10.0,1.35
-10,False,hybrid,True,3.0,3.0,26,1.8028,25,1,2.0,15.0,1.94
-10,False,hybrid,False,1.5,1.5,26,1.8028,25,1,2.0,5.0,1.03
-10,False,hybrid,False,1.5,3.0,26,1.8028,25,1,2.0,6.0,1.13
-10,False,hybrid,False,3.0,1.5,26,1.8028,25,1,2.0,,73.77
-10,False,hybrid,False,3.0,3.0,26,1.8028,25,1,2.0,,73.58
-20,True,all to all,True,1.5,1.5,18,0.0,20,1,3.0,9.0,1.17
-20,True,all to all,True,1.5,3.0,18,0.0,20,1,2.0,14.0,1.67
-20,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,23.0,2.4
-20,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,13.0,0.91
-20,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,11.0,1.11
-20,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,14.0,1.38
-20,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,4.0,0.7
-20,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,4.0,0.71
-20,False,all to all,True,1.5,1.5,12,0.0,20,1,5.0,13.0,1.1
-20,False,all to all,True,1.5,3.0,12,0.0,20,1,3.0,251.0,19.79
-20,False,all to all,True,3.0,1.5,12,0.0,20,1,2.0,6.0,0.73
-20,False,all to all,True,3.0,3.0,12,0.0,20,1,1.0,127.0,10.72
-20,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,12.0,1.0
-20,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,6.0,0.61
-20,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,3.0,0.37
-20,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,2.0,0.2
-20,True,best to rest,True,1.5,1.5,33,0.0,20,1,3.0,31.0,2.97
-20,True,best to rest,True,1.5,3.0,33,0.0,20,1,2.0,251.0,18.71
-20,True,best to rest,True,3.0,1.5,33,0.0,20,1,1.0,23.0,2.84
-20,True,best to rest,True,3.0,3.0,33,0.0,20,1,1.0,13.0,1.95
-20,True,best to rest,False,1.5,1.5,33,0.0,20,1,2.0,20.0,2.12
-20,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,9.0,1.37
-20,True,best to rest,False,3.0,1.5,33,0.0,20,1,1.0,3.0,0.97
-20,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,3.0,0.97
-20,False,best to rest,True,1.5,1.5,8,0.0,20,1,3.0,11.0,0.79
-20,False,best to rest,True,1.5,3.0,8,0.0,20,1,2.0,3.0,0.3
-20,False,best to rest,True,3.0,1.5,8,0.0,20,1,1.0,15.0,0.77
-20,False,best to rest,True,3.0,3.0,8,0.0,20,1,1.0,19.0,1.61
-20,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,9.0,0.77
-20,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,15.0,1.16
-20,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-20,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,3.0,0.35
-20,True,hybrid,True,1.5,1.5,4,5.1516,32,1,3.0,9.0,1.7
-20,True,hybrid,True,1.5,3.0,4,5.1516,32,1,,,73.55
-20,True,hybrid,True,3.0,1.5,4,5.1516,32,1,,,63.87
-20,True,hybrid,True,3.0,3.0,4,5.1516,32,1,,,62.12
-20,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,8.0,1.49
-20,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,10.0,1.63
-20,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,4.0,1.24
-20,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,4.0,1.28
-20,False,hybrid,True,1.5,1.5,26,1.8028,25,1,,,75.58
-20,False,hybrid,True,1.5,3.0,26,1.8028,25,1,3.0,6.0,0.76
-20,False,hybrid,True,3.0,1.5,26,1.8028,25,1,,,61.33
-20,False,hybrid,True,3.0,3.0,26,1.8028,25,1,,,63.56
-20,False,hybrid,False,1.5,1.5,26,1.8028,25,1,2.0,7.0,1.2
-20,False,hybrid,False,1.5,3.0,26,1.8028,25,1,2.0,5.0,1.05
-20,False,hybrid,False,3.0,1.5,26,1.8028,25,1,,,71.46
-20,False,hybrid,False,3.0,3.0,26,1.8028,25,1,,,71.9
-30,True,all to all,True,1.5,1.5,18,0.0,20,1,2.0,7.0,0.99
-30,True,all to all,True,1.5,3.0,18,0.0,20,1,1.0,30.0,2.25
-30,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,51.0,4.59
-30,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,11.0,1.44
-30,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,31.0,2.64
-30,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,7.0,0.51
-30,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,5.0,0.5
-30,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,3.0,0.63
-30,False,all to all,True,1.5,1.5,12,0.0,20,1,2.0,7.0,0.72
-30,False,all to all,True,1.5,3.0,12,0.0,20,1,2.0,57.0,5.27
-30,False,all to all,True,3.0,1.5,12,0.0,20,1,2.0,5.0,0.66
-30,False,all to all,True,3.0,3.0,12,0.0,20,1,1.0,45.0,3.18
-30,False,all to all,False,1.5,1.5,12,0.0,20,1,2.0,7.0,0.65
-30,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,7.0,0.67
-30,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,4.0,0.49
-30,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,3.0,0.42
-30,True,best to rest,True,1.5,1.5,33,0.0,20,1,3.0,6.0,1.19
-30,True,best to rest,True,1.5,3.0,33,0.0,20,1,2.0,6.0,1.23
-30,True,best to rest,True,3.0,1.5,33,0.0,20,1,2.0,3.0,1.06
-30,True,best to rest,True,3.0,3.0,33,0.0,20,1,2.0,5.0,0.99
-30,True,best to rest,False,1.5,1.5,33,0.0,20,1,1.0,20.0,1.6
-30,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,8.0,1.31
-30,True,best to rest,False,3.0,1.5,33,0.0,20,1,1.0,3.0,0.97
-30,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,4.0,1.04
-30,False,best to rest,True,1.5,1.5,8,0.0,20,1,2.0,122.0,7.74
-30,False,best to rest,True,1.5,3.0,8,0.0,20,1,2.0,122.0,8.76
-30,False,best to rest,True,3.0,1.5,8,0.0,20,1,1.0,5.0,0.59
-30,False,best to rest,True,3.0,3.0,8,0.0,20,1,1.0,15.0,1.29
-30,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,15.0,1.19
-30,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,13.0,1.04
-30,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-30,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,2.0,0.28
-30,True,hybrid,True,1.5,1.5,4,5.1516,32,6,8.0,14.0,1.53
-30,True,hybrid,True,1.5,3.0,4,5.1516,32,1,3.0,6.0,1.42
-30,True,hybrid,True,3.0,1.5,4,5.1516,32,1,3.0,4.0,1.28
-30,True,hybrid,True,3.0,3.0,4,5.1516,32,1,2.0,3.0,1.24
-30,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,6.0,1.35
-30,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,9.0,1.57
-30,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,3.0,1.18
-30,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,4.0,0.74
-30,False,hybrid,True,1.5,1.5,26,1.8028,25,2,4.0,7.0,0.74
-30,False,hybrid,True,1.5,3.0,26,1.8028,25,2,3.0,32.0,2.01
-30,False,hybrid,True,3.0,1.5,26,1.8028,25,1,3.0,42.0,4.04
-30,False,hybrid,True,3.0,3.0,26,1.8028,25,1,2.0,,76.2
-30,False,hybrid,False,1.5,1.5,26,1.8028,25,1,3.0,7.0,1.17
-30,False,hybrid,False,1.5,3.0,26,1.8028,25,1,2.0,5.0,1.06
-30,False,hybrid,False,3.0,1.5,26,1.8028,25,1,2.0,8.0,1.29
-30,False,hybrid,False,3.0,3.0,26,1.8028,25,1,1.0,,72.17
-40,True,all to all,True,1.5,1.5,18,0.0,20,1,3.0,14.0,1.0
-40,True,all to all,True,1.5,3.0,18,0.0,20,1,3.0,10.0,0.66
-40,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,35.0,2.35
-40,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,19.0,1.88
-40,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,11.0,1.15
-40,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,7.0,0.9
-40,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,4.0,0.7
-40,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,4.0,0.7
-40,False,all to all,True,1.5,1.5,12,0.0,20,2,6.0,7.0,0.76
-40,False,all to all,True,1.5,3.0,12,0.0,20,1,4.0,393.0,28.86
-40,False,all to all,True,3.0,1.5,12,0.0,20,1,2.0,75.0,5.86
-40,False,all to all,True,3.0,3.0,12,0.0,20,1,2.0,208.0,15.03
-40,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,6.0,0.33
-40,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,4.0,0.26
-40,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,4.0,0.3
-40,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,3.0,0.42
-40,True,best to rest,True,1.5,1.5,33,0.0,20,1,2.0,9.0,1.44
-40,True,best to rest,True,1.5,3.0,33,0.0,20,1,2.0,45.0,3.96
-40,True,best to rest,True,3.0,1.5,33,0.0,20,1,1.0,13.0,1.98
-40,True,best to rest,True,3.0,3.0,33,0.0,20,1,1.0,3.0,0.67
-40,True,best to rest,False,1.5,1.5,33,0.0,20,1,1.0,10.0,1.04
-40,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,9.0,1.36
-40,True,best to rest,False,3.0,1.5,33,0.0,20,1,1.0,3.0,0.97
-40,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,5.0,1.11
-40,False,best to rest,True,1.5,1.5,8,0.0,20,1,5.0,19.0,1.38
-40,False,best to rest,True,1.5,3.0,8,0.0,20,1,2.0,45.0,3.05
-40,False,best to rest,True,3.0,1.5,8,0.0,20,1,2.0,35.0,2.24
-40,False,best to rest,True,3.0,3.0,8,0.0,20,1,1.0,12.0,1.24
-40,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,8.0,0.66
-40,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,7.0,0.6
-40,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-40,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,3.0,0.36
-40,True,hybrid,True,1.5,1.5,4,5.1516,32,23,26.0,55.0,5.45
-40,True,hybrid,True,1.5,3.0,4,5.1516,32,2,4.0,12.0,2.1
-40,True,hybrid,True,3.0,1.5,4,5.1516,32,2,5.0,5.0,1.44
-40,True,hybrid,True,3.0,3.0,4,5.1516,32,1,2.0,2.0,1.17
-40,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,14.0,1.87
-40,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,19.0,1.48
-40,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,3.0,1.19
-40,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,4.0,1.25
-40,False,hybrid,True,1.5,1.5,26,1.8028,25,1,5.0,7.0,1.3
-40,False,hybrid,True,1.5,3.0,26,1.8028,25,1,2.0,45.0,4.01
-40,False,hybrid,True,3.0,1.5,26,1.8028,25,1,,,76.38
-40,False,hybrid,True,3.0,3.0,26,1.8028,25,1,2.0,19.0,2.26
-40,False,hybrid,False,1.5,1.5,26,1.8028,25,1,2.0,5.0,1.03
-40,False,hybrid,False,1.5,3.0,26,1.8028,25,1,2.0,4.0,0.98
-40,False,hybrid,False,3.0,1.5,26,1.8028,25,1,2.0,,71.57
-40,False,hybrid,False,3.0,3.0,26,1.8028,25,1,2.0,,68.78
-50,True,all to all,True,1.5,1.5,18,0.0,20,1,1.0,22.0,2.36
-50,True,all to all,True,1.5,3.0,18,0.0,20,1,1.0,9.0,1.22
-50,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,8.0,1.14
-50,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,36.0,3.03
-50,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,11.0,0.93
-50,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,9.0,1.01
-50,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,5.0,0.77
-50,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,4.0,0.7
-50,False,all to all,True,1.5,1.5,12,0.0,20,1,2.0,98.0,6.92
-50,False,all to all,True,1.5,3.0,12,0.0,20,1,2.0,55.0,4.58
-50,False,all to all,True,3.0,1.5,12,0.0,20,1,2.0,247.0,16.87
-50,False,all to all,True,3.0,3.0,12,0.0,20,1,2.0,27.0,2.05
-50,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,10.0,0.85
-50,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,5.0,0.54
-50,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,3.0,0.42
-50,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,3.0,0.42
-50,True,best to rest,True,1.5,1.5,33,0.0,20,1,3.0,98.0,7.41
-50,True,best to rest,True,1.5,3.0,33,0.0,20,1,3.0,18.0,2.04
-50,True,best to rest,True,3.0,1.5,33,0.0,20,1,2.0,19.0,2.29
-50,True,best to rest,True,3.0,3.0,33,0.0,20,1,2.0,3.0,1.06
-50,True,best to rest,False,1.5,1.5,33,0.0,20,1,1.0,13.0,1.63
-50,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,15.0,0.99
-50,True,best to rest,False,3.0,1.5,33,0.0,20,1,1.0,3.0,0.55
-50,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,3.0,0.55
-50,False,best to rest,True,1.5,1.5,8,0.0,20,1,3.0,28.0,1.46
-50,False,best to rest,True,1.5,3.0,8,0.0,20,1,3.0,11.0,0.85
-50,False,best to rest,True,3.0,1.5,8,0.0,20,1,2.0,19.0,1.65
-50,False,best to rest,True,3.0,3.0,8,0.0,20,1,2.0,2.0,0.34
-50,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,22.0,1.73
-50,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,9.0,0.75
-50,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-50,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,3.0,0.35
-50,True,hybrid,True,1.5,1.5,4,5.1516,32,2,4.0,11.0,1.79
-50,True,hybrid,True,1.5,3.0,4,5.1516,32,1,2.0,55.0,4.59
-50,True,hybrid,True,3.0,1.5,4,5.1516,32,2,3.0,5.0,1.42
-50,True,hybrid,True,3.0,3.0,4,5.1516,32,1,4.0,5.0,1.37
-50,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,19.0,2.22
-50,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,9.0,0.9
-50,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,6.0,1.36
-50,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,4.0,1.24
-50,False,hybrid,True,1.5,1.5,26,1.8028,25,8,13.0,17.0,2.26
-50,False,hybrid,True,1.5,3.0,26,1.8028,25,1,3.0,9.0,1.41
-50,False,hybrid,True,3.0,1.5,26,1.8028,25,1,,,75.01
-50,False,hybrid,True,3.0,3.0,26,1.8028,25,1,,,77.44
-50,False,hybrid,False,1.5,1.5,26,1.8028,25,1,2.0,6.0,1.1
-50,False,hybrid,False,1.5,3.0,26,1.8028,25,1,2.0,7.0,1.17
-50,False,hybrid,False,3.0,1.5,26,1.8028,25,1,2.0,,70.95
-50,False,hybrid,False,3.0,3.0,26,1.8028,25,1,2.0,,69.36
-60,True,all to all,True,1.5,1.5,18,0.0,20,1,1.0,49.0,3.29
-60,True,all to all,True,1.5,3.0,18,0.0,20,1,1.0,7.0,1.02
-60,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,5.0,0.9
-60,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,6.0,0.99
-60,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,17.0,1.57
-60,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,7.0,0.9
-60,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,3.0,0.63
-60,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,3.0,0.67
-60,False,all to all,True,1.5,1.5,12,0.0,20,1,2.0,6.0,0.52
-60,False,all to all,True,1.5,3.0,12,0.0,20,1,2.0,5.0,0.36
-60,False,all to all,True,3.0,1.5,12,0.0,20,1,2.0,5.0,0.39
-60,False,all to all,True,3.0,3.0,12,0.0,20,1,1.0,409.0,30.53
-60,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,6.0,0.34
-60,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,8.0,0.42
-60,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,3.0,0.23
-60,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,3.0,0.23
-60,True,best to rest,True,1.5,1.5,33,0.0,20,1,2.0,49.0,4.25
-60,True,best to rest,True,1.5,3.0,33,0.0,20,1,1.0,15.0,1.83
-60,True,best to rest,True,3.0,1.5,33,0.0,20,1,2.0,2.0,0.97
-60,True,best to rest,True,3.0,3.0,33,0.0,20,1,2.0,5.0,1.21
-60,True,best to rest,False,1.5,1.5,33,0.0,20,1,1.0,19.0,1.21
-60,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,6.0,0.66
-60,True,best to rest,False,3.0,1.5,33,0.0,20,1,1.0,3.0,0.74
-60,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,5.0,1.11
-60,False,best to rest,True,1.5,1.5,8,0.0,20,1,2.0,5.0,0.48
-60,False,best to rest,True,1.5,3.0,8,0.0,20,1,1.0,30.0,2.26
-60,False,best to rest,True,3.0,1.5,8,0.0,20,1,1.0,2.0,0.34
-60,False,best to rest,True,3.0,3.0,8,0.0,20,1,1.0,7.0,0.8
-60,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,17.0,1.36
-60,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,5.0,0.49
-60,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,2.0,0.28
-60,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,2.0,0.28
-60,True,hybrid,True,1.5,1.5,4,5.1516,32,3,5.0,9.0,1.51
-60,True,hybrid,True,1.5,3.0,4,5.1516,32,3,5.0,9.0,1.2
-60,True,hybrid,True,3.0,1.5,4,5.1516,32,3,22.0,101.0,7.72
-60,True,hybrid,True,3.0,3.0,4,5.1516,32,1,4.0,6.0,0.8
-60,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,5.0,0.75
-60,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,7.0,0.81
-60,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,4.0,0.96
-60,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,4.0,1.25
-60,False,hybrid,True,1.5,1.5,26,1.8028,25,1,2.0,3.0,1.04
-60,False,hybrid,True,1.5,3.0,26,1.8028,25,1,2.0,18.0,2.0
-60,False,hybrid,True,3.0,1.5,26,1.8028,25,1,2.0,2.0,0.95
-60,False,hybrid,True,3.0,3.0,26,1.8028,25,1,2.0,5.0,1.15
-60,False,hybrid,False,1.5,1.5,26,1.8028,25,1,3.0,7.0,1.17
-60,False,hybrid,False,1.5,3.0,26,1.8028,25,1,2.0,6.0,1.03
-60,False,hybrid,False,3.0,1.5,26,1.8028,25,1,3.0,,70.19
-60,False,hybrid,False,3.0,3.0,26,1.8028,25,1,2.0,,74.31
-70,True,all to all,True,1.5,1.5,18,0.0,20,1,4.0,13.0,1.45
-70,True,all to all,True,1.5,3.0,18,0.0,20,1,2.0,40.0,2.2
-70,True,all to all,True,3.0,1.5,18,0.0,20,1,2.0,15.0,1.28
-70,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,4.0,0.84
-70,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,12.0,1.18
-70,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,7.0,0.89
-70,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,8.0,0.98
-70,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,4.0,0.7
-70,False,all to all,True,1.5,1.5,12,0.0,20,1,3.0,148.0,11.82
-70,False,all to all,True,1.5,3.0,12,0.0,20,1,2.0,218.0,16.58
-70,False,all to all,True,3.0,1.5,12,0.0,20,1,1.0,44.0,2.32
-70,False,all to all,True,3.0,3.0,12,0.0,20,1,1.0,77.0,6.62
-70,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,8.0,0.72
-70,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,6.0,0.61
-70,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,4.0,0.48
-70,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,3.0,0.42
-70,True,best to rest,True,1.5,1.5,33,0.0,20,1,3.0,44.0,3.82
-70,True,best to rest,True,1.5,3.0,33,0.0,20,1,3.0,40.0,3.05
-70,True,best to rest,True,3.0,1.5,33,0.0,20,1,2.0,4.0,0.98
-70,True,best to rest,True,3.0,3.0,33,0.0,20,1,1.0,5.0,1.25
-70,True,best to rest,False,1.5,1.5,33,0.0,20,1,1.0,26.0,2.67
-70,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,7.0,1.25
-70,True,best to rest,False,3.0,1.5,33,0.0,20,1,1.0,3.0,0.97
-70,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,5.0,1.11
-70,False,best to rest,True,1.5,1.5,8,0.0,20,1,2.0,11.0,0.54
-70,False,best to rest,True,1.5,3.0,8,0.0,20,1,2.0,40.0,2.57
-70,False,best to rest,True,3.0,1.5,8,0.0,20,1,2.0,13.0,1.1
-70,False,best to rest,True,3.0,3.0,8,0.0,20,1,2.0,2.0,0.34
-70,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,32.0,2.44
-70,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,9.0,0.76
-70,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-70,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,2.0,0.28
-70,True,hybrid,True,1.5,1.5,4,5.1516,32,16,18.0,148.0,11.55
-70,True,hybrid,True,1.5,3.0,4,5.1516,32,4,9.0,10.0,1.86
-70,True,hybrid,True,3.0,1.5,4,5.1516,32,2,5.0,6.0,1.49
-70,True,hybrid,True,3.0,3.0,4,5.1516,32,1,2.0,2.0,1.05
-70,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,30.0,2.46
-70,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,7.0,1.44
-70,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,4.0,1.27
-70,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,4.0,1.25
-70,False,hybrid,True,1.5,1.5,26,1.8028,25,3,8.0,13.0,1.81
-70,False,hybrid,True,1.5,3.0,26,1.8028,25,2,4.0,6.0,1.3
-70,False,hybrid,True,3.0,1.5,26,1.8028,25,1,,,61.96
-70,False,hybrid,True,3.0,3.0,26,1.8028,25,1,,,75.46
-70,False,hybrid,False,1.5,1.5,26,1.8028,25,1,2.0,10.0,1.38
-70,False,hybrid,False,1.5,3.0,26,1.8028,25,1,1.0,5.0,1.06
-70,False,hybrid,False,3.0,1.5,26,1.8028,25,1,1.0,3.0,0.94
-70,False,hybrid,False,3.0,3.0,26,1.8028,25,1,1.0,3.0,0.94
-80,True,all to all,True,1.5,1.5,18,0.0,20,1,2.0,21.0,2.04
-80,True,all to all,True,1.5,3.0,18,0.0,20,1,2.0,15.0,1.57
-80,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,9.0,1.01
-80,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,7.0,0.63
-80,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,12.0,0.69
-80,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,5.0,0.48
-80,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,4.0,0.7
-80,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,3.0,0.64
-80,False,all to all,True,1.5,1.5,12,0.0,20,1,3.0,3.0,0.47
-80,False,all to all,True,1.5,3.0,12,0.0,20,1,3.0,5.0,0.65
-80,False,all to all,True,3.0,1.5,12,0.0,20,1,1.0,76.0,6.45
-80,False,all to all,True,3.0,3.0,12,0.0,20,1,1.0,104.0,7.36
-80,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,11.0,0.91
-80,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,4.0,0.47
-80,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,4.0,0.49
-80,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,3.0,0.42
-80,True,best to rest,True,1.5,1.5,33,0.0,20,1,2.0,3.0,1.02
-80,True,best to rest,True,1.5,3.0,33,0.0,20,1,2.0,2.0,0.96
-80,True,best to rest,True,3.0,1.5,33,0.0,20,1,2.0,66.0,5.28
-80,True,best to rest,True,3.0,3.0,33,0.0,20,1,2.0,4.0,1.15
-80,True,best to rest,False,1.5,1.5,33,0.0,20,1,1.0,18.0,1.95
-80,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,12.0,0.95
-80,True,best to rest,False,3.0,1.5,33,0.0,20,1,1.0,3.0,0.55
-80,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,3.0,0.57
-80,False,best to rest,True,1.5,1.5,8,0.0,20,2,4.0,5.0,0.56
-80,False,best to rest,True,1.5,3.0,8,0.0,20,1,4.0,196.0,14.88
-80,False,best to rest,True,3.0,1.5,8,0.0,20,1,1.0,17.0,1.43
-80,False,best to rest,True,3.0,3.0,8,0.0,20,1,1.0,103.0,7.47
-80,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,5.0,0.44
-80,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,8.0,0.66
-80,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-80,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,3.0,0.35
-80,True,hybrid,True,1.5,1.5,4,5.1516,32,13,18.0,18.0,2.07
-80,True,hybrid,True,1.5,3.0,4,5.1516,32,1,2.0,196.0,13.34
-80,True,hybrid,True,3.0,1.5,4,5.1516,32,1,3.0,5.0,0.93
-80,True,hybrid,True,3.0,3.0,4,5.1516,32,1,2.0,7.0,1.6
-80,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,15.0,1.92
-80,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,8.0,1.49
-80,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,4.0,1.24
-80,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,5.0,1.29
-80,False,hybrid,True,1.5,1.5,26,1.8028,25,1,4.0,9.0,1.37
-80,False,hybrid,True,1.5,3.0,26,1.8028,25,1,3.0,15.0,1.93
-80,False,hybrid,True,3.0,1.5,26,1.8028,25,1,,,64.84
-80,False,hybrid,True,3.0,3.0,26,1.8028,25,1,,,86.64
-80,False,hybrid,False,1.5,1.5,26,1.8028,25,1,2.0,7.0,1.12
-80,False,hybrid,False,1.5,3.0,26,1.8028,25,1,2.0,4.0,0.56
-80,False,hybrid,False,3.0,1.5,26,1.8028,25,1,2.0,,71.72
-80,False,hybrid,False,3.0,3.0,26,1.8028,25,1,2.0,,71.41
-90,True,all to all,True,1.5,1.5,18,0.0,20,1,2.0,9.0,1.09
-90,True,all to all,True,1.5,3.0,18,0.0,20,1,2.0,317.0,21.97
-90,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,15.0,1.63
-90,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,124.0,9.23
-90,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,9.0,0.57
-90,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,9.0,0.64
-90,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,3.0,0.63
-90,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,3.0,0.63
-90,False,all to all,True,1.5,1.5,12,0.0,20,1,4.0,86.0,6.9
-90,False,all to all,True,1.5,3.0,12,0.0,20,1,2.0,317.0,22.14
-90,False,all to all,True,3.0,1.5,12,0.0,20,1,2.0,9.0,0.97
-90,False,all to all,True,3.0,3.0,12,0.0,20,1,1.0,15.0,1.51
-90,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,16.0,1.28
-90,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,11.0,0.93
-90,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,5.0,0.56
-90,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,4.0,0.49
-90,True,best to rest,True,1.5,1.5,33,0.0,20,1,2.0,5.0,1.05
-90,True,best to rest,True,1.5,3.0,33,0.0,20,1,2.0,12.0,0.95
-90,True,best to rest,True,3.0,1.5,33,0.0,20,1,2.0,15.0,1.19
-90,True,best to rest,True,3.0,3.0,33,0.0,20,1,2.0,4.0,1.12
-90,True,best to rest,False,1.5,1.5,33,0.0,20,1,1.0,8.0,1.26
-90,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,11.0,1.49
-90,True,best to rest,False,3.0,1.5,33,0.0,20,1,2.0,7.0,1.25
-90,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,3.0,0.97
-90,False,best to rest,True,1.5,1.5,8,0.0,20,1,3.0,16.0,1.07
-90,False,best to rest,True,1.5,3.0,8,0.0,20,1,2.0,10.0,0.87
-90,False,best to rest,True,3.0,1.5,8,0.0,20,1,2.0,5.0,0.54
-90,False,best to rest,True,3.0,3.0,8,0.0,20,1,2.0,124.0,9.71
-90,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,14.0,1.13
-90,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,5.0,0.48
-90,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-90,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,2.0,0.29
-90,True,hybrid,True,1.5,1.5,4,5.1516,32,2,4.0,6.0,0.98
-90,True,hybrid,True,1.5,3.0,4,5.1516,32,2,4.0,10.0,1.51
-90,True,hybrid,True,3.0,1.5,4,5.1516,32,1,4.0,4.0,1.31
-90,True,hybrid,True,3.0,3.0,4,5.1516,32,1,2.0,6.0,1.52
-90,True,hybrid,False,1.5,1.5,4,5.1516,32,1,2.0,5.0,1.3
-90,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,11.0,1.7
-90,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,7.0,1.46
-90,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,4.0,0.96
-90,False,hybrid,True,1.5,1.5,26,1.8028,25,4,6.0,15.0,1.39
-90,False,hybrid,True,1.5,3.0,26,1.8028,25,2,6.0,,73.89
-90,False,hybrid,True,3.0,1.5,26,1.8028,25,2,4.0,6.0,1.29
-90,False,hybrid,True,3.0,3.0,26,1.8028,25,1,,,79.43
-90,False,hybrid,False,1.5,1.5,26,1.8028,25,1,,,73.89
-90,False,hybrid,False,1.5,3.0,26,1.8028,25,1,1.0,5.0,0.95
-90,False,hybrid,False,3.0,1.5,26,1.8028,25,1,2.0,,72.73
-90,False,hybrid,False,3.0,3.0,26,1.8028,25,1,2.0,5.0,1.09
-100,True,all to all,True,1.5,1.5,18,0.0,20,1,1.0,22.0,1.77
-100,True,all to all,True,1.5,3.0,18,0.0,20,1,1.0,83.0,5.7
-100,True,all to all,True,3.0,1.5,18,0.0,20,1,1.0,10.0,1.34
-100,True,all to all,True,3.0,3.0,18,0.0,20,1,1.0,28.0,2.35
-100,True,all to all,False,1.5,1.5,18,0.0,20,1,1.0,13.0,1.11
-100,True,all to all,False,1.5,3.0,18,0.0,20,1,1.0,7.0,0.89
-100,True,all to all,False,3.0,1.5,18,0.0,20,1,1.0,4.0,0.7
-100,True,all to all,False,3.0,3.0,18,0.0,20,1,1.0,4.0,0.71
-100,False,all to all,True,1.5,1.5,12,0.0,20,1,1.0,3.0,0.49
-100,False,all to all,True,1.5,3.0,12,0.0,20,1,1.0,135.0,9.5
-100,False,all to all,True,3.0,1.5,12,0.0,20,1,2.0,3.0,0.5
-100,False,all to all,True,3.0,3.0,12,0.0,20,1,2.0,92.0,7.22
-100,False,all to all,False,1.5,1.5,12,0.0,20,1,1.0,8.0,0.6
-100,False,all to all,False,1.5,3.0,12,0.0,20,1,1.0,5.0,0.54
-100,False,all to all,False,3.0,1.5,12,0.0,20,1,1.0,4.0,0.48
-100,False,all to all,False,3.0,3.0,12,0.0,20,1,1.0,3.0,0.41
-100,True,best to rest,True,1.5,1.5,33,0.0,20,1,3.0,41.0,3.56
-100,True,best to rest,True,1.5,3.0,33,0.0,20,1,2.0,10.0,1.49
-100,True,best to rest,True,3.0,1.5,33,0.0,20,1,2.0,6.0,1.24
-100,True,best to rest,True,3.0,3.0,33,0.0,20,1,2.0,6.0,0.75
-100,True,best to rest,False,1.5,1.5,33,0.0,20,1,1.0,12.0,0.88
-100,True,best to rest,False,1.5,3.0,33,0.0,20,1,1.0,5.0,0.61
-100,True,best to rest,False,3.0,1.5,33,0.0,20,1,2.0,3.0,0.55
-100,True,best to rest,False,3.0,3.0,33,0.0,20,1,1.0,3.0,0.86
-100,False,best to rest,True,1.5,1.5,8,0.0,20,1,5.0,11.0,0.85
-100,False,best to rest,True,1.5,3.0,8,0.0,20,1,2.0,5.0,0.6
-100,False,best to rest,True,3.0,1.5,8,0.0,20,1,2.0,13.0,1.21
-100,False,best to rest,True,3.0,3.0,8,0.0,20,1,1.0,18.0,1.77
-100,False,best to rest,False,1.5,1.5,8,0.0,20,1,1.0,18.0,1.31
-100,False,best to rest,False,1.5,3.0,8,0.0,20,1,1.0,6.0,0.53
-100,False,best to rest,False,3.0,1.5,8,0.0,20,1,1.0,3.0,0.35
-100,False,best to rest,False,3.0,3.0,8,0.0,20,1,1.0,3.0,0.36
-100,True,hybrid,True,1.5,1.5,4,5.1516,32,1,4.0,134.0,10.44
-100,True,hybrid,True,1.5,3.0,4,5.1516,32,1,2.0,92.0,6.12
-100,True,hybrid,True,3.0,1.5,4,5.1516,32,1,3.0,4.0,1.31
-100,True,hybrid,True,3.0,3.0,4,5.1516,32,1,3.0,6.0,1.49
-100,True,hybrid,False,1.5,1.5,4,5.1516,32,1,3.0,10.0,1.64
-100,True,hybrid,False,1.5,3.0,4,5.1516,32,1,2.0,6.0,1.38
-100,True,hybrid,False,3.0,1.5,4,5.1516,32,1,2.0,6.0,0.78
-100,True,hybrid,False,3.0,3.0,4,5.1516,32,1,2.0,6.0,1.22
-100,False,hybrid,True,1.5,1.5,26,1.8028,25,4,11.0,24.0,2.38
-100,False,hybrid,True,1.5,3.0,26,1.8028,25,1,2.0,24.0,2.52
-100,False,hybrid,True,3.0,1.5,26,1.8028,25,1,3.0,5.0,1.16
-100,False,hybrid,True,3.0,3.0,26,1.8028,25,1,3.0,6.0,1.11
-100,False,hybrid,False,1.5,1.5,26,1.8028,25,1,2.0,6.0,0.63
-100,False,hybrid,False,1.5,3.0,26,1.8028,25,1,2.0,5.0,0.87
-100,False,hybrid,False,3.0,1.5,26,1.8028,25,1,2.0,,70.9
-100,False,hybrid,False,3.0,3.0,26,1.8028,25,1,2.0,,73.87
+Random State,GA Revisit Possible,Selection Type,ACO Revisit Possible,Alpha,Beta,GA Best Generation,GA Best Score,GA Best Secondary Score,GA Generations per Second,ACO First Full Path,ACO First Optimal Path,ACO Convergence Iteration,ACO Iterations per Second,Total Time
+10,True,all to all,True,1.5,1.5,17,0.0,20,29.82,,,,,0.57
+10,True,all to all,True,1.5,3.0,17,0.0,20,28.81,,,,,0.59
+10,True,all to all,True,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+10,True,all to all,True,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+10,True,all to all,False,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+10,True,all to all,False,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+10,True,all to all,False,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+10,True,all to all,False,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+10,False,all to all,True,1.5,1.5,20,0.0,20,57.14,,,,,0.35
+10,False,all to all,True,1.5,3.0,20,0.0,20,80.0,,,,,0.25
+10,False,all to all,True,3.0,1.5,20,0.0,20,80.0,,,,,0.25
+10,False,all to all,True,3.0,3.0,20,0.0,20,80.0,,,,,0.25
+10,False,all to all,False,1.5,1.5,20,0.0,20,80.0,,,,,0.25
+10,False,all to all,False,1.5,3.0,20,0.0,20,80.0,,,,,0.25
+10,False,all to all,False,3.0,1.5,20,0.0,20,80.0,,,,,0.25
+10,False,all to all,False,3.0,3.0,20,0.0,20,80.0,,,,,0.25
+10,True,best to rest,True,1.5,1.5,13,0.0,20,54.17,,,,,0.24
+10,True,best to rest,True,1.5,3.0,13,0.0,20,54.17,,,,,0.24
+10,True,best to rest,True,3.0,1.5,13,0.0,20,54.17,,,,,0.24
+10,True,best to rest,True,3.0,3.0,13,0.0,20,54.17,,,,,0.24
+10,True,best to rest,False,1.5,1.5,13,0.0,20,39.39,,,,,0.33
+10,True,best to rest,False,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+10,True,best to rest,False,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+10,True,best to rest,False,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+10,False,best to rest,True,1.5,1.5,45,0.0,20,47.37,,,,,0.95
+10,False,best to rest,True,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+10,False,best to rest,True,3.0,1.5,45,0.0,20,47.87,,,,,0.95
+10,False,best to rest,True,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+10,False,best to rest,False,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+10,False,best to rest,False,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+10,False,best to rest,False,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+10,False,best to rest,False,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+10,True,hybrid,True,1.5,1.5,43,1.5812,24,66.67,1.0,,,13.25,76.21
+10,True,hybrid,True,1.5,3.0,43,1.5812,24,60.24,1.0,3.0,5.0,19.23,1.09
+10,True,hybrid,True,3.0,1.5,43,1.5812,24,42.37,1.0,2.0,3.0,9.09,1.51
+10,True,hybrid,True,3.0,3.0,43,1.5812,24,39.06,1.0,2.0,6.0,10.53,1.86
+10,True,hybrid,False,1.5,1.5,43,1.5812,24,39.06,1.0,2.0,4.0,14.81,1.55
+10,True,hybrid,False,1.5,3.0,43,1.5812,24,39.06,1.0,2.0,5.0,15.15,1.61
+10,True,hybrid,False,3.0,1.5,43,1.5812,24,39.06,1.0,2.0,3.0,15.0,1.48
+10,True,hybrid,False,3.0,3.0,43,1.5812,24,40.32,1.0,2.0,4.0,26.67,1.4
+10,False,hybrid,True,1.5,1.5,1,1.5812,26,102.04,2.0,4.0,4.0,17.39,0.72
+10,False,hybrid,True,1.5,3.0,1,1.5812,26,102.04,1.0,3.0,6.0,21.43,0.77
+10,False,hybrid,True,3.0,1.5,1,1.5812,26,70.42,1.0,,,13.81,73.09
+10,False,hybrid,True,3.0,3.0,1,1.5812,26,72.46,1.0,,,13.01,77.59
+10,False,hybrid,False,1.5,1.5,1,1.5812,26,56.82,1.0,2.0,3.0,16.67,1.06
+10,False,hybrid,False,1.5,3.0,1,1.5812,26,57.47,1.0,2.0,5.0,15.15,1.2
+10,False,hybrid,False,3.0,1.5,1,1.5812,26,57.47,1.0,2.0,3.0,15.0,1.07
+10,False,hybrid,False,3.0,3.0,1,1.5812,26,57.47,1.0,,,13.75,73.62
+20,True,all to all,True,1.5,1.5,17,0.0,20,53.12,,,,,0.32
+20,True,all to all,True,1.5,3.0,17,0.0,20,53.12,,,,,0.32
+20,True,all to all,True,3.0,1.5,17,0.0,20,31.48,,,,,0.54
+20,True,all to all,True,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+20,True,all to all,False,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+20,True,all to all,False,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+20,True,all to all,False,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+20,True,all to all,False,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+20,False,all to all,True,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+20,False,all to all,True,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+20,False,all to all,True,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+20,False,all to all,True,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+20,False,all to all,False,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+20,False,all to all,False,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+20,False,all to all,False,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+20,False,all to all,False,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+20,True,best to rest,True,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+20,True,best to rest,True,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+20,True,best to rest,True,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+20,True,best to rest,True,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+20,True,best to rest,False,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+20,True,best to rest,False,1.5,3.0,13,0.0,20,43.33,,,,,0.3
+20,True,best to rest,False,3.0,1.5,13,0.0,20,54.17,,,,,0.24
+20,True,best to rest,False,3.0,3.0,13,0.0,20,54.17,,,,,0.24
+20,False,best to rest,True,1.5,1.5,45,0.0,20,84.91,,,,,0.53
+20,False,best to rest,True,1.5,3.0,45,0.0,20,84.91,,,,,0.53
+20,False,best to rest,True,3.0,1.5,45,0.0,20,67.16,,,,,0.67
+20,False,best to rest,True,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+20,False,best to rest,False,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+20,False,best to rest,False,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+20,False,best to rest,False,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+20,False,best to rest,False,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+20,True,hybrid,True,1.5,1.5,43,1.5812,24,38.76,1.0,3.0,4.0,11.76,1.62
+20,True,hybrid,True,1.5,3.0,43,1.5812,24,38.76,1.0,2.0,4.0,18.18,1.5
+20,True,hybrid,True,3.0,1.5,43,1.5812,24,68.49,1.0,3.0,4.0,19.05,0.94
+20,True,hybrid,True,3.0,3.0,43,1.5812,24,68.49,1.0,2.0,3.0,18.75,0.89
+20,True,hybrid,False,1.5,1.5,43,1.5812,24,40.98,1.0,2.0,5.0,15.15,1.56
+20,True,hybrid,False,1.5,3.0,43,1.5812,24,38.76,1.0,2.0,4.0,14.81,1.56
+20,True,hybrid,False,3.0,1.5,43,1.5812,24,38.76,1.0,2.0,3.0,14.29,1.5
+20,True,hybrid,False,3.0,3.0,43,1.5812,24,38.76,1.0,2.0,4.0,14.29,1.56
+20,False,hybrid,True,1.5,1.5,1,1.5812,26,57.47,1.0,3.0,4.0,11.76,1.21
+20,False,hybrid,True,1.5,3.0,1,1.5812,26,57.47,1.0,2.0,4.0,10.81,1.24
+20,False,hybrid,True,3.0,1.5,1,1.5812,26,76.92,2.0,,,14.26,70.79
+20,False,hybrid,True,3.0,3.0,1,1.5812,26,57.47,1.0,4.0,6.0,10.91,1.42
+20,False,hybrid,False,1.5,1.5,1,1.5812,26,57.47,1.0,2.0,5.0,15.15,1.2
+20,False,hybrid,False,1.5,3.0,1,1.5812,26,57.47,1.0,2.0,5.0,15.15,1.19
+20,False,hybrid,False,3.0,1.5,1,1.5812,26,57.47,1.0,2.0,5.0,14.29,1.21
+20,False,hybrid,False,3.0,3.0,1,1.5812,26,57.47,1.0,2.0,3.0,21.43,1.01
+30,True,all to all,True,1.5,1.5,17,0.0,20,53.12,,,,,0.32
+30,True,all to all,True,1.5,3.0,17,0.0,20,53.12,,,,,0.32
+30,True,all to all,True,3.0,1.5,17,0.0,20,53.12,,,,,0.32
+30,True,all to all,True,3.0,3.0,17,0.0,20,53.12,,,,,0.32
+30,True,all to all,False,1.5,1.5,17,0.0,20,53.12,,,,,0.32
+30,True,all to all,False,1.5,3.0,17,0.0,20,53.12,,,,,0.32
+30,True,all to all,False,3.0,1.5,17,0.0,20,30.91,,,,,0.55
+30,True,all to all,False,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+30,False,all to all,True,1.5,1.5,20,0.0,20,46.51,,,,,0.43
+30,False,all to all,True,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+30,False,all to all,True,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+30,False,all to all,True,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+30,False,all to all,False,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+30,False,all to all,False,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+30,False,all to all,False,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+30,False,all to all,False,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+30,True,best to rest,True,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+30,True,best to rest,True,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+30,True,best to rest,True,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+30,True,best to rest,True,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+30,True,best to rest,False,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+30,True,best to rest,False,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+30,True,best to rest,False,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+30,True,best to rest,False,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+30,False,best to rest,True,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+30,False,best to rest,True,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+30,False,best to rest,True,3.0,1.5,45,0.0,20,69.23,,,,,0.65
+30,False,best to rest,True,3.0,3.0,45,0.0,20,84.91,,,,,0.53
+30,False,best to rest,False,1.5,1.5,45,0.0,20,84.91,,,,,0.53
+30,False,best to rest,False,1.5,3.0,45,0.0,20,84.91,,,,,0.53
+30,False,best to rest,False,3.0,1.5,45,0.0,20,51.14,,,,,0.88
+30,False,best to rest,False,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+30,True,hybrid,True,1.5,1.5,43,1.5812,24,38.76,4.0,,,12.13,83.74
+30,True,hybrid,True,1.5,3.0,43,1.5812,24,38.76,1.0,3.0,6.0,11.54,1.82
+30,True,hybrid,True,3.0,1.5,43,1.5812,24,41.67,1.0,2.0,3.0,15.79,1.39
+30,True,hybrid,True,3.0,3.0,43,1.5812,24,67.57,1.0,2.0,4.0,10.0,1.14
+30,True,hybrid,False,1.5,1.5,43,1.5812,24,39.06,1.0,2.0,10.0,15.15,1.94
+30,True,hybrid,False,1.5,3.0,43,1.5812,24,38.76,1.0,2.0,10.0,15.15,1.95
+30,True,hybrid,False,3.0,1.5,43,1.5812,24,39.06,1.0,2.0,3.0,15.0,1.49
+30,True,hybrid,False,3.0,3.0,43,1.5812,24,38.76,1.0,2.0,3.0,14.29,1.5
+30,False,hybrid,True,1.5,1.5,1,1.5812,26,62.5,2.0,,,15.01,67.42
+30,False,hybrid,True,1.5,3.0,1,1.5812,26,57.47,1.0,2.0,3.0,10.71,1.16
+30,False,hybrid,True,3.0,1.5,1,1.5812,26,57.47,2.0,4.0,6.0,10.17,1.46
+30,False,hybrid,True,3.0,3.0,1,1.5812,26,57.47,1.0,4.0,5.0,10.0,1.37
+30,False,hybrid,False,1.5,1.5,1,1.5812,26,57.47,1.0,2.0,3.0,15.79,1.06
+30,False,hybrid,False,1.5,3.0,1,1.5812,26,70.42,1.0,2.0,3.0,30.0,0.81
+30,False,hybrid,False,3.0,1.5,1,1.5812,26,102.04,1.0,7.0,8.0,21.62,0.86
+30,False,hybrid,False,3.0,3.0,1,1.5812,26,102.04,1.0,,,13.56,74.23
+40,True,all to all,True,1.5,1.5,17,0.0,20,29.82,,,,,0.57
+40,True,all to all,True,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+40,True,all to all,True,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+40,True,all to all,True,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+40,True,all to all,False,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+40,True,all to all,False,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+40,True,all to all,False,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+40,True,all to all,False,3.0,3.0,17,0.0,20,53.12,,,,,0.32
+40,False,all to all,True,1.5,1.5,20,0.0,20,80.0,,,,,0.25
+40,False,all to all,True,1.5,3.0,20,0.0,20,80.0,,,,,0.25
+40,False,all to all,True,3.0,1.5,20,0.0,20,68.97,,,,,0.29
+40,False,all to all,True,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+40,False,all to all,False,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+40,False,all to all,False,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+40,False,all to all,False,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+40,False,all to all,False,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+40,True,best to rest,True,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+40,True,best to rest,True,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+40,True,best to rest,True,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+40,True,best to rest,True,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+40,True,best to rest,False,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+40,True,best to rest,False,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+40,True,best to rest,False,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+40,True,best to rest,False,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+40,False,best to rest,True,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+40,False,best to rest,True,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+40,False,best to rest,True,3.0,1.5,45,0.0,20,55.56,,,,,0.81
+40,False,best to rest,True,3.0,3.0,45,0.0,20,84.91,,,,,0.53
+40,False,best to rest,False,1.5,1.5,45,0.0,20,64.29,,,,,0.7
+40,False,best to rest,False,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+40,False,best to rest,False,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+40,False,best to rest,False,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+40,True,hybrid,True,1.5,1.5,43,1.5812,24,38.76,2.0,3.0,4.0,9.09,1.73
+40,True,hybrid,True,1.5,3.0,43,1.5812,24,39.06,2.0,4.0,5.0,10.42,1.76
+40,True,hybrid,True,3.0,1.5,43,1.5812,24,39.06,1.0,,,12.36,82.2
+40,True,hybrid,True,3.0,3.0,43,1.5812,24,68.49,1.0,2.0,5.0,20.83,0.97
+40,True,hybrid,False,1.5,1.5,43,1.5812,24,51.55,1.0,2.0,3.0,16.67,1.15
+40,True,hybrid,False,1.5,3.0,43,1.5812,24,39.06,1.0,2.0,6.0,15.38,1.67
+40,True,hybrid,False,3.0,1.5,43,1.5812,24,39.06,1.0,2.0,4.0,15.38,1.55
+40,True,hybrid,False,3.0,3.0,43,1.5812,24,39.06,1.0,2.0,10.0,14.29,1.98
+40,False,hybrid,True,1.5,1.5,1,1.5812,26,57.47,2.0,4.0,4.0,10.0,1.27
+40,False,hybrid,True,1.5,3.0,1,1.5812,26,58.14,1.0,2.0,5.0,11.9,1.28
+40,False,hybrid,True,3.0,1.5,1,1.5812,26,68.49,1.0,,,13.99,72.23
+40,False,hybrid,True,3.0,3.0,1,1.5812,26,64.1,1.0,,,14.09,71.74
+40,False,hybrid,False,1.5,1.5,1,1.5812,26,69.44,1.0,3.0,4.0,16.67,0.96
+40,False,hybrid,False,1.5,3.0,1,1.5812,26,58.14,1.0,2.0,5.0,14.71,1.2
+40,False,hybrid,False,3.0,1.5,1,1.5812,26,58.14,1.0,2.0,3.0,14.29,1.08
+40,False,hybrid,False,3.0,3.0,1,1.5812,26,58.14,1.0,2.0,4.0,13.33,1.16
+50,True,all to all,True,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+50,True,all to all,True,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+50,True,all to all,True,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+50,True,all to all,True,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+50,True,all to all,False,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+50,True,all to all,False,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+50,True,all to all,False,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+50,True,all to all,False,3.0,3.0,17,0.0,20,51.52,,,,,0.33
+50,False,all to all,True,1.5,1.5,20,0.0,20,83.33,,,,,0.24
+50,False,all to all,True,1.5,3.0,20,0.0,20,80.0,,,,,0.25
+50,False,all to all,True,3.0,1.5,20,0.0,20,80.0,,,,,0.25
+50,False,all to all,True,3.0,3.0,20,0.0,20,80.0,,,,,0.25
+50,False,all to all,False,1.5,1.5,20,0.0,20,80.0,,,,,0.25
+50,False,all to all,False,1.5,3.0,20,0.0,20,80.0,,,,,0.25
+50,False,all to all,False,3.0,1.5,20,0.0,20,80.0,,,,,0.25
+50,False,all to all,False,3.0,3.0,20,0.0,20,80.0,,,,,0.25
+50,True,best to rest,True,1.5,1.5,13,0.0,20,54.17,,,,,0.24
+50,True,best to rest,True,1.5,3.0,13,0.0,20,54.17,,,,,0.24
+50,True,best to rest,True,3.0,1.5,13,0.0,20,46.43,,,,,0.28
+50,True,best to rest,True,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+50,True,best to rest,False,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+50,True,best to rest,False,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+50,True,best to rest,False,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+50,True,best to rest,False,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+50,False,best to rest,True,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+50,False,best to rest,True,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+50,False,best to rest,True,3.0,1.5,45,0.0,20,48.39,,,,,0.93
+50,False,best to rest,True,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+50,False,best to rest,False,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+50,False,best to rest,False,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+50,False,best to rest,False,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+50,False,best to rest,False,3.0,3.0,45,0.0,20,68.18,,,,,0.66
+50,True,hybrid,True,1.5,1.5,43,1.5812,24,63.29,1.0,2.0,6.0,10.53,1.36
+50,True,hybrid,True,1.5,3.0,43,1.5812,24,39.06,1.0,3.0,5.0,10.87,1.74
+50,True,hybrid,True,3.0,1.5,43,1.5812,24,39.06,1.0,2.0,3.0,8.82,1.62
+50,True,hybrid,True,3.0,3.0,43,1.5812,24,39.06,1.0,2.0,8.0,12.9,1.9
+50,True,hybrid,False,1.5,1.5,43,1.5812,24,39.06,1.0,2.0,6.0,15.38,1.68
+50,True,hybrid,False,1.5,3.0,43,1.5812,24,56.82,1.0,2.0,4.0,26.67,1.03
+50,True,hybrid,False,3.0,1.5,43,1.5812,24,48.54,1.0,2.0,3.0,14.29,1.24
+50,True,hybrid,False,3.0,3.0,43,1.5812,24,39.06,1.0,2.0,3.0,14.29,1.49
+50,False,hybrid,True,1.5,1.5,1,1.5812,26,57.47,1.0,3.0,5.0,12.2,1.27
+50,False,hybrid,True,1.5,3.0,1,1.5812,26,58.14,1.0,2.0,4.0,11.43,1.22
+50,False,hybrid,True,3.0,1.5,1,1.5812,26,57.47,2.0,6.0,6.0,10.53,1.43
+50,False,hybrid,True,3.0,3.0,1,1.5812,26,57.47,1.0,2.0,11.0,13.41,1.69
+50,False,hybrid,False,1.5,1.5,1,1.5812,26,102.04,1.0,2.0,3.0,30.0,0.59
+50,False,hybrid,False,1.5,3.0,1,1.5812,26,102.04,1.0,2.0,4.0,26.67,0.64
+50,False,hybrid,False,3.0,1.5,1,1.5812,26,102.04,1.0,2.0,3.0,25.0,0.61
+50,False,hybrid,False,3.0,3.0,1,1.5812,26,102.04,1.0,2.0,3.0,25.0,0.61
+60,True,all to all,True,1.5,1.5,17,0.0,20,53.12,,,,,0.32
+60,True,all to all,True,1.5,3.0,17,0.0,20,53.12,,,,,0.32
+60,True,all to all,True,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+60,True,all to all,True,3.0,3.0,17,0.0,20,28.81,,,,,0.59
+60,True,all to all,False,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+60,True,all to all,False,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+60,True,all to all,False,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+60,True,all to all,False,3.0,3.0,17,0.0,20,30.36,,,,,0.57
+60,False,all to all,True,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+60,False,all to all,True,1.5,3.0,20,0.0,20,46.51,,,,,0.43
+60,False,all to all,True,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+60,False,all to all,True,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+60,False,all to all,False,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+60,False,all to all,False,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+60,False,all to all,False,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+60,False,all to all,False,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+60,True,best to rest,True,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+60,True,best to rest,True,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+60,True,best to rest,True,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+60,True,best to rest,True,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+60,True,best to rest,False,1.5,1.5,13,0.0,20,35.14,,,,,0.37
+60,True,best to rest,False,1.5,3.0,13,0.0,20,54.17,,,,,0.24
+60,True,best to rest,False,3.0,1.5,13,0.0,20,54.17,,,,,0.24
+60,True,best to rest,False,3.0,3.0,13,0.0,20,54.17,,,,,0.24
+60,False,best to rest,True,1.5,1.5,45,0.0,20,84.91,,,,,0.53
+60,False,best to rest,True,1.5,3.0,45,0.0,20,84.91,,,,,0.53
+60,False,best to rest,True,3.0,1.5,45,0.0,20,84.91,,,,,0.53
+60,False,best to rest,True,3.0,3.0,45,0.0,20,84.91,,,,,0.53
+60,False,best to rest,False,1.5,1.5,45,0.0,20,56.25,,,,,0.8
+60,False,best to rest,False,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+60,False,best to rest,False,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+60,False,best to rest,False,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+60,True,hybrid,True,1.5,1.5,43,1.5812,24,39.06,2.0,,,12.96,78.43
+60,True,hybrid,True,1.5,3.0,43,1.5812,24,38.46,1.0,3.0,6.0,10.91,1.85
+60,True,hybrid,True,3.0,1.5,43,1.5812,24,39.06,1.0,3.0,3.0,9.68,1.6
+60,True,hybrid,True,3.0,3.0,43,1.5812,24,67.57,1.0,2.0,5.0,18.52,1.01
+60,True,hybrid,False,1.5,1.5,43,1.5812,24,68.49,1.0,2.0,4.0,26.67,0.88
+60,True,hybrid,False,1.5,3.0,43,1.5812,24,44.25,1.0,2.0,11.0,16.18,1.81
+60,True,hybrid,False,3.0,1.5,43,1.5812,24,38.76,1.0,2.0,3.0,15.0,1.49
+60,True,hybrid,False,3.0,3.0,43,1.5812,24,39.06,1.0,2.0,3.0,15.0,1.49
+60,False,hybrid,True,1.5,1.5,1,1.5812,26,58.14,1.0,,,14.26,71.01
+60,False,hybrid,True,1.5,3.0,1,1.5812,26,59.52,1.0,,,14.26,70.98
+60,False,hybrid,True,3.0,1.5,1,1.5812,26,57.47,1.0,2.0,4.0,10.26,1.26
+60,False,hybrid,True,3.0,3.0,1,1.5812,26,60.24,1.0,2.0,6.0,20.0,1.13
+60,False,hybrid,False,1.5,1.5,1,1.5812,26,102.04,1.0,3.0,4.0,26.67,0.64
+60,False,hybrid,False,1.5,3.0,1,1.5812,26,58.14,1.0,2.0,4.0,14.81,1.13
+60,False,hybrid,False,3.0,1.5,1,1.5812,26,57.47,1.0,3.0,4.0,13.79,1.16
+60,False,hybrid,False,3.0,3.0,1,1.5812,26,58.14,1.0,2.0,6.0,13.95,1.3
+70,True,all to all,True,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+70,True,all to all,True,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+70,True,all to all,True,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+70,True,all to all,True,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+70,True,all to all,False,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+70,True,all to all,False,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+70,True,all to all,False,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+70,True,all to all,False,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+70,False,all to all,True,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+70,False,all to all,True,1.5,3.0,20,0.0,20,46.51,,,,,0.43
+70,False,all to all,True,3.0,1.5,20,0.0,20,66.67,,,,,0.3
+70,False,all to all,True,3.0,3.0,20,0.0,20,80.0,,,,,0.25
+70,False,all to all,False,1.5,1.5,20,0.0,20,80.0,,,,,0.25
+70,False,all to all,False,1.5,3.0,20,0.0,20,80.0,,,,,0.25
+70,False,all to all,False,3.0,1.5,20,0.0,20,54.05,,,,,0.37
+70,False,all to all,False,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+70,True,best to rest,True,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+70,True,best to rest,True,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+70,True,best to rest,True,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+70,True,best to rest,True,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+70,True,best to rest,False,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+70,True,best to rest,False,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+70,True,best to rest,False,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+70,True,best to rest,False,3.0,3.0,13,0.0,20,28.89,,,,,0.45
+70,False,best to rest,True,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+70,False,best to rest,True,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+70,False,best to rest,True,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+70,False,best to rest,True,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+70,False,best to rest,False,1.5,1.5,45,0.0,20,77.59,,,,,0.58
+70,False,best to rest,False,1.5,3.0,45,0.0,20,84.91,,,,,0.53
+70,False,best to rest,False,3.0,1.5,45,0.0,20,48.39,,,,,0.93
+70,False,best to rest,False,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+70,True,hybrid,True,1.5,1.5,43,1.5812,24,39.06,3.0,5.0,6.0,10.71,1.85
+70,True,hybrid,True,1.5,3.0,43,1.5812,24,39.06,1.0,2.0,6.0,12.5,1.76
+70,True,hybrid,True,3.0,1.5,43,1.5812,24,39.06,1.0,,,13.61,74.77
+70,True,hybrid,True,3.0,3.0,43,1.5812,24,38.76,1.0,2.0,4.0,10.0,1.69
+70,True,hybrid,False,1.5,1.5,43,1.5812,24,39.06,1.0,2.0,3.0,15.79,1.46
+70,True,hybrid,False,1.5,3.0,43,1.5812,24,65.79,1.0,2.0,5.0,27.78,0.94
+70,True,hybrid,False,3.0,1.5,43,1.5812,24,68.49,1.0,2.0,9.0,26.47,1.07
+70,True,hybrid,False,3.0,3.0,43,1.5812,24,68.49,1.0,2.0,4.0,26.67,0.88
+70,False,hybrid,True,1.5,1.5,1,1.5812,26,65.79,1.0,4.0,4.0,13.33,1.06
+70,False,hybrid,True,1.5,3.0,1,1.5812,26,57.47,3.0,5.0,6.0,10.0,1.46
+70,False,hybrid,True,3.0,1.5,1,1.5812,26,57.47,2.0,5.0,6.0,10.71,1.43
+70,False,hybrid,True,3.0,3.0,1,1.5812,26,57.47,1.0,3.0,4.0,9.76,1.27
+70,False,hybrid,False,1.5,1.5,1,1.5812,26,57.47,1.0,3.0,4.0,16.0,1.12
+70,False,hybrid,False,1.5,3.0,1,1.5812,26,58.14,1.0,2.0,4.0,14.81,1.14
+70,False,hybrid,False,3.0,1.5,1,1.5812,26,57.47,1.0,2.0,3.0,15.0,1.07
+70,False,hybrid,False,3.0,3.0,1,1.5812,26,57.47,1.0,3.0,5.0,12.82,1.26
+80,True,all to all,True,1.5,1.5,17,0.0,20,33.33,,,,,0.51
+80,True,all to all,True,1.5,3.0,17,0.0,20,53.12,,,,,0.32
+80,True,all to all,True,3.0,1.5,17,0.0,20,53.12,,,,,0.32
+80,True,all to all,True,3.0,3.0,17,0.0,20,53.12,,,,,0.32
+80,True,all to all,False,1.5,1.5,17,0.0,20,53.12,,,,,0.32
+80,True,all to all,False,1.5,3.0,17,0.0,20,53.12,,,,,0.32
+80,True,all to all,False,3.0,1.5,17,0.0,20,42.5,,,,,0.4
+80,True,all to all,False,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+80,False,all to all,True,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+80,False,all to all,True,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+80,False,all to all,True,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+80,False,all to all,True,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+80,False,all to all,False,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+80,False,all to all,False,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+80,False,all to all,False,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+80,False,all to all,False,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+80,True,best to rest,True,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+80,True,best to rest,True,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+80,True,best to rest,True,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+80,True,best to rest,True,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+80,True,best to rest,False,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+80,True,best to rest,False,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+80,True,best to rest,False,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+80,True,best to rest,False,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+80,False,best to rest,True,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+80,False,best to rest,True,1.5,3.0,45,0.0,20,60.0,,,,,0.75
+80,False,best to rest,True,3.0,1.5,45,0.0,20,84.91,,,,,0.53
+80,False,best to rest,True,3.0,3.0,45,0.0,20,58.44,,,,,0.77
+80,False,best to rest,False,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+80,False,best to rest,False,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+80,False,best to rest,False,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+80,False,best to rest,False,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+80,True,hybrid,True,1.5,1.5,43,1.5812,24,39.06,1.0,2.0,3.0,9.38,1.61
+80,True,hybrid,True,1.5,3.0,43,1.5812,24,39.06,1.0,3.0,5.0,11.11,1.73
+80,True,hybrid,True,3.0,1.5,43,1.5812,24,56.18,1.0,2.0,6.0,22.22,1.16
+80,True,hybrid,True,3.0,3.0,43,1.5812,24,44.64,1.0,2.0,4.0,10.0,1.52
+80,True,hybrid,False,1.5,1.5,43,1.5812,24,38.76,1.0,3.0,6.0,15.79,1.67
+80,True,hybrid,False,1.5,3.0,43,1.5812,24,38.76,1.0,2.0,5.0,16.13,1.6
+80,True,hybrid,False,3.0,1.5,43,1.5812,24,38.76,1.0,2.0,3.0,15.0,1.49
+80,True,hybrid,False,3.0,3.0,43,1.5812,24,38.76,1.0,2.0,3.0,15.0,1.49
+80,False,hybrid,True,1.5,1.5,1,1.5812,26,65.79,1.0,,,14.46,69.93
+80,False,hybrid,True,1.5,3.0,1,1.5812,26,57.47,2.0,,,13.81,73.29
+80,False,hybrid,True,3.0,1.5,1,1.5812,26,94.34,1.0,,,14.58,69.12
+80,False,hybrid,True,3.0,3.0,1,1.5812,26,56.82,1.0,,,14.12,71.71
+80,False,hybrid,False,1.5,1.5,1,1.5812,26,57.47,1.0,2.0,5.0,15.62,1.2
+80,False,hybrid,False,1.5,3.0,1,1.5812,26,57.47,1.0,2.0,4.0,14.81,1.14
+80,False,hybrid,False,3.0,1.5,1,1.5812,26,57.47,1.0,2.0,3.0,15.0,1.07
+80,False,hybrid,False,3.0,3.0,1,1.5812,26,57.47,1.0,2.0,14.0,14.14,1.86
+90,True,all to all,True,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+90,True,all to all,True,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+90,True,all to all,True,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+90,True,all to all,True,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+90,True,all to all,False,1.5,1.5,17,0.0,20,36.17,,,,,0.47
+90,True,all to all,False,1.5,3.0,17,0.0,20,53.12,,,,,0.32
+90,True,all to all,False,3.0,1.5,17,0.0,20,53.12,,,,,0.32
+90,True,all to all,False,3.0,3.0,17,0.0,20,53.12,,,,,0.32
+90,False,all to all,True,1.5,1.5,20,0.0,20,80.0,,,,,0.25
+90,False,all to all,True,1.5,3.0,20,0.0,20,80.0,,,,,0.25
+90,False,all to all,True,3.0,1.5,20,0.0,20,80.0,,,,,0.25
+90,False,all to all,True,3.0,3.0,20,0.0,20,80.0,,,,,0.25
+90,False,all to all,False,1.5,1.5,20,0.0,20,80.0,,,,,0.25
+90,False,all to all,False,1.5,3.0,20,0.0,20,80.0,,,,,0.25
+90,False,all to all,False,3.0,1.5,20,0.0,20,80.0,,,,,0.25
+90,False,all to all,False,3.0,3.0,20,0.0,20,80.0,,,,,0.25
+90,True,best to rest,True,1.5,1.5,13,0.0,20,33.33,,,,,0.39
+90,True,best to rest,True,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+90,True,best to rest,True,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+90,True,best to rest,True,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+90,True,best to rest,False,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+90,True,best to rest,False,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+90,True,best to rest,False,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+90,True,best to rest,False,3.0,3.0,13,0.0,20,30.95,,,,,0.42
+90,False,best to rest,True,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+90,False,best to rest,True,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+90,False,best to rest,True,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+90,False,best to rest,True,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+90,False,best to rest,False,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+90,False,best to rest,False,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+90,False,best to rest,False,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+90,False,best to rest,False,3.0,3.0,45,0.0,20,80.36,,,,,0.56
+90,True,hybrid,True,1.5,1.5,43,1.5812,24,69.44,2.0,5.0,6.0,20.0,1.02
+90,True,hybrid,True,1.5,3.0,43,1.5812,24,57.47,1.0,2.0,3.0,10.0,1.17
+90,True,hybrid,True,3.0,1.5,43,1.5812,24,38.76,1.0,2.0,7.0,12.73,1.84
+90,True,hybrid,True,3.0,3.0,43,1.5812,24,38.76,1.0,2.0,3.0,9.68,1.6
+90,True,hybrid,False,1.5,1.5,43,1.5812,24,39.06,1.0,2.0,7.0,15.56,1.74
+90,True,hybrid,False,1.5,3.0,43,1.5812,24,38.76,1.0,2.0,7.0,14.89,1.75
+90,True,hybrid,False,3.0,1.5,43,1.5812,24,39.06,1.0,2.0,8.0,19.51,1.7
+90,True,hybrid,False,3.0,3.0,43,1.5812,24,68.49,1.0,2.0,8.0,16.0,1.23
+90,False,hybrid,True,1.5,1.5,1,1.5812,26,57.47,2.0,3.0,4.0,9.52,1.29
+90,False,hybrid,True,1.5,3.0,1,1.5812,26,58.14,1.0,3.0,4.0,10.81,1.24
+90,False,hybrid,True,3.0,1.5,1,1.5812,26,58.14,4.0,,,14.11,71.72
+90,False,hybrid,True,3.0,3.0,1,1.5812,26,57.47,1.0,,,14.15,71.57
+90,False,hybrid,False,1.5,1.5,1,1.5812,26,57.47,1.0,3.0,4.0,16.67,1.11
+90,False,hybrid,False,1.5,3.0,1,1.5812,26,57.47,1.0,3.0,7.0,15.56,1.32
+90,False,hybrid,False,3.0,1.5,1,1.5812,26,102.04,1.0,2.0,3.0,25.0,0.61
+90,False,hybrid,False,3.0,3.0,1,1.5812,26,102.04,1.0,2.0,5.0,25.0,0.69
+100,True,all to all,True,1.5,1.5,17,0.0,20,53.12,,,,,0.32
+100,True,all to all,True,1.5,3.0,17,0.0,20,53.12,,,,,0.32
+100,True,all to all,True,3.0,1.5,17,0.0,20,34.69,,,,,0.49
+100,True,all to all,True,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+100,True,all to all,False,1.5,1.5,17,0.0,20,30.36,,,,,0.56
+100,True,all to all,False,1.5,3.0,17,0.0,20,30.36,,,,,0.56
+100,True,all to all,False,3.0,1.5,17,0.0,20,30.36,,,,,0.56
+100,True,all to all,False,3.0,3.0,17,0.0,20,30.36,,,,,0.56
+100,False,all to all,True,1.5,1.5,20,0.0,20,46.51,,,,,0.43
+100,False,all to all,True,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+100,False,all to all,True,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+100,False,all to all,True,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+100,False,all to all,False,1.5,1.5,20,0.0,20,45.45,,,,,0.44
+100,False,all to all,False,1.5,3.0,20,0.0,20,45.45,,,,,0.44
+100,False,all to all,False,3.0,1.5,20,0.0,20,45.45,,,,,0.44
+100,False,all to all,False,3.0,3.0,20,0.0,20,45.45,,,,,0.44
+100,True,best to rest,True,1.5,1.5,13,0.0,20,30.95,,,,,0.42
+100,True,best to rest,True,1.5,3.0,13,0.0,20,30.95,,,,,0.42
+100,True,best to rest,True,3.0,1.5,13,0.0,20,30.95,,,,,0.42
+100,True,best to rest,True,3.0,3.0,13,0.0,20,50.0,,,,,0.26
+100,True,best to rest,False,1.5,1.5,13,0.0,20,54.17,,,,,0.24
+100,True,best to rest,False,1.5,3.0,13,0.0,20,54.17,,,,,0.24
+100,True,best to rest,False,3.0,1.5,13,0.0,20,54.17,,,,,0.24
+100,True,best to rest,False,3.0,3.0,13,0.0,20,54.17,,,,,0.24
+100,False,best to rest,True,1.5,1.5,45,0.0,20,84.91,,,,,0.53
+100,False,best to rest,True,1.5,3.0,45,0.0,20,68.18,,,,,0.67
+100,False,best to rest,True,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+100,False,best to rest,True,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+100,False,best to rest,False,1.5,1.5,45,0.0,20,47.87,,,,,0.94
+100,False,best to rest,False,1.5,3.0,45,0.0,20,47.87,,,,,0.94
+100,False,best to rest,False,3.0,1.5,45,0.0,20,47.87,,,,,0.94
+100,False,best to rest,False,3.0,3.0,45,0.0,20,47.87,,,,,0.94
+100,True,hybrid,True,1.5,1.5,43,1.5812,24,38.76,1.0,3.0,5.0,10.87,1.75
+100,True,hybrid,True,1.5,3.0,43,1.5812,24,38.76,1.0,2.0,4.0,16.0,1.54
+100,True,hybrid,True,3.0,1.5,43,1.5812,24,69.44,1.0,2.0,3.0,13.64,0.95
+100,True,hybrid,True,3.0,3.0,43,1.5812,24,39.06,1.0,2.0,3.0,9.68,1.6
+100,True,hybrid,False,1.5,1.5,43,1.5812,24,38.76,1.0,2.0,7.0,15.56,1.74
+100,True,hybrid,False,1.5,3.0,43,1.5812,24,39.06,1.0,2.0,4.0,16.0,1.54
+100,True,hybrid,False,3.0,1.5,43,1.5812,24,39.06,1.0,2.0,3.0,14.29,1.49
+100,True,hybrid,False,3.0,3.0,43,1.5812,24,38.76,1.0,2.0,3.0,14.29,1.5
+100,False,hybrid,True,1.5,1.5,1,1.5812,26,98.04,1.0,3.0,4.0,21.05,0.7
+100,False,hybrid,True,1.5,3.0,1,1.5812,26,84.75,1.0,2.0,3.0,9.68,0.9
+100,False,hybrid,True,3.0,1.5,1,1.5812,26,57.47,1.0,3.0,4.0,11.76,1.2
+100,False,hybrid,True,3.0,3.0,1,1.5812,26,58.14,1.0,2.0,3.0,10.34,1.16
+100,False,hybrid,False,1.5,1.5,1,1.5812,26,57.47,1.0,2.0,7.0,15.22,1.33
+100,False,hybrid,False,1.5,3.0,1,1.5812,26,57.47,1.0,2.0,7.0,14.58,1.34
+100,False,hybrid,False,3.0,1.5,1,1.5812,26,58.14,1.0,2.0,3.0,13.64,1.08
+100,False,hybrid,False,3.0,3.0,1,1.5812,26,58.14,1.0,2.0,5.0,13.89,1.23

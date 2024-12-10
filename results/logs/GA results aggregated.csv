@@ -1,13 +1,13 @@
-Selection Type,Revisit Possible,Bias,Best Generation,Best Score,Best Secondary Score,Total Time
-all to all,False,1.5,73.0,0.0,20.0,1.49
-all to all,False,3.0,109.0,0.0,20.0,2.31
-all to all,True,1.5,33.0,0.0,20.0,0.8
-all to all,True,3.0,45.0,0.0,20.0,1.1
-best to rest,False,1.5,29.0,0.0,20.0,0.55
-best to rest,False,3.0,65.0,0.0,20.0,1.24
-best to rest,True,1.5,41.0,0.0,20.0,0.94
-best to rest,True,3.0,42.0,0.0,20.0,0.95
-hybrid,False,1.5,26.0,1.8,25.0,15.18
-hybrid,False,3.0,26.0,1.8,25.0,15.19
-hybrid,True,1.5,4.0,5.15,32.0,19.91
-hybrid,True,3.0,4.0,5.15,32.0,19.93
+Selection Type,Revisit Possible,Bias,Best Generation,Best Score,Best Secondary Score,Generations per Second,Total Time
+all to all,False,1.5,13.0,0.0,20.0,55.85,0.25
+all to all,False,3.0,6.0,0.0,20.0,57.14,0.11
+all to all,True,1.5,39.0,0.0,20.0,29.84,1.31
+all to all,True,3.0,4.0,0.0,20.0,28.38,0.14
+best to rest,False,1.5,13.0,0.0,20.0,55.85,0.25
+best to rest,False,3.0,13.0,0.0,20.0,55.85,0.25
+best to rest,True,1.5,24.0,0.0,20.0,32.3,0.74
+best to rest,True,3.0,7.0,0.0,20.0,31.68,0.22
+hybrid,False,1.5,1.0,1.58,26.0,58.18,17.24
+hybrid,False,3.0,1.0,1.58,26.0,60.14,16.71
+hybrid,True,1.5,68.0,1.41,32.0,45.72,21.93
+hybrid,True,3.0,68.0,1.41,32.0,46.0,21.81

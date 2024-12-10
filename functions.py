@@ -290,53 +290,6 @@ def recode_agent_path(
     # Abort if no valid moves
     return (None, None)
 
-# def recode_agent_path(
-#     previous_positions: List[Tuple[int, int]],
-#     current_position: Tuple[int, int],
-#     grid_world: np.ndarray,
-#     revisit_possible: bool
-# ) -> Tuple[Optional[Tuple[int, int]], Optional[Tuple[str, str]]]:
-#     """
-#     Recode the agent's path to avoid obstacles.
-
-#     Parameters:
-#     - previous_positions (List[Tuple[int, int]]): List of previously visited positions.
-#     - current_position (Tuple[int, int]): Current position of the agent.
-#     - grid_world (np.ndarray): The grid world matrix.
-#     - revisit_possible (bool): If True, allow revisited positions only when no other options are available.
-
-#     Returns:
-#     - Optional[Tuple[int, int]]: The new position for the agent, or None if no valid moves exist.
-#     - Optional[Tuple[str, str]]: The corresponding choice bytes for the new position, or None if aborted.
-#     """
-#     valid_moves = {
-#         "00": (1, 0),  # down
-#         "01": (0, 1),  # right
-#         "10": (0, -1), # left
-#         "11": (-1, 0)  # up
-#     }
-
-#     new_positions = []
-
-#     for choice_bytes, (dx, dy) in valid_moves.items():
-#         new_position = (current_position[0] + dx, current_position[1] + dy)
-
-#         # Check if the new position is within bounds and not an obstacle
-#         if (
-#             0 <= new_position[0] < grid_world.shape[0] and
-#             0 <= new_position[1] < grid_world.shape[1] and
-#             grid_world[new_position] != 3
-#         ):
-#             if revisit_possible:
-#                 new_positions.append((new_position, (choice_bytes[0], choice_bytes[1])))
-#             elif new_position not in previous_positions:
-#                 new_positions.append((new_position, (choice_bytes[0], choice_bytes[1])))
-
-#     if new_positions:
-#         return random.choice(new_positions)
-
-#     return (None, None)
-
 def fitness_score_calculation(
     agent_path: str,
     grid_world: np.ndarray,
@@ -412,35 +365,63 @@ def fitness_score_calculation(
     - Obstacles are represented as `3` in `grid_world`.
     - Dynamic path adjustment requires a properly defined `recode_agent_path` function.
     """
-    grid_world = copy.deepcopy(grid_world)
-    secondary_fitness_score = 0
-    previous_positions = [start_position]
-    agent_path = list(agent_path)
-    optimal_step_position = None
-    
-    for i in range(0, chromosome_length, 2):
-        previous_position = previous_positions[-1]
-        grid_world[previous_position] = 6
+    def revisit_path_recode():
+        """
+        Handles path recalculation for an agent in a grid world when revisits are allowed.
 
-        choice_bytes = agent_path[i] + agent_path[i + 1]
-        if choice_bytes == "00":  # down
-            new_position = (previous_position[0] + 1, previous_position[1])
-        elif choice_bytes == "01":  # right
-            new_position = (previous_position[0], previous_position[1] + 1)
-        elif choice_bytes == "10":  # left
-            new_position = (previous_position[0], previous_position[1] - 1)
-        elif choice_bytes == "11":  # up
-            new_position = (previous_position[0] - 1, previous_position[1])
-        else:
-            raise ValueError("Values only could be: '00', '01', '10', '11'.")
+        This function processes the agent's path in a grid world by decoding its binary chromosome
+        representation and adjusting the path dynamically if obstacles or invalid moves are encountered.
+        It supports revisiting previously visited cells.
 
-        if new_position[0] < 0 or new_position[0] >= grid_size[0] or new_position[1] < 0 or new_position[1] >= grid_size[1]:
-            primary_fitness_score = np.inf
-            previous_positions.append(new_position)
-            break
+        Returns:
+        -------
+        Tuple:
+            - final_position (Tuple[int, int]): The last valid position of the agent.
+            - secondary_fitness_score (int): The total number of steps taken by the agent.
+            - optimal_step_position (Optional[Tuple[int, int]]): The position where the agent reached
+            the optimal step count, if applicable.
+            - grid_world (np.ndarray): The updated grid world after processing the path.
+            - previous_positions (List[Tuple[int, int]]): A list of all positions visited by the agent.
+            - agent_path (str): The updated binary string representing the agent's path.
 
-        if grid_world[new_position] == 3:
-            if recode_path:
+        Raises:
+        -------
+        ValueError:
+            If the binary chromosome contains invalid movement codes.
+            If recoding fails and no valid moves are possible.
+
+        Notes:
+        -----
+        - Movement codes:
+            '00': Down, '01': Right, '10': Left, '11': Up.
+        - Obstacles are represented as `3` in the grid world.
+        - Revisiting is allowed, but recoding adjusts the path when necessary.
+        """
+        nonlocal agent_path, grid_world, start_position, end_position, chromosome_length, grid_size, num_optimal_steps, revisit_possible
+
+        grid_world = copy.deepcopy(grid_world)
+        secondary_fitness_score = 0
+        previous_positions = [start_position]
+        agent_path = list(agent_path)
+        optimal_step_position = None
+
+        for i in range(0, chromosome_length, 2):
+            previous_position = previous_positions[-1]
+            grid_world[previous_position] = 6
+
+            choice_bytes = agent_path[i] + agent_path[i + 1]
+            if choice_bytes == "00":  # down
+                new_position = (previous_position[0] + 1, previous_position[1])
+            elif choice_bytes == "01":  # right
+                new_position = (previous_position[0], previous_position[1] + 1)
+            elif choice_bytes == "10":  # left
+                new_position = (previous_position[0], previous_position[1] - 1)
+            elif choice_bytes == "11":  # up
+                new_position = (previous_position[0] - 1, previous_position[1])
+            else:
+                raise ValueError("Values only could be: '00', '01', '10', '11'.")
+
+            if grid_world[new_position] == 3:
                 recoded_new_position, choice_bytes = recode_agent_path(previous_positions, previous_positions[-1], grid_world, revisit_possible)
                 if recoded_new_position is None:
                     final_position = previous_positions[-1]
@@ -457,48 +438,137 @@ def fitness_score_calculation(
                 secondary_fitness_score = len(previous_positions) - 1
                 if secondary_fitness_score == num_optimal_steps:
                     optimal_step_position = previous_positions[-1]
-            else:
+            elif new_position in previous_positions:
+                recoded_new_position, choice_bytes = recode_agent_path(previous_positions, previous_positions[-1], grid_world, revisit_possible)
+                if recoded_new_position is None:
+                    final_position = previous_positions[-1]
+                    raise ValueError("New position couldn't be None!")
+                    break
+                agent_path[i] = choice_bytes[0]
+                agent_path[i + 1] = choice_bytes[1]
+                final_position = recoded_new_position
+                grid_world[recoded_new_position] = 5
+                previous_positions.append(recoded_new_position)
+                secondary_fitness_score = len(previous_positions) - 1
+                if secondary_fitness_score == num_optimal_steps:
+                    optimal_step_position = previous_positions[-1]
+            elif new_position == end_position:
                 final_position = new_position
-                grid_world[new_position] = 7
                 previous_positions.append(new_position)
                 secondary_fitness_score = len(previous_positions) - 1
                 if secondary_fitness_score == num_optimal_steps:
                     optimal_step_position = previous_positions[-1]
                 break
-        elif not revisit_possible and recode_path and new_position in previous_positions:
-            recoded_new_position, choice_bytes = recode_agent_path(previous_positions, new_position, grid_world, revisit_possible)
-            if recoded_new_position is None:
-                final_position = previous_positions[-1]
+            else:
+                final_position = new_position
+                grid_world[new_position] = 5
+                previous_positions.append(new_position)
+                secondary_fitness_score = len(previous_positions) - 1
+                if secondary_fitness_score == num_optimal_steps:
+                    optimal_step_position = previous_positions[-1]
+
+        grid_world[start_position] = 1
+        agent_path = ''.join(agent_path)
+
+        return final_position, secondary_fitness_score, optimal_step_position, grid_world, previous_positions, agent_path
+
+    def no_revisit_path_recode():
+        """
+        Handles path recalculation for an agent in a grid world when revisits are disallowed.
+
+        This function processes the agent's path in a grid world by decoding its binary chromosome
+        representation and adjusting the path dynamically if obstacles or revisits are encountered.
+        Revisits to previously visited cells are treated as obstacles.
+
+        Returns:
+        -------
+        Tuple:
+            - final_position (Tuple[int, int]): The last valid position of the agent.
+            - secondary_fitness_score (int): The total number of steps taken by the agent.
+            - optimal_step_position (Optional[Tuple[int, int]]): The position where the agent reached
+            the optimal step count, if applicable.
+            - grid_world (np.ndarray): The updated grid world after processing the path.
+            - previous_positions (List[Tuple[int, int]]): A list of all positions visited by the agent.
+            - agent_path (str): The updated binary string representing the agent's path.
+
+        Raises:
+        -------
+        ValueError:
+            If the binary chromosome contains invalid movement codes.
+            If recoding fails and no valid moves are possible.
+
+        Notes:
+        -----
+        - Movement codes:
+            '00': Down, '01': Right, '10': Left, '11': Up.
+        - Obstacles are represented as `3` in the grid world.
+        - Revisits are not allowed and are treated as obstacles.
+        """
+        nonlocal agent_path, grid_world, start_position, end_position, chromosome_length, grid_size, num_optimal_steps, revisit_possible
+
+        grid_world = copy.deepcopy(grid_world)
+        secondary_fitness_score = 0
+        previous_positions = [start_position]
+        agent_path = list(agent_path)
+        optimal_step_position = None
+
+        for i in range(0, chromosome_length, 2):
+            previous_position = previous_positions[-1]
+            grid_world[previous_position] = 6
+
+            choice_bytes = agent_path[i] + agent_path[i + 1]
+            if choice_bytes == "00":  # down
+                new_position = (previous_position[0] + 1, previous_position[1])
+            elif choice_bytes == "01":  # right
+                new_position = (previous_position[0], previous_position[1] + 1)
+            elif choice_bytes == "10":  # left
+                new_position = (previous_position[0], previous_position[1] - 1)
+            elif choice_bytes == "11":  # up
+                new_position = (previous_position[0] - 1, previous_position[1])
+            else:
+                raise ValueError("Values only could be: '00', '01', '10', '11'.")
+
+            if grid_world[new_position] == 3 or new_position in previous_positions:
+                recoded_new_position, choice_bytes = recode_agent_path(previous_positions, previous_positions[-1], grid_world, revisit_possible)
+                if recoded_new_position is None:
+                    final_position = previous_positions[-1]
+                    secondary_fitness_score = len(previous_positions) - 1
+                    if secondary_fitness_score == num_optimal_steps:
+                        optimal_step_position = previous_positions[-1]
+                    break
+                agent_path[i] = choice_bytes[0]
+                agent_path[i + 1] = choice_bytes[1]
+                final_position = recoded_new_position
+                grid_world[recoded_new_position] = 5
+                previous_positions.append(recoded_new_position)
+
+                secondary_fitness_score = len(previous_positions) - 1
+                if secondary_fitness_score == num_optimal_steps:
+                    optimal_step_position = previous_positions[-1]
+            elif new_position == end_position:
+                final_position = new_position
+                previous_positions.append(new_position)
                 secondary_fitness_score = len(previous_positions) - 1
                 if secondary_fitness_score == num_optimal_steps:
                     optimal_step_position = previous_positions[-1]
                 break
-            agent_path[i] = choice_bytes[0]
-            agent_path[i + 1] = choice_bytes[1]
-            final_position = recoded_new_position
-            grid_world[recoded_new_position] = 5
-            previous_positions.append(recoded_new_position)
-            secondary_fitness_score = len(previous_positions) - 1
-            if secondary_fitness_score == num_optimal_steps:
-                optimal_step_position = previous_positions[-1]
+            else:
+                final_position = new_position
+                grid_world[new_position] = 5
+                previous_positions.append(new_position)
+                secondary_fitness_score = len(previous_positions) - 1
+                if secondary_fitness_score == num_optimal_steps:
+                    optimal_step_position = previous_positions[-1]
 
-        elif new_position == end_position:
-            final_position = new_position
-            previous_positions.append(new_position)
-            secondary_fitness_score = len(previous_positions) - 1
-            if secondary_fitness_score == num_optimal_steps:
-                optimal_step_position = previous_positions[-1]
-            break
-        else:
-            final_position = new_position
-            grid_world[new_position] = 5
-            previous_positions.append(new_position)
-            secondary_fitness_score = len(previous_positions) - 1
-            if secondary_fitness_score == num_optimal_steps:
-                optimal_step_position = previous_positions[-1]
+        grid_world[start_position] = 1
+        agent_path = ''.join(agent_path)
 
-    grid_world[start_position] = 1
-    agent_path = ''.join(agent_path)
+        return final_position, secondary_fitness_score, optimal_step_position, grid_world, previous_positions, agent_path
+
+    if revisit_possible:
+        final_position, secondary_fitness_score, optimal_step_position, grid_world, previous_positions, agent_path = revisit_path_recode()
+    else:
+        final_position, secondary_fitness_score, optimal_step_position, grid_world, previous_positions, agent_path = no_revisit_path_recode()
 
     if optimal_step_position:
         final_step_position_score = round(np.sqrt((final_position[0] - end_position[0]) ** 2 + (final_position[1] - end_position[1]) ** 2), 4)
@@ -512,84 +582,6 @@ def fitness_score_calculation(
         primary_fitness_score = round((optimal_step_position_score + final_step_position_score)/2, 4)
 
         return primary_fitness_score, secondary_fitness_score, grid_world, previous_positions, agent_path
-
-# def fitness_score_calculation(
-#     agent_path: str,
-#     grid_world: np.ndarray,
-#     chromosome_length: int,
-#     start_position: Tuple[int, int],
-#     end_position: Tuple[int, int],
-#     grid_size: Tuple[int, int]
-# ) -> Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
-#     """
-#     Calculates the fitness score of an agent's path in a grid world.
-
-#     The function evaluates the agent's path based on its distance to the end position,
-#     while marking its journey in the grid. Obstacles block progress, and the path
-#     terminates upon encountering an obstacle or reaching the end.
-
-#     Parameters:
-#     agent_path (str): A bitstring representing the agent's movement directions.
-#                       Each pair of bits encodes a movement: 
-#                       "00" = down, "01" = right, "10" = left, "11" = up.
-#     grid_world (np.ndarray): The grid world matrix where the agent navigates.
-#     chromosome_length (int): The total number of bits in the agent's path encoding.
-#     start_position (Tuple[int, int]): The starting coordinates of the agent (row, column).
-#     end_position (Tuple[int, int]): The target coordinates of the agent (row, column).
-#     grid_size (Tuple[int, int]): Dimensions of the grid (rows, columns).
-
-#     Returns:
-#     Tuple[float, int, np.ndarray, List[Tuple[int, int]]]:
-#         - primary_fitness_score (float): The Euclidean distance from the agent's final position
-#           to the end position.
-#         - secondary_fitness_score (int): The total number of steps taken by the agent.
-#         - grid_world (np.ndarray): The updated grid world with the agent's path marked.
-#         - previous_positions (List[Tuple[int, int]]): List of coordinates visited by the agent.
-#     """
-#     grid_world = copy.deepcopy(grid_world)
-#     secondary_fitness_score = 0
-#     previous_positions = [start_position]
-    
-#     for i in range(0, chromosome_length, 2):
-#         secondary_fitness_score = len(previous_positions)
-#         previous_position = previous_positions[-1]
-#         grid_world[previous_position] = 6
-
-#         choice_bytes = agent_path[i] + agent_path[i + 1]
-#         if choice_bytes == "00":  # down
-#             new_position = (previous_position[0] + 1, previous_position[1])
-#         elif choice_bytes == "01":  # right
-#             new_position = (previous_position[0], previous_position[1] + 1)
-#         elif choice_bytes == "10":  # left
-#             new_position = (previous_position[0], previous_position[1] - 1)
-#         elif choice_bytes == "11":  # up
-#             new_position = (previous_position[0] - 1, previous_position[1])
-#         else:
-#             raise ValueError("Values only could be: '00', '01', '10', '11'.")
-
-#         if new_position[0] < 0 or new_position[0] >= grid_size[0] or new_position[1] < 0 or new_position[1] >= grid_size[1]:
-#             primary_fitness_score = np.inf
-#             previous_positions.append(new_position)
-#             break
-
-#         if grid_world[new_position] == 3:  
-#             final_position = new_position
-#             grid_world[new_position] = 7
-#             previous_positions.append(new_position)
-#             break
-#         elif new_position == end_position:
-#             final_position = new_position
-#             previous_positions.append(new_position)
-#             break
-#         else:
-#             final_position = new_position
-#             grid_world[new_position] = 5
-#             previous_positions.append(new_position)
-
-#     grid_world[start_position] = 1
-#     primary_fitness_score = round(np.sqrt((final_position[0] - end_position[0]) ** 2 + (final_position[1] - end_position[1]) ** 2), 4)
-
-#     return primary_fitness_score, secondary_fitness_score, grid_world, previous_positions
 
 def population_sorting(
     population: List[str],
@@ -723,45 +715,77 @@ def mutate(agent: str, mutation_probability: float = 0.01, random_seed: Optional
     
     return ''.join(mutated_agent)
 
+def get_indices(best_index: int) -> List[int]:
+    """
+    Returns a list of indices based on the given best index:
+    1. If best_index < 9: Returns all indices from 0 to best_index inclusively.
+    2. If best_index >= 9: Returns a list of 10 indices, including 0, best_index, 
+       and 8 equally spaced indices between them.
+
+    Parameters:
+    ----------
+    best_index : int
+        The best index up to which the list of indices is created.
+
+    Returns:
+    -------
+    List[int]
+        List of indices satisfying the conditions.
+    """
+    if best_index < 9:
+        return list(range(0, best_index + 1))
+    else:
+        step = best_index / 9  # Divide range into 9 equal steps
+        indices = [round(i * step) for i in range(10)]  # Create 10 evenly spaced indices
+        return indices
+
 def path_reconstruction(
     best_population_paths: List[List[Tuple[int, int]]],
     initial_grid_world: np.ndarray,
     results_path: str,
     start_position: Tuple[int, int],
     end_position: Tuple[int, int],
-    step: int = 1,
+    indices_list: List[int],
     title_type: str = "generation",
     path_flag: bool = False
 ) -> None:
     """
     Reconstructs and visualizes the paths taken by the best agents in a grid world
-    for each generation or iteration. Saves visualizations to a specified directory.
+    for selected generations or iterations based on `indices_list`.
+    Saves visualizations to a specified directory.
 
     Parameters:
-    best_population_paths (List[List[Tuple[int, int]]]): A list of paths where each path 
-        is a list of coordinates (tuples) representing the positions visited by the best agent in each generation.
-    initial_grid_world (np.ndarray): The initial state of the grid world as a NumPy array.
-    results_path (str): The directory path where the visualizations will be saved.
-    start_position (Tuple[int, int]): The starting position (x, y) of the agent in the grid world.
-    end_position (Tuple[int, int]): The ending position (x, y) of the agent in the grid world.
-    step (int, optional): Interval for selecting generations to visualize. Defaults to 1.
-    title_type (str, optional): Type of title to be used in the visualizations, either "generation" or "iteration".
+    ----------
+    best_population_paths : List[List[Tuple[int, int]]]
+        A list of paths where each path is a list of coordinates (tuples) representing the 
+        positions visited by the best agent in each generation.
+    initial_grid_world : np.ndarray
+        The initial state of the grid world as a NumPy array.
+    results_path : str
+        The directory path where the visualizations will be saved.
+    start_position : Tuple[int, int]
+        The starting position (x, y) of the agent in the grid world.
+    end_position : Tuple[int, int]
+        The ending position (x, y) of the agent in the grid world.
+    indices_list : List[int]
+        List of generation indices to visualize.
+    title_type : str, optional
+        Type of title to be used in the visualizations, either "generation" or "iteration".
         If another string is provided, it will be used as the title directly. Defaults to "generation".
-    path_flag (bool, optional): If True, the entire path taken by the agent is visualized. If False, 
+    path_flag : bool, optional
+        If True, the entire path taken by the agent is visualized. If False, 
         only the current step is shown. Defaults to False.
 
     Returns:
+    -------
     None
     """
-    create_or_empty_directory(results_path) 
-    selected_indices = list(range(0, len(best_population_paths), step))
-    if selected_indices[-1] != len(best_population_paths) - 1:
-        selected_indices.append(len(best_population_paths) - 1)
+    create_or_empty_directory(results_path)
 
-    for index in tqdm(selected_indices, desc="Processing generations/iterations"):
+    for index in tqdm(indices_list, desc="Processing generations/iterations"):
         generation = index + 1
         best_agent_path = best_population_paths[index]
-        
+
         generation_path = f"{results_path}/{generation}. generation"
         if title_type == "generation":
             title = f"{generation}. generation grid world visualization"
@@ -783,13 +807,13 @@ def path_reconstruction(
                     grid_world[position] = 7
                 else:
                     grid_world[position] = 5
-                    
-            step_path = f"{generation_path}/step_{j+1}.png"
+
+            step_path = f"{generation_path}/step_{j + 1}.png"
             if not path_flag:
                 grid_world_visualization(grid_world, title=title, agent_flag=1, saving_path=step_path, full_legend=1)
             else:
                 grid_world_visualization(grid_world, agent_path=best_agent_path, title=title, agent_flag=1, saving_path=step_path, full_legend=1)
-
+                
 def video_creation(
     images_path: str,
     video_path: str,
@@ -1016,10 +1040,17 @@ def update_pheromones(
     pheromones *= (1 - evaporation_rate)
     
     # Deposit pheromones for each path
+    # best_path = float('inf')
     for path in paths:
         path_length = len(path)
+        # if path_length < best_path:
+        #     best_path = path_length
+
         for position in path:
             pheromones[position] += deposit_factor / path_length  # Pheromone deposit
+
+    # for position in best_path:
+    #         pheromones[position] += 2 * deposit_factor / path_length
     
     # Optional pheromone normalization
     if pheromone_normalization:
@@ -1129,6 +1160,8 @@ def create_pheromones_matrix(
     Creates a pheromone matrix where pheromone levels depend on the frequency of 
     positions in best_positions. Positions with the highest frequency get level 1, 
     positions with no appearance get 0, and all others are scaled between.
+    Additionally, assigns pheromone level 1 to all positions in columns 
+    without any positive pheromone values after calculating based on positions.
 
     Parameters:
     best_positions (List[Tuple[int, int]]): List of coordinates representing positions visited in the best paths.
@@ -1148,6 +1181,11 @@ def create_pheromones_matrix(
 
     for position, count in position_counts.items():
         pheromones[position] = count / max_count
+
+    # Identify columns without any positive values and set them to 1
+    for col in range(grid_size[1]):
+        if not np.any(pheromones[:, col] > 0):
+            pheromones[:, col] = 1.0
 
     return pheromones
 
@@ -1276,6 +1314,29 @@ def aggregate_categorical_results(
     grouped_df[numerical_columns] = grouped_df[numerical_columns].round(2)
 
     return grouped_df
+
+def fill_none_with_median(dataframe: pd.DataFrame, conditions: dict) -> pd.DataFrame:
+    """
+    Fill None values in rows where specific conditions are met with the column median.
+
+    Parameters:
+    - dataframe: pd.DataFrame
+        The DataFrame to process.
+    - conditions: dict
+        A dictionary where keys are column names, and values are the required values for the condition.
+
+    Returns:
+    - pd.DataFrame
+        The DataFrame with `None` values replaced by column medians in rows meeting the conditions.
+    """
+    for idx, row in dataframe.iterrows():
+        if all(row[col] == val for col, val in conditions.items()):
+            for col in dataframe.columns:
+                if pd.isna(row[col]) and pd.api.types.is_numeric_dtype(dataframe[col]):
+                    median_value = dataframe[col].median()
+                    dataframe.at[idx, col] = median_value
+    
+    return dataframe
 
 
 

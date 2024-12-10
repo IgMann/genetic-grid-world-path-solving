@@ -29,10 +29,10 @@ NUM_OPTIMAL_STEPS: int = 20
 ALPHA: List[float] = [1.5, 3.0]
 BETA: List[float] = [1.5, 3.0]
 EVAPORATION_RATE: float = 0.5
-DEPOSIT_FACTOR: int = 10
+DEPOSIT_FACTOR: int = 100
 NUM_ANTS: int = 100
 NUM_ITERATIONS: int = 1000
-MAX_PATH_LENGTH: int = 32
+MAX_PATH_LENGTH: int = 33
 REVISIT_POSSIBILITY: List[bool] = [True, False]  
 PHEROMONE_NORMALIZATION: bool = True
 PHEROMONE_THRESHOLD: float = 0.25
@@ -134,6 +134,7 @@ try:
                         "First Full Path": first_full_path,
                         "First Optimal Path": first_optimal_path,
                         "Convergence Iteration": convergence_iteration,
+                        "Iterations per Second": iterations_per_second,
                         "Total Time": total_time
                     })
 
