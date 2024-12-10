@@ -570,6 +570,8 @@ def fitness_score_calculation(
     else:
         final_position, secondary_fitness_score, optimal_step_position, grid_world, previous_positions, agent_path = no_revisit_path_recode()
 
+    grid_world[end_position] = 2
+
     if optimal_step_position:
         final_step_position_score = round(np.sqrt((final_position[0] - end_position[0]) ** 2 + (final_position[1] - end_position[1]) ** 2), 4)
         optimal_step_position_score = round(np.sqrt((optimal_step_position[0] - end_position[0]) ** 2 + (optimal_step_position[1] - end_position[1]) ** 2), 4)
@@ -1040,17 +1042,10 @@ def update_pheromones(
     pheromones *= (1 - evaporation_rate)
     
     # Deposit pheromones for each path
-    # best_path = float('inf')
     for path in paths:
         path_length = len(path)
-        # if path_length < best_path:
-        #     best_path = path_length
-
         for position in path:
             pheromones[position] += deposit_factor / path_length  # Pheromone deposit
-
-    # for position in best_path:
-    #         pheromones[position] += 2 * deposit_factor / path_length
     
     # Optional pheromone normalization
     if pheromone_normalization:
