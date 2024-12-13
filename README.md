@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is part of my master's thesis titled **"Comparative Examination and Combination of Metaheuristic Algorithms in Path Optimization"**, completed as part of the Master's program in **Artificial Intelligence and Machine Learning** at the **Faculty of Technical Sciences, University of Novi Sad**.
+This project is part of my master's thesis titled **"Comparative Examination and Combination of Metaheuristic Algorithms in Path Optimization Problem"**, completed as part of the Master's program in **Artificial Intelligence and Machine Learning** at the **Faculty of Technical Sciences, University of Novi Sad**.
 
 The project focuses on optimizing pathfinding strategies in grid-world environments using **Genetic Algorithms (GA)** and **Ant Colony Optimization (ACO)**. Its primary objective is to efficiently navigate grids with obstacles while producing high-quality solutions by integrating theoretical frameworks with practical implementations. The research explores standalone GA and ACO approaches as well as a hybrid strategy that combines the strengths of both methods.
 
